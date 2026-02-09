@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights | Nakola Expert Systems</title>
-  <meta name="description" content="Technical articles, industry insights, and thought leadership from the Nakola Expert Systems team." />
+  <title>Insights | Tech Articles, Tutorials & Thought Leadership — Nakola Expert Systems</title>
+  <meta name="description" content="Expert insights on software development, digital transformation, cloud architecture, and technology strategy for African and global businesses." />
+  <meta name="keywords" content="tech blog, software development insights, digital transformation Africa, cloud architecture, Nakola Expert Systems articles" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Insights — Nakola Expert Systems" />
+  <meta property="og:description" content="Expert insights on software, cloud, and digital transformation." />
+  <meta property="og:url" content="https://nakolaexpertsystems.com/insights" />
+  <link rel="canonical" href="https://nakolaexpertsystems.com/insights.html" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <script type="module" src="/src/main.js"></script>
 </head>
+
 <body class="bg-white text-neutral-800 antialiased">
 
-  <!-- HEADER -->
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ -->
   <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-transparent" role="banner">
     <div class="container-nes flex items-center justify-between h-16 lg:h-20">
       <a href="/" class="flex items-center gap-2 group" aria-label="Nakola Expert Systems — Home">
@@ -32,22 +44,279 @@
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
+    <style>.header-scrolled{border-color:var(--color-neutral-200);box-shadow:0 1px 3px rgba(0,0,0,.04)}.header-hidden{transform:translateY(-100%)}.nav-active{color:var(--color-primary-600)!important;background:var(--color-primary-50)}</style>
   </header>
 
-  <main id="main-content" role="main" class="pt-20 lg:pt-24">
-    <section class="section">
-      <div class="container-nes text-center">
-        <span class="badge badge-primary mb-4">Blog</span>
-        <h1 class="text-4xl lg:text-5xl font-extrabold text-neutral-900 mb-6">Technical <span class="gradient-text">Insights</span></h1>
-        <p class="text-lg text-neutral-500 max-w-2xl mx-auto">This page is under construction. Articles and thought leadership coming in Phase 3.</p>
+  <!-- Mobile Overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+  <style>.overlay-visible{opacity:1!important;pointer-events:auto!important}</style>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-drawer" class="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" role="dialog" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between p-5 border-b border-neutral-100">
+      <span class="font-heading font-bold text-lg text-neutral-900">Menu</span>
+      <button id="mobile-close" class="p-2 -mr-2 text-neutral-500 hover:text-neutral-700 transition" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-5 space-y-1" aria-label="Mobile">
+      <a href="/" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Home</a>
+      <a href="/services.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Services</a>
+      <a href="/work.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Our Work</a>
+      <a href="/about.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">About</a>
+      <a href="/insights.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Insights</a>
+      <a href="/careers.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Careers</a>
+    </nav>
+    <div class="p-5 border-t border-neutral-100 space-y-3">
+      <a href="/contact.html" class="btn btn-primary btn-lg w-full">Get in Touch</a>
+      <a href="tel:+254700000000" class="btn btn-secondary btn-lg w-full">Call Us</a>
+    </div>
+  </aside>
+  <style>.drawer-open{transform:translateX(0)!important}</style>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN
+       ═══════════════════════════════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ── HERO ─────────────────────────────────────────── -->
+    <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden bg-gradient-mesh" aria-labelledby="insights-hero-heading">
+      <div class="container-nes relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="reveal"><span class="badge badge-primary mb-5">Insights</span></div>
+          <h1 id="insights-hero-heading" class="reveal reveal-delay-1 text-balance mb-6">
+            Ideas, Expertise &amp; <span class="gradient-text">Technical Deep Dives</span>
+          </h1>
+          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto">
+            Practical insights from our engineering team — covering architecture patterns, digital transformation strategy, and lessons from 50+ projects across Africa.
+          </p>
+        </div>
       </div>
     </section>
+
+    <!-- ── FEATURED ARTICLE ───────────────────────────── -->
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container-nes">
+        <div class="card card-elevated reveal overflow-hidden">
+          <div class="grid lg:grid-cols-2">
+            <div class="h-64 lg:h-auto bg-gradient-to-br from-primary-600 to-purple-600 flex items-center justify-center p-8">
+              <div class="text-center">
+                <span class="badge bg-white/20 text-white text-[10px] mb-3">Featured Article</span>
+                <svg class="w-16 h-16 text-white/30 mx-auto" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+              </div>
+            </div>
+            <div class="p-8 lg:p-10 flex flex-col justify-center">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="badge badge-primary">Strategy</span>
+                <span class="text-xs text-neutral-400">12 min read</span>
+              </div>
+              <h2 id="featured-heading" class="text-2xl lg:text-3xl font-extrabold text-neutral-900 mb-3">Building for Africa: Why Mobile-First Isn't Enough Anymore</h2>
+              <p class="text-neutral-500 leading-relaxed mb-5">The next wave of African digital products must go beyond mobile-first. We explore offline-first architecture, USSD fallbacks, and designing for the realities of 2G networks and shared devices.</p>
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center"><span class="text-white text-xs font-bold">WN</span></div>
+                <div><p class="text-sm font-medium text-neutral-900">Waiyah Nakola</p><p class="text-xs text-neutral-400">January 15, 2025</p></div>
+              </div>
+              <a href="#" class="btn btn-primary btn-md self-start">Read Full Article <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CATEGORY TABS + ARTICLES ──────────────────── -->
+    <section class="section bg-neutral-50" aria-labelledby="articles-heading">
+      <div class="container-nes">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg> Latest Articles</span>
+          <h2 id="articles-heading" class="section-title">From the <span class="gradient-text">Engineering Team</span></h2>
+        </div>
+
+        <!-- Category filters -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10 reveal" role="tablist" aria-label="Filter by topic">
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-primary-600 text-white transition" role="tab" aria-selected="true" data-filter="all">All Topics</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-white text-neutral-600 hover:bg-neutral-100 transition" role="tab" aria-selected="false" data-filter="engineering">Engineering</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-white text-neutral-600 hover:bg-neutral-100 transition" role="tab" aria-selected="false" data-filter="strategy">Strategy</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-white text-neutral-600 hover:bg-neutral-100 transition" role="tab" aria-selected="false" data-filter="case-study">Case Study</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-white text-neutral-600 hover:bg-neutral-100 transition" role="tab" aria-selected="false" data-filter="tutorial">Tutorial</button>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Article 1 -->
+          <article class="card card-hover reveal overflow-hidden group" data-category="engineering">
+            <div class="h-44 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center p-6">
+              <svg class="w-12 h-12 text-white/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="badge badge-primary text-[10px]">Engineering</span><span class="text-[11px] text-neutral-400">8 min read</span></div>
+              <h3 class="font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition">Microservices vs Monolith: A Pragmatic Guide for African Startups</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed mb-4">Not every startup needs microservices. We break down when a monolith is the right call and how to evolve your architecture as you scale.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center"><span class="text-white text-[9px] font-bold">WN</span></div><span class="text-xs text-neutral-400">Dec 20, 2024</span></div>
+                <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700 transition">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="card card-hover reveal reveal-delay-1 overflow-hidden group" data-category="tutorial">
+            <div class="h-44 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center p-6">
+              <svg class="w-12 h-12 text-white/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="badge badge-green text-[10px]">Tutorial</span><span class="text-[11px] text-neutral-400">15 min read</span></div>
+              <h3 class="font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition">Integrating M-Pesa with Next.js: A Step-by-Step Guide</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed mb-4">A complete walkthrough of integrating Safaricom's M-Pesa Daraja API into a modern Next.js application — from STK Push to callbacks.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center"><span class="text-white text-[9px] font-bold">AK</span></div><span class="text-xs text-neutral-400">Dec 5, 2024</span></div>
+                <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700 transition">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="card card-hover reveal reveal-delay-2 overflow-hidden group" data-category="strategy">
+            <div class="h-44 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center p-6">
+              <svg class="w-12 h-12 text-white/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"/></svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="badge badge-purple text-[10px]">Strategy</span><span class="text-[11px] text-neutral-400">10 min read</span></div>
+              <h3 class="font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition">Digital Transformation Roadmap for East African SMEs</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed mb-4">A phased approach to digital transformation that considers budget constraints, infrastructure realities, and the unique opportunities of East African markets.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center"><span class="text-white text-[9px] font-bold">WN</span></div><span class="text-xs text-neutral-400">Nov 18, 2024</span></div>
+                <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700 transition">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="card card-hover reveal overflow-hidden group" data-category="case-study">
+            <div class="h-44 bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center p-6">
+              <svg class="w-12 h-12 text-white/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="badge badge-gold text-[10px]">Case Study</span><span class="text-[11px] text-neutral-400">6 min read</span></div>
+              <h3 class="font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition">How AfriCommerce Scaled to 5 Countries in 14 Weeks</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed mb-4">An inside look at the technical and strategic decisions behind our fastest multi-market e-commerce deployment — from architecture to go-live.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center"><span class="text-white text-[9px] font-bold">LO</span></div><span class="text-xs text-neutral-400">Nov 2, 2024</span></div>
+                <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700 transition">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="card card-hover reveal reveal-delay-1 overflow-hidden group" data-category="engineering">
+            <div class="h-44 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center p-6">
+              <svg class="w-12 h-12 text-white/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="badge badge-primary text-[10px]">Engineering</span><span class="text-[11px] text-neutral-400">12 min read</span></div>
+              <h3 class="font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition">AWS vs GCP for African Workloads: A Cost & Latency Comparison</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed mb-4">We benchmarked both platforms from Nairobi, Cape Town, and Lagos. Here's what we found about latency, pricing, and available services.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center"><span class="text-white text-[9px] font-bold">AK</span></div><span class="text-xs text-neutral-400">Oct 22, 2024</span></div>
+                <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700 transition">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="card card-hover reveal reveal-delay-2 overflow-hidden group" data-category="tutorial">
+            <div class="h-44 bg-gradient-to-br from-primary-600 to-purple-600 flex items-center justify-center p-6">
+              <svg class="w-12 h-12 text-white/30" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="badge badge-green text-[10px]">Tutorial</span><span class="text-[11px] text-neutral-400">20 min read</span></div>
+              <h3 class="font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition">Building a CI/CD Pipeline for Django + Docker on GitHub Actions</h3>
+              <p class="text-sm text-neutral-500 leading-relaxed mb-4">A hands-on tutorial covering automated testing, containerized deployments, and zero-downtime releases for Python web applications.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2"><div class="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center"><span class="text-white text-[9px] font-bold">AK</span></div><span class="text-xs text-neutral-400">Oct 8, 2024</span></div>
+                <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700 transition">Read →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NEWSLETTER CTA ───────────────────────────────── -->
+    <section class="section" aria-labelledby="newsletter-heading">
+      <div class="container-nes max-w-2xl text-center">
+        <div class="card card-elevated p-8 lg:p-12 reveal">
+          <div class="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mx-auto mb-5"><svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
+          <h2 id="newsletter-heading" class="text-2xl lg:text-3xl font-extrabold text-neutral-900 mb-3">Stay in the Loop</h2>
+          <p class="text-neutral-500 leading-relaxed mb-6">Get our best articles, case studies, and tech insights delivered to your inbox. No spam — just practical knowledge, once a month.</p>
+          <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-validate>
+            <div class="flex-1">
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <input type="email" id="newsletter-email" name="email" placeholder="you@company.com" required data-rules="required|email" data-label="Email" class="input w-full" />
+            </div>
+            <button type="submit" class="btn btn-primary btn-md shrink-0">Subscribe <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></button>
+          </form>
+          <p class="text-xs text-neutral-400 mt-4">Join 500+ founders, CTOs, and engineers. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ──────────────────────────────────────────── -->
+    <section class="section bg-gradient-primary text-white" aria-labelledby="insights-cta-heading">
+      <div class="container-nes text-center max-w-3xl mx-auto">
+        <h2 id="insights-cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white">Have a Challenge We Should Write About?</h2>
+        <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed">We love exploring real-world engineering problems. Reach out and let's discuss your technical challenge — it might become our next deep dive.</p>
+        <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-4">
+          <a href="/contact.html" class="btn btn-white btn-lg">Get in Touch <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="/work.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">See Our Work</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
   <footer class="bg-neutral-900 text-neutral-300" role="contentinfo">
-    <div class="container-nes py-12 text-center">
-      <p class="text-sm text-neutral-500">&copy; 2026 Nakola Expert Systems. All rights reserved.</p>
+    <div class="container-nes section-sm">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div class="lg:col-span-1">
+          <a href="/" class="flex items-center gap-2 mb-4"><span class="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-extrabold text-sm tracking-tight">NE</span><span class="font-heading font-bold text-lg text-white">Nakola<span class="text-primary-400">Expert</span></span></a>
+          <p class="text-sm leading-relaxed text-neutral-400 mb-5">African-grounded technical expertise delivering global-standard digital solutions that drive measurable business outcomes.</p>
+          <div class="flex gap-3">
+            <a href="https://www.linkedin.com/company/nakola-expert-systems" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="LinkedIn"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="GitHub"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="https://twitter.com/NakolaExpert" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="Twitter / X"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Services</h4>
+          <nav class="space-y-2.5" aria-label="Footer services"><a href="/services.html#custom-software" class="block text-sm text-neutral-400 hover:text-white transition">Custom Software</a><a href="/services.html#consulting" class="block text-sm text-neutral-400 hover:text-white transition">Technology Consulting</a><a href="/services.html#digital-transformation" class="block text-sm text-neutral-400 hover:text-white transition">Digital Transformation</a><a href="/services.html#cloud-devops" class="block text-sm text-neutral-400 hover:text-white transition">Cloud &amp; DevOps</a><a href="/services.html#qa" class="block text-sm text-neutral-400 hover:text-white transition">Quality Assurance</a><a href="/services.html#managed-support" class="block text-sm text-neutral-400 hover:text-white transition">Managed Support</a></nav>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Company</h4>
+          <nav class="space-y-2.5" aria-label="Footer company"><a href="/about.html" class="block text-sm text-neutral-400 hover:text-white transition">About Us</a><a href="/work.html" class="block text-sm text-neutral-400 hover:text-white transition">Our Work</a><a href="/insights.html" class="block text-sm text-neutral-400 hover:text-white transition">Insights</a><a href="/careers.html" class="block text-sm text-neutral-400 hover:text-white transition">Careers</a><a href="/contact.html" class="block text-sm text-neutral-400 hover:text-white transition">Contact</a></nav>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Get in Touch</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@nakolaexpertsystems.com" class="flex items-start gap-2.5 text-neutral-400 hover:text-white transition"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>hello@nakolaexpertsystems.com</a>
+            <a href="tel:+254700000000" class="flex items-start gap-2.5 text-neutral-400 hover:text-white transition"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>+254 700 000 000</a>
+            <div class="flex items-start gap-2.5 text-neutral-400"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Nairobi, Kenya · Serving clients globally</div>
+          </div>
+          <div class="mt-5 p-3 bg-neutral-800 rounded-lg"><p class="text-xs text-neutral-400 leading-relaxed"><span class="text-green-400 font-medium">● Available</span> — We respond within 4 business hours.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-neutral-800">
+      <div class="container-nes flex flex-col sm:flex-row items-center justify-between gap-4 py-5 text-xs text-neutral-500">
+        <p>&copy; 2026 Nakola Expert Systems. All rights reserved.</p>
+        <nav class="flex gap-4" aria-label="Legal"><a href="#" class="hover:text-neutral-300 transition">Privacy Policy</a><a href="#" class="hover:text-neutral-300 transition">Terms of Service</a></nav>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>

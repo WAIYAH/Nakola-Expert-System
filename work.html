@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Work | Nakola Expert Systems</title>
-  <meta name="description" content="Explore our portfolio of projects — case studies, client results, and the technology solutions we've delivered across Africa and beyond." />
+  <title>Our Work | Case Studies & Client Results — Nakola Expert Systems</title>
+  <meta name="description" content="Explore real-world results from Nakola Expert Systems — case studies spanning e-commerce, fintech, healthcare, and enterprise systems across Africa and beyond." />
+  <meta name="keywords" content="Nakola case studies, software development portfolio, African tech projects, client results, digital transformation Africa" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Our Work — Nakola Expert Systems" />
+  <meta property="og:description" content="Real projects, real metrics, real business impact." />
+  <meta property="og:url" content="https://nakolaexpertsystems.com/work" />
+  <link rel="canonical" href="https://nakolaexpertsystems.com/work.html" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <script type="module" src="/src/main.js"></script>
 </head>
+
 <body class="bg-white text-neutral-800 antialiased">
 
-  <!-- HEADER -->
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ -->
   <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-transparent" role="banner">
     <div class="container-nes flex items-center justify-between h-16 lg:h-20">
       <a href="/" class="flex items-center gap-2 group" aria-label="Nakola Expert Systems — Home">
@@ -32,22 +44,375 @@
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
+    <style>.header-scrolled{border-color:var(--color-neutral-200);box-shadow:0 1px 3px rgba(0,0,0,.04)}.header-hidden{transform:translateY(-100%)}.nav-active{color:var(--color-primary-600)!important;background:var(--color-primary-50)}</style>
   </header>
 
-  <main id="main-content" role="main" class="pt-20 lg:pt-24">
-    <section class="section">
-      <div class="container-nes text-center">
-        <span class="badge badge-primary mb-4">Portfolio</span>
-        <h1 class="text-4xl lg:text-5xl font-extrabold text-neutral-900 mb-6">Our <span class="gradient-text">Work</span></h1>
-        <p class="text-lg text-neutral-500 max-w-2xl mx-auto">This page is under construction. Case studies and project showcases coming in Phase 2.</p>
+  <!-- Mobile Overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+  <style>.overlay-visible{opacity:1!important;pointer-events:auto!important}</style>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-drawer" class="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" role="dialog" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between p-5 border-b border-neutral-100">
+      <span class="font-heading font-bold text-lg text-neutral-900">Menu</span>
+      <button id="mobile-close" class="p-2 -mr-2 text-neutral-500 hover:text-neutral-700 transition" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-5 space-y-1" aria-label="Mobile">
+      <a href="/" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Home</a>
+      <a href="/services.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Services</a>
+      <a href="/work.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Our Work</a>
+      <a href="/about.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">About</a>
+      <a href="/insights.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Insights</a>
+      <a href="/careers.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Careers</a>
+    </nav>
+    <div class="p-5 border-t border-neutral-100 space-y-3">
+      <a href="/contact.html" class="btn btn-primary btn-lg w-full">Get in Touch</a>
+      <a href="tel:+254700000000" class="btn btn-secondary btn-lg w-full">Call Us</a>
+    </div>
+  </aside>
+  <style>.drawer-open{transform:translateX(0)!important}</style>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN
+       ═══════════════════════════════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ── HERO ─────────────────────────────────────────── -->
+    <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden bg-gradient-mesh" aria-labelledby="work-hero-heading">
+      <div class="container-nes relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="reveal"><span class="badge badge-primary mb-5">Our Work</span></div>
+          <h1 id="work-hero-heading" class="reveal reveal-delay-1 text-balance mb-6">
+            Results That <span class="gradient-text">Speak for Themselves</span>
+          </h1>
+          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto">
+            Every engagement starts with a business problem and ends with measurable impact. Here's a selection of projects we're proud of.
+          </p>
+        </div>
       </div>
     </section>
+
+    <!-- ── AGGREGATE METRICS ───────────────────────────── -->
+    <section class="bg-neutral-900 py-10" aria-label="Aggregate results">
+      <div class="container-nes">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="reveal"><p class="font-heading font-extrabold text-3xl text-white" data-count-to="50" data-count-suffix="+">0+</p><p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">Projects Completed</p></div>
+          <div class="reveal reveal-delay-1"><p class="font-heading font-extrabold text-3xl text-green-400" data-count-to="2" data-count-suffix="M+">0M+</p><p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">Users Impacted</p></div>
+          <div class="reveal reveal-delay-2"><p class="font-heading font-extrabold text-3xl text-primary-400" data-count-to="98" data-count-suffix="%">0%</p><p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">On-Time Delivery</p></div>
+          <div class="reveal reveal-delay-3"><p class="font-heading font-extrabold text-3xl text-purple-400" data-count-to="8" data-count-suffix="+">0+</p><p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">Countries Reached</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FILTER TABS ─────────────────────────────────── -->
+    <section class="section" aria-labelledby="cases-heading">
+      <div class="container-nes">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg> Case Studies</span>
+          <h2 id="cases-heading" class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10 reveal" role="tablist" aria-label="Filter by category">
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-primary-600 text-white transition" role="tab" aria-selected="true" data-filter="all">All Projects</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition" role="tab" aria-selected="false" data-filter="ecommerce">E-Commerce</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition" role="tab" aria-selected="false" data-filter="enterprise">Enterprise</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition" role="tab" aria-selected="false" data-filter="fintech">Fintech</button>
+          <button class="px-4 py-2 text-sm font-medium rounded-full bg-neutral-100 text-neutral-600 hover:bg-neutral-200 transition" role="tab" aria-selected="false" data-filter="healthcare">Healthcare</button>
+        </div>
+
+        <!-- Case Studies Grid -->
+        <div id="case-grid" class="grid md:grid-cols-2 gap-8">
+
+          <!-- ─── CASE 1 — AfriCommerce ───────────────── -->
+          <article class="card card-elevated reveal overflow-hidden group" data-category="ecommerce">
+            <div class="h-48 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center relative overflow-hidden">
+              <span class="text-6xl font-extrabold text-white/10 absolute -bottom-2 right-4">01</span>
+              <div class="text-center relative z-10"><span class="badge bg-white/20 text-white text-[10px] mb-2">E-Commerce</span><h3 class="text-xl font-extrabold text-white">AfriCommerce</h3></div>
+            </div>
+            <div class="p-6 lg:p-8">
+              <p class="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-3">Pan-African Marketplace · 5 Countries</p>
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Challenge</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">A growing African retail brand needed a scalable marketplace platform that could handle multi-currency payments, local logistics, and multiple languages across 5 countries.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Solution</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Built a headless e-commerce platform on Next.js and Strapi with M-Pesa, Flutterwave, and Stripe integrations. Designed for mobile-first usage with offline cart capabilities.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Results</h4>
+                  <div class="grid grid-cols-3 gap-3 mt-2">
+                    <div class="text-center p-3 bg-primary-50 rounded-lg"><p class="font-extrabold text-primary-600 text-lg">300%</p><p class="text-[10px] text-neutral-500 uppercase">Revenue Growth</p></div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg"><p class="font-extrabold text-green-600 text-lg">14wk</p><p class="text-[10px] text-neutral-500 uppercase">Delivery Time</p></div>
+                    <div class="text-center p-3 bg-purple-50 rounded-lg"><p class="font-extrabold text-purple-600 text-lg">5</p><p class="text-[10px] text-neutral-500 uppercase">Markets Live</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Next.js</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Strapi</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">M-Pesa</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Flutterwave</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">PostgreSQL</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">AWS</span>
+              </div>
+              <blockquote class="border-l-2 border-primary-200 pl-4 text-sm text-neutral-500 italic">"NES didn't just build our platform — they understood our market. The M-Pesa integration alone increased conversions by 40%."<br><cite class="not-italic font-medium text-neutral-700 text-xs mt-1 block">— James Mwangi, CEO, AfriCommerce</cite></blockquote>
+            </div>
+          </article>
+
+          <!-- ─── CASE 2 — SafiriHealth ───────────────── -->
+          <article class="card card-elevated reveal reveal-delay-1 overflow-hidden group" data-category="healthcare">
+            <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center relative overflow-hidden">
+              <span class="text-6xl font-extrabold text-white/10 absolute -bottom-2 right-4">02</span>
+              <div class="text-center relative z-10"><span class="badge bg-white/20 text-white text-[10px] mb-2">Healthcare</span><h3 class="text-xl font-extrabold text-white">SafiriHealth</h3></div>
+            </div>
+            <div class="p-6 lg:p-8">
+              <p class="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-3">Telemedicine Platform · East Africa</p>
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Challenge</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">A healthcare NGO needed a HIPAA-compliant telemedicine platform connecting rural patients with urban specialists, working reliably on 2G/3G networks.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Solution</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Developed a Progressive Web App with video consultations, e-prescriptions, and patient records. Optimized for low bandwidth with aggressive caching and USSD fallback.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Results</h4>
+                  <div class="grid grid-cols-3 gap-3 mt-2">
+                    <div class="text-center p-3 bg-green-50 rounded-lg"><p class="font-extrabold text-green-600 text-lg">15K+</p><p class="text-[10px] text-neutral-500 uppercase">Consultations</p></div>
+                    <div class="text-center p-3 bg-primary-50 rounded-lg"><p class="font-extrabold text-primary-600 text-lg">92%</p><p class="text-[10px] text-neutral-500 uppercase">Patient Satisfaction</p></div>
+                    <div class="text-center p-3 bg-purple-50 rounded-lg"><p class="font-extrabold text-purple-600 text-lg">3</p><p class="text-[10px] text-neutral-500 uppercase">Countries</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">React</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">WebRTC</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Node.js</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">MongoDB</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">PWA</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">GCP</span>
+              </div>
+              <blockquote class="border-l-2 border-green-200 pl-4 text-sm text-neutral-500 italic">"They built a platform that works where our patients are — even in areas with barely any internet. That's rare expertise."<br><cite class="not-italic font-medium text-neutral-700 text-xs mt-1 block">— Dr. Amina Osei, Program Director</cite></blockquote>
+            </div>
+          </article>
+
+          <!-- ─── CASE 3 — PaySwift ──────────────────── -->
+          <article class="card card-elevated reveal overflow-hidden group" data-category="fintech">
+            <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center relative overflow-hidden">
+              <span class="text-6xl font-extrabold text-white/10 absolute -bottom-2 right-4">03</span>
+              <div class="text-center relative z-10"><span class="badge bg-white/20 text-white text-[10px] mb-2">Fintech</span><h3 class="text-xl font-extrabold text-white">PaySwift</h3></div>
+            </div>
+            <div class="p-6 lg:p-8">
+              <p class="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-3">Payment Processing · Pan-African</p>
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Challenge</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">A fintech startup needed a PCI-DSS compliant payment gateway that could process mobile money and card transactions across 4 African countries with sub-second latency.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Solution</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Architected a microservices payment engine with event-driven processing, real-time fraud detection, and automated reconciliation across multiple mobile money providers.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Results</h4>
+                  <div class="grid grid-cols-3 gap-3 mt-2">
+                    <div class="text-center p-3 bg-purple-50 rounded-lg"><p class="font-extrabold text-purple-600 text-lg">$2M+</p><p class="text-[10px] text-neutral-500 uppercase">Monthly Volume</p></div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg"><p class="font-extrabold text-green-600 text-lg">99.9%</p><p class="text-[10px] text-neutral-500 uppercase">Uptime</p></div>
+                    <div class="text-center p-3 bg-primary-50 rounded-lg"><p class="font-extrabold text-primary-600 text-lg">&lt;200ms</p><p class="text-[10px] text-neutral-500 uppercase">Avg Latency</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Go</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Kafka</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Redis</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">PostgreSQL</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Kubernetes</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">AWS</span>
+              </div>
+              <blockquote class="border-l-2 border-purple-200 pl-4 text-sm text-neutral-500 italic">"NES delivered a payment engine that rivals systems built by teams 10× their size. Their fintech knowledge is exceptional."<br><cite class="not-italic font-medium text-neutral-700 text-xs mt-1 block">— David Okello, CTO, PaySwift</cite></blockquote>
+            </div>
+          </article>
+
+          <!-- ─── CASE 4 — NairobiMetro ERP ──────────── -->
+          <article class="card card-elevated reveal reveal-delay-1 overflow-hidden group" data-category="enterprise">
+            <div class="h-48 bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center relative overflow-hidden">
+              <span class="text-6xl font-extrabold text-white/10 absolute -bottom-2 right-4">04</span>
+              <div class="text-center relative z-10"><span class="badge bg-white/20 text-white text-[10px] mb-2">Enterprise</span><h3 class="text-xl font-extrabold text-white">NairobiMetro ERP</h3></div>
+            </div>
+            <div class="p-6 lg:p-8">
+              <p class="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-3">Enterprise Resource Planning · Kenya</p>
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Challenge</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">A Nairobi-based logistics company managing 200+ vehicles was running on spreadsheets and disconnected systems, leading to inventory errors and delayed reporting.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Solution</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Built a custom ERP system covering fleet management, inventory, HR, and financial reporting. Integrated GPS tracking, automated invoice generation, and real-time dashboards.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Results</h4>
+                  <div class="grid grid-cols-3 gap-3 mt-2">
+                    <div class="text-center p-3 bg-gold-50 rounded-lg"><p class="font-extrabold text-gold-600 text-lg">60%</p><p class="text-[10px] text-neutral-500 uppercase">Less Manual Work</p></div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg"><p class="font-extrabold text-green-600 text-lg">$340K</p><p class="text-[10px] text-neutral-500 uppercase">Annual Savings</p></div>
+                    <div class="text-center p-3 bg-primary-50 rounded-lg"><p class="font-extrabold text-primary-600 text-lg">200+</p><p class="text-[10px] text-neutral-500 uppercase">Vehicles Managed</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Django</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">React</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">PostgreSQL</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Celery</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Docker</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Azure</span>
+              </div>
+              <blockquote class="border-l-2 border-gold-200 pl-4 text-sm text-neutral-500 italic">"We went from spreadsheets to a single source of truth. Our operations team can finally focus on strategy, not data entry."<br><cite class="not-italic font-medium text-neutral-700 text-xs mt-1 block">— Catherine Wanjiku, COO, NairobiMetro Logistics</cite></blockquote>
+            </div>
+          </article>
+
+          <!-- ─── CASE 5 — EduSpark ─────────────────── -->
+          <article class="card card-elevated reveal overflow-hidden group" data-category="enterprise">
+            <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center relative overflow-hidden">
+              <span class="text-6xl font-extrabold text-white/10 absolute -bottom-2 right-4">05</span>
+              <div class="text-center relative z-10"><span class="badge bg-white/20 text-white text-[10px] mb-2">EdTech</span><h3 class="text-xl font-extrabold text-white">EduSpark LMS</h3></div>
+            </div>
+            <div class="p-6 lg:p-8">
+              <p class="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-3">Learning Management System · East &amp; West Africa</p>
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Challenge</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">An education non-profit needed a learning platform for 50,000+ students across East and West Africa, with offline-first capabilities and support for local languages.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Solution</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Built an offline-capable LMS with progressive content download, multilingual interface (Swahili, Yoruba, French), gamified learning paths, and teacher dashboards.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Results</h4>
+                  <div class="grid grid-cols-3 gap-3 mt-2">
+                    <div class="text-center p-3 bg-teal-50 rounded-lg"><p class="font-extrabold text-teal-600 text-lg">50K+</p><p class="text-[10px] text-neutral-500 uppercase">Students Active</p></div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg"><p class="font-extrabold text-green-600 text-lg">78%</p><p class="text-[10px] text-neutral-500 uppercase">Completion Rate</p></div>
+                    <div class="text-center p-3 bg-primary-50 rounded-lg"><p class="font-extrabold text-primary-600 text-lg">4</p><p class="text-[10px] text-neutral-500 uppercase">Languages</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Vue.js</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Laravel</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">MySQL</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Service Workers</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">i18n</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">AWS</span>
+              </div>
+              <blockquote class="border-l-2 border-teal-200 pl-4 text-sm text-neutral-500 italic">"Students in areas with no internet can still access full courses offline. Nakola's engineering made this possible."<br><cite class="not-italic font-medium text-neutral-700 text-xs mt-1 block">— Emmanuel Adebayo, Executive Director</cite></blockquote>
+            </div>
+          </article>
+
+          <!-- ─── CASE 6 — KenyaFirst Insurance ──────── -->
+          <article class="card card-elevated reveal reveal-delay-1 overflow-hidden group" data-category="fintech">
+            <div class="h-48 bg-gradient-to-br from-primary-600 to-purple-600 flex items-center justify-center relative overflow-hidden">
+              <span class="text-6xl font-extrabold text-white/10 absolute -bottom-2 right-4">06</span>
+              <div class="text-center relative z-10"><span class="badge bg-white/20 text-white text-[10px] mb-2">InsurTech</span><h3 class="text-xl font-extrabold text-white">KenyaFirst Insurance</h3></div>
+            </div>
+            <div class="p-6 lg:p-8">
+              <p class="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-3">Insurance Platform · Kenya &amp; Uganda</p>
+              <div class="space-y-4 mb-6">
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Challenge</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">A traditional insurance company wanted to launch micro-insurance products via mobile, targeting underserved communities with no prior insurance access.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Solution</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Designed a mobile-first insurance platform with USSD enrollment, M-Pesa premium payments, AI-assisted claims processing, and agent management dashboards.</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-neutral-900 mb-1">Results</h4>
+                  <div class="grid grid-cols-3 gap-3 mt-2">
+                    <div class="text-center p-3 bg-primary-50 rounded-lg"><p class="font-extrabold text-primary-600 text-lg">25K+</p><p class="text-[10px] text-neutral-500 uppercase">Policies Sold</p></div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg"><p class="font-extrabold text-green-600 text-lg">48hr</p><p class="text-[10px] text-neutral-500 uppercase">Claims Processing</p></div>
+                    <div class="text-center p-3 bg-purple-50 rounded-lg"><p class="font-extrabold text-purple-600 text-lg">85%</p><p class="text-[10px] text-neutral-500 uppercase">Renewal Rate</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">Python</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">React Native</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">FastAPI</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">TensorFlow</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">PostgreSQL</span>
+                <span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium text-neutral-500">GCP</span>
+              </div>
+              <blockquote class="border-l-2 border-primary-200 pl-4 text-sm text-neutral-500 italic">"We went from 0 to 25,000 policies in 8 months. Nakola understood insurance AND technology — a rare combination."<br><cite class="not-italic font-medium text-neutral-700 text-xs mt-1 block">— Sarah Njeri, Head of Digital, KenyaFirst</cite></blockquote>
+            </div>
+          </article>
+
+        </div><!-- /case-grid -->
+      </div>
+    </section>
+
+    <!-- ── CTA ──────────────────────────────────────────── -->
+    <section class="section bg-gradient-primary text-white" aria-labelledby="work-cta-heading">
+      <div class="container-nes text-center max-w-3xl mx-auto">
+        <h2 id="work-cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white">Have a Similar Challenge?</h2>
+        <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed">We'd love to explore how we can help. Every project starts with a free, no-obligation consultation — let's talk about your goals.</p>
+        <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-4">
+          <a href="/contact.html" class="btn btn-white btn-lg">Start a Project <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="/services.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
   <footer class="bg-neutral-900 text-neutral-300" role="contentinfo">
-    <div class="container-nes py-12 text-center">
-      <p class="text-sm text-neutral-500">&copy; 2026 Nakola Expert Systems. All rights reserved.</p>
+    <div class="container-nes section-sm">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div class="lg:col-span-1">
+          <a href="/" class="flex items-center gap-2 mb-4"><span class="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-extrabold text-sm tracking-tight">NE</span><span class="font-heading font-bold text-lg text-white">Nakola<span class="text-primary-400">Expert</span></span></a>
+          <p class="text-sm leading-relaxed text-neutral-400 mb-5">African-grounded technical expertise delivering global-standard digital solutions that drive measurable business outcomes.</p>
+          <div class="flex gap-3">
+            <a href="https://www.linkedin.com/company/nakola-expert-systems" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="LinkedIn"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="GitHub"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="https://twitter.com/NakolaExpert" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="Twitter / X"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Services</h4>
+          <nav class="space-y-2.5" aria-label="Footer services"><a href="/services.html#custom-software" class="block text-sm text-neutral-400 hover:text-white transition">Custom Software</a><a href="/services.html#consulting" class="block text-sm text-neutral-400 hover:text-white transition">Technology Consulting</a><a href="/services.html#digital-transformation" class="block text-sm text-neutral-400 hover:text-white transition">Digital Transformation</a><a href="/services.html#cloud-devops" class="block text-sm text-neutral-400 hover:text-white transition">Cloud &amp; DevOps</a><a href="/services.html#qa" class="block text-sm text-neutral-400 hover:text-white transition">Quality Assurance</a><a href="/services.html#managed-support" class="block text-sm text-neutral-400 hover:text-white transition">Managed Support</a></nav>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Company</h4>
+          <nav class="space-y-2.5" aria-label="Footer company"><a href="/about.html" class="block text-sm text-neutral-400 hover:text-white transition">About Us</a><a href="/work.html" class="block text-sm text-neutral-400 hover:text-white transition">Our Work</a><a href="/insights.html" class="block text-sm text-neutral-400 hover:text-white transition">Insights</a><a href="/careers.html" class="block text-sm text-neutral-400 hover:text-white transition">Careers</a><a href="/contact.html" class="block text-sm text-neutral-400 hover:text-white transition">Contact</a></nav>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Get in Touch</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@nakolaexpertsystems.com" class="flex items-start gap-2.5 text-neutral-400 hover:text-white transition"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>hello@nakolaexpertsystems.com</a>
+            <a href="tel:+254700000000" class="flex items-start gap-2.5 text-neutral-400 hover:text-white transition"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>+254 700 000 000</a>
+            <div class="flex items-start gap-2.5 text-neutral-400"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Nairobi, Kenya · Serving clients globally</div>
+          </div>
+          <div class="mt-5 p-3 bg-neutral-800 rounded-lg"><p class="text-xs text-neutral-400 leading-relaxed"><span class="text-green-400 font-medium">● Available</span> — We respond within 4 business hours.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-neutral-800">
+      <div class="container-nes flex flex-col sm:flex-row items-center justify-between gap-4 py-5 text-xs text-neutral-500">
+        <p>&copy; 2026 Nakola Expert Systems. All rights reserved.</p>
+        <nav class="flex gap-4" aria-label="Legal"><a href="#" class="hover:text-neutral-300 transition">Privacy Policy</a><a href="#" class="hover:text-neutral-300 transition">Terms of Service</a></nav>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>

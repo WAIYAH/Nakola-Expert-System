@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Careers | Nakola Expert Systems</title>
-  <meta name="description" content="Join Nakola Expert Systems. We're building a world-class engineering team — explore open positions and grow your career with us." />
+  <title>Careers | Join Our Team — Nakola Expert Systems</title>
+  <meta name="description" content="Join Nakola Expert Systems — build world-class software from Africa. Explore open roles in engineering, design, and strategy." />
+  <meta name="keywords" content="Nakola careers, software engineering jobs Nairobi, remote developer jobs Africa, tech jobs Kenya, join Nakola" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Careers — Nakola Expert Systems" />
+  <meta property="og:description" content="Build world-class software from Africa. Explore open roles." />
+  <meta property="og:url" content="https://nakolaexpertsystems.com/careers" />
+  <link rel="canonical" href="https://nakolaexpertsystems.com/careers.html" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <script type="module" src="/src/main.js"></script>
 </head>
+
 <body class="bg-white text-neutral-800 antialiased">
 
-  <!-- HEADER -->
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ -->
   <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-transparent" role="banner">
     <div class="container-nes flex items-center justify-between h-16 lg:h-20">
       <a href="/" class="flex items-center gap-2 group" aria-label="Nakola Expert Systems — Home">
@@ -32,23 +44,365 @@
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
+    <style>.header-scrolled{border-color:var(--color-neutral-200);box-shadow:0 1px 3px rgba(0,0,0,.04)}.header-hidden{transform:translateY(-100%)}.nav-active{color:var(--color-primary-600)!important;background:var(--color-primary-50)}</style>
   </header>
 
-  <main id="main-content" role="main" class="pt-20 lg:pt-24">
-    <section class="section">
-      <div class="container-nes text-center">
-        <span class="badge badge-primary mb-4">Careers</span>
-        <h1 class="text-4xl lg:text-5xl font-extrabold text-neutral-900 mb-6">Build Your Career <span class="gradient-text">With Us</span></h1>
-        <p class="text-lg text-neutral-500 max-w-2xl mx-auto mb-8">Full careers page with open positions coming in Phase 3. Interested?</p>
-        <a href="mailto:careers@nakolaexpertsystems.com" class="btn btn-primary btn-lg">Send Your CV</a>
+  <!-- Mobile Overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+  <style>.overlay-visible{opacity:1!important;pointer-events:auto!important}</style>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-drawer" class="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" role="dialog" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between p-5 border-b border-neutral-100">
+      <span class="font-heading font-bold text-lg text-neutral-900">Menu</span>
+      <button id="mobile-close" class="p-2 -mr-2 text-neutral-500 hover:text-neutral-700 transition" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-5 space-y-1" aria-label="Mobile">
+      <a href="/" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Home</a>
+      <a href="/services.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Services</a>
+      <a href="/work.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Our Work</a>
+      <a href="/about.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">About</a>
+      <a href="/insights.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Insights</a>
+      <a href="/careers.html" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Careers</a>
+    </nav>
+    <div class="p-5 border-t border-neutral-100 space-y-3">
+      <a href="/contact.html" class="btn btn-primary btn-lg w-full">Get in Touch</a>
+      <a href="tel:+254700000000" class="btn btn-secondary btn-lg w-full">Call Us</a>
+    </div>
+  </aside>
+  <style>.drawer-open{transform:translateX(0)!important}</style>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN
+       ═══════════════════════════════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ── HERO ─────────────────────────────────────────── -->
+    <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden bg-gradient-mesh" aria-labelledby="careers-hero-heading">
+      <div class="container-nes relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="reveal"><span class="badge badge-primary mb-5">We're Hiring</span></div>
+          <h1 id="careers-hero-heading" class="reveal reveal-delay-1 text-balance mb-6">
+            Build World-Class Software <span class="gradient-text">From Africa</span>
+          </h1>
+          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto">
+            Join a team that proves African engineers can compete with anyone globally. Remote-first, senior-focused, and obsessed with delivering real business impact.
+          </p>
+          <div class="reveal reveal-delay-3 mt-8"><a href="#positions" class="btn btn-primary btn-lg">View Open Positions <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg></a></div>
+        </div>
       </div>
     </section>
+
+    <!-- ── WHY JOIN US ─────────────────────────────────── -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container-nes">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg> Why NES</span>
+          <h2 id="why-heading" class="section-title">What Makes Working Here <span class="gradient-text">Different</span></h2>
+          <p class="section-description">We're not a factory. We're a small, senior team that takes pride in craft and impact.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card card-hover reveal p-6">
+            <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+            <h3 class="font-bold text-neutral-900 mb-2">Remote-First, Africa-Based</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Work from anywhere in Africa (or globally). Our collaboration is async-first with focused sync meetings. No pointless standups.</p>
+          </div>
+          <div class="card card-hover reveal reveal-delay-1 p-6">
+            <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg></div>
+            <h3 class="font-bold text-neutral-900 mb-2">High-Impact Projects</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">No ticket-factory work. You'll own real challenges — from architecture to deployment — for clients across Africa and beyond.</p>
+          </div>
+          <div class="card card-hover reveal reveal-delay-2 p-6">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>
+            <h3 class="font-bold text-neutral-900 mb-2">Learning Budget</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Annual learning budget for courses, conferences, and certifications. We invest in your growth because our success depends on it.</p>
+          </div>
+          <div class="card card-hover reveal reveal-delay-3 p-6">
+            <div class="w-12 h-12 rounded-xl bg-gold-50 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <h3 class="font-bold text-neutral-900 mb-2">Competitive Compensation</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">We benchmark against international remote rates, not local agency rates. Great work deserves great pay.</p>
+          </div>
+          <div class="card card-hover reveal reveal-delay-4 p-6">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.645-5.645a2.1 2.1 0 010-2.97l.706-.706a2.1 2.1 0 012.97 0l2.549 2.548 2.548-2.548a2.1 2.1 0 012.97 0l.707.707a2.1 2.1 0 010 2.97l-5.645 5.644a1.5 1.5 0 01-2.12 0z"/></svg></div>
+            <h3 class="font-bold text-neutral-900 mb-2">Health & Wellness</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Comprehensive health insurance, mental health support, and flexible PTO. We take care of you so you can take care of our clients.</p>
+          </div>
+          <div class="card card-hover reveal reveal-delay-4 p-6">
+            <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg></div>
+            <h3 class="font-bold text-neutral-900 mb-2">Small Team, Big Voice</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Every engineer has a direct line to leadership. Your ideas shape our products, processes, and company direction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EMPLOYEE TESTIMONIALS ────────────────────────── -->
+    <section class="section bg-neutral-50" aria-labelledby="testimonials-heading">
+      <div class="container-nes max-w-4xl">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg> Life at NES</span>
+          <h2 id="testimonials-heading" class="section-title">What Our Team <span class="gradient-text">Says</span></h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card card-elevated reveal p-6">
+            <svg class="w-8 h-8 text-primary-200 mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/></svg>
+            <p class="text-neutral-600 leading-relaxed mb-4">"This is the first place where I've felt my voice actually matters in architecture decisions. I work on real problems, not JIRA tickets in an assembly line."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center"><span class="text-white text-xs font-bold">AK</span></div>
+              <div><p class="font-medium text-sm text-neutral-900">Amara Kimathi</p><p class="text-xs text-neutral-400">Senior Software Engineer · 2 years</p></div>
+            </div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-1 p-6">
+            <svg class="w-8 h-8 text-green-200 mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/></svg>
+            <p class="text-neutral-600 leading-relaxed mb-4">"The learning budget isn't lip service — I got my AWS Solutions Architect cert last year and attended a React conference. The team genuinely invests in growth."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center"><span class="text-white text-xs font-bold">LO</span></div>
+              <div><p class="font-medium text-sm text-neutral-900">Lilian Odhiambo</p><p class="text-xs text-neutral-400">UX Engineer · 1.5 years</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── OPEN POSITIONS ──────────────────────────────── -->
+    <section id="positions" class="section" aria-labelledby="positions-heading">
+      <div class="container-nes max-w-4xl">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg> Open Roles</span>
+          <h2 id="positions-heading" class="section-title">Current <span class="gradient-text">Openings</span></h2>
+          <p class="section-description">All positions are remote-first within Africa unless otherwise noted. Don't see a perfect fit? Send us your CV anyway.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Position 1 -->
+          <details class="card card-elevated reveal group" open>
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <h3 class="font-bold text-neutral-900">Senior Full-Stack Engineer</h3>
+                  <span class="badge badge-primary text-[10px]">Engineering</span>
+                </div>
+                <div class="flex flex-wrap gap-3 text-xs text-neutral-400">
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg> Remote (Africa)</span>
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Full-time</span>
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Competitive</span>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-neutral-400 transition-transform group-open:rotate-180 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 border-t border-neutral-100 pt-5 space-y-4">
+              <div>
+                <h4 class="font-bold text-sm text-neutral-900 mb-2">About the Role</h4>
+                <p class="text-sm text-neutral-500 leading-relaxed">We're looking for a senior full-stack engineer who can own projects end-to-end. You'll work directly with clients and the founding team to design, build, and ship production-grade applications.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-neutral-900 mb-2">Requirements</h4>
+                <ul class="space-y-1.5 text-sm text-neutral-500">
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>4+ years of professional full-stack experience</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Strong with React/Next.js, Node.js or Python</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Experience with PostgreSQL, Redis, and cloud platforms (AWS/GCP)</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Track record of shipping products, not just features</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Excellent written communication in English</li>
+                </ul>
+              </div>
+              <div class="pt-2"><a href="#apply" class="btn btn-primary btn-md">Apply for This Role <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+            </div>
+          </details>
+
+          <!-- Position 2 -->
+          <details class="card card-elevated reveal reveal-delay-1 group">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <h3 class="font-bold text-neutral-900">DevOps / Cloud Engineer</h3>
+                  <span class="badge badge-green text-[10px]">Infrastructure</span>
+                </div>
+                <div class="flex flex-wrap gap-3 text-xs text-neutral-400">
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg> Remote (Africa)</span>
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Full-time</span>
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Competitive</span>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-neutral-400 transition-transform group-open:rotate-180 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 border-t border-neutral-100 pt-5 space-y-4">
+              <div>
+                <h4 class="font-bold text-sm text-neutral-900 mb-2">About the Role</h4>
+                <p class="text-sm text-neutral-500 leading-relaxed">Own our infrastructure and CI/CD pipelines across multiple client projects. Design, deploy, and maintain cloud infrastructure on AWS and GCP with a focus on reliability, security, and cost optimization.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-neutral-900 mb-2">Requirements</h4>
+                <ul class="space-y-1.5 text-sm text-neutral-500">
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>3+ years experience with AWS, GCP, or Azure</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Docker, Kubernetes, and Terraform experience</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>CI/CD pipeline design (GitHub Actions, GitLab CI)</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Scripting (Bash, Python) and monitoring (Prometheus, Grafana)</li>
+                </ul>
+              </div>
+              <div class="pt-2"><a href="#apply" class="btn btn-primary btn-md">Apply for This Role <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+            </div>
+          </details>
+
+          <!-- Position 3 -->
+          <details class="card card-elevated reveal reveal-delay-2 group">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <h3 class="font-bold text-neutral-900">UI/UX Designer</h3>
+                  <span class="badge badge-purple text-[10px]">Design</span>
+                </div>
+                <div class="flex flex-wrap gap-3 text-xs text-neutral-400">
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg> Remote (Africa)</span>
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Contract / Full-time</span>
+                  <span class="flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Competitive</span>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-neutral-400 transition-transform group-open:rotate-180 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 border-t border-neutral-100 pt-5 space-y-4">
+              <div>
+                <h4 class="font-bold text-sm text-neutral-900 mb-2">About the Role</h4>
+                <p class="text-sm text-neutral-500 leading-relaxed">Lead the design process for client projects — from user research and wireframes to high-fidelity prototypes and design systems. Work closely with engineers to ship pixel-perfect, accessible interfaces.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-neutral-900 mb-2">Requirements</h4>
+                <ul class="space-y-1.5 text-sm text-neutral-500">
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>3+ years product design experience with a strong portfolio</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Expert with Figma, design systems, and component libraries</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Understanding of accessibility (WCAG) and responsive design</li>
+                  <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75"/></svg>Bonus: familiarity with HTML/CSS/Tailwind for developer handoff</li>
+                </ul>
+              </div>
+              <div class="pt-2"><a href="#apply" class="btn btn-primary btn-md">Apply for This Role <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── APPLICATION FORM ─────────────────────────────── -->
+    <section id="apply" class="section bg-neutral-50" aria-labelledby="apply-heading">
+      <div class="container-nes max-w-2xl">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg> Apply</span>
+          <h2 id="apply-heading" class="section-title">Send Us Your <span class="gradient-text">Application</span></h2>
+          <p class="section-description">No cover letter needed — just tell us what you've built and link to your best work. We review every application personally.</p>
+        </div>
+
+        <div class="card card-elevated reveal p-6 lg:p-8">
+          <form data-validate class="space-y-5" id="application-form">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="app-name" class="label">Full Name *</label>
+                <input type="text" id="app-name" name="name" placeholder="Your full name" class="input" data-rules="required" data-label="Full name" />
+              </div>
+              <div>
+                <label for="app-email" class="label">Email *</label>
+                <input type="email" id="app-email" name="email" placeholder="you@example.com" class="input" data-rules="required|email" data-label="Email" />
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="app-phone" class="label">Phone</label>
+                <input type="tel" id="app-phone" name="phone" placeholder="+254 7XX XXX XXX" class="input" data-rules="phone" data-label="Phone" />
+              </div>
+              <div>
+                <label for="app-role" class="label">Role Applying For *</label>
+                <select id="app-role" name="role" class="input" data-rules="required" data-label="Role">
+                  <option value="">Select a role…</option>
+                  <option value="senior-fullstack">Senior Full-Stack Engineer</option>
+                  <option value="devops">DevOps / Cloud Engineer</option>
+                  <option value="designer">UI/UX Designer</option>
+                  <option value="other">Other / General Application</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="app-portfolio" class="label">Portfolio / GitHub / LinkedIn *</label>
+              <input type="url" id="app-portfolio" name="portfolio" placeholder="https://github.com/yourname" class="input" data-rules="required" data-label="Portfolio link" />
+              <p class="helper-text">Link to your portfolio, GitHub profile, or LinkedIn.</p>
+            </div>
+            <div>
+              <label for="app-experience" class="label">Tell Us About Your Best Project *</label>
+              <textarea id="app-experience" name="experience" rows="4" placeholder="What's the most impactful thing you've built? What was your role? What were the results?" class="input" data-rules="required|min:30" data-label="Project description"></textarea>
+              <p class="helper-text">We value outcomes over job titles. Tell us what you shipped.</p>
+            </div>
+            <div>
+              <label for="app-why" class="label">Why NES?</label>
+              <textarea id="app-why" name="why" rows="3" placeholder="What about Nakola Expert Systems interests you?" class="input" data-label="Motivation"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-full">Submit Application <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg></button>
+            <p class="text-xs text-neutral-400 text-center">We review applications within 3 business days. Your data is kept confidential.</p>
+          </form>
+
+          <!-- Success state (hidden by default) -->
+          <div class="form-success hidden text-center py-8">
+            <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <h3 class="text-xl font-extrabold text-neutral-900 mb-2">Application Received!</h3>
+            <p class="text-neutral-500 mb-1">Thank you for your interest in joining NES.</p>
+            <p class="text-sm text-neutral-400">We'll review your application and get back to you at <strong id="success-email" class="text-neutral-600"></strong> within 3 business days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ──────────────────────────────────────────── -->
+    <section class="section bg-gradient-primary text-white" aria-labelledby="careers-cta-heading">
+      <div class="container-nes text-center max-w-3xl mx-auto">
+        <h2 id="careers-cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white">Not Ready to Apply Yet?</h2>
+        <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed">Follow our journey and see what we're building. When the time is right, we'll be here.</p>
+        <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-4">
+          <a href="https://www.linkedin.com/company/nakola-expert-systems" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-lg">Follow on LinkedIn <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></a>
+          <a href="/insights.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">Read Our Insights</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
   <footer class="bg-neutral-900 text-neutral-300" role="contentinfo">
-    <div class="container-nes py-12 text-center">
-      <p class="text-sm text-neutral-500">&copy; 2026 Nakola Expert Systems. All rights reserved.</p>
+    <div class="container-nes section-sm">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div class="lg:col-span-1">
+          <a href="/" class="flex items-center gap-2 mb-4"><span class="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-extrabold text-sm tracking-tight">NE</span><span class="font-heading font-bold text-lg text-white">Nakola<span class="text-primary-400">Expert</span></span></a>
+          <p class="text-sm leading-relaxed text-neutral-400 mb-5">African-grounded technical expertise delivering global-standard digital solutions that drive measurable business outcomes.</p>
+          <div class="flex gap-3">
+            <a href="https://www.linkedin.com/company/nakola-expert-systems" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="LinkedIn"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="GitHub"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="https://twitter.com/NakolaExpert" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary-600 hover:text-white transition" aria-label="Twitter / X"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Services</h4>
+          <nav class="space-y-2.5" aria-label="Footer services"><a href="/services.html#custom-software" class="block text-sm text-neutral-400 hover:text-white transition">Custom Software</a><a href="/services.html#consulting" class="block text-sm text-neutral-400 hover:text-white transition">Technology Consulting</a><a href="/services.html#digital-transformation" class="block text-sm text-neutral-400 hover:text-white transition">Digital Transformation</a><a href="/services.html#cloud-devops" class="block text-sm text-neutral-400 hover:text-white transition">Cloud &amp; DevOps</a><a href="/services.html#qa" class="block text-sm text-neutral-400 hover:text-white transition">Quality Assurance</a><a href="/services.html#managed-support" class="block text-sm text-neutral-400 hover:text-white transition">Managed Support</a></nav>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Company</h4>
+          <nav class="space-y-2.5" aria-label="Footer company"><a href="/about.html" class="block text-sm text-neutral-400 hover:text-white transition">About Us</a><a href="/work.html" class="block text-sm text-neutral-400 hover:text-white transition">Our Work</a><a href="/insights.html" class="block text-sm text-neutral-400 hover:text-white transition">Insights</a><a href="/careers.html" class="block text-sm text-neutral-400 hover:text-white transition">Careers</a><a href="/contact.html" class="block text-sm text-neutral-400 hover:text-white transition">Contact</a></nav>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Get in Touch</h4>
+          <div class="space-y-3 text-sm">
+            <a href="mailto:hello@nakolaexpertsystems.com" class="flex items-start gap-2.5 text-neutral-400 hover:text-white transition"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>hello@nakolaexpertsystems.com</a>
+            <a href="tel:+254700000000" class="flex items-start gap-2.5 text-neutral-400 hover:text-white transition"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>+254 700 000 000</a>
+            <div class="flex items-start gap-2.5 text-neutral-400"><svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Nairobi, Kenya · Serving clients globally</div>
+          </div>
+          <div class="mt-5 p-3 bg-neutral-800 rounded-lg"><p class="text-xs text-neutral-400 leading-relaxed"><span class="text-green-400 font-medium">● Available</span> — We respond within 4 business hours.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-neutral-800">
+      <div class="container-nes flex flex-col sm:flex-row items-center justify-between gap-4 py-5 text-xs text-neutral-500">
+        <p>&copy; 2026 Nakola Expert Systems. All rights reserved.</p>
+        <nav class="flex gap-4" aria-label="Legal"><a href="#" class="hover:text-neutral-300 transition">Privacy Policy</a><a href="#" class="hover:text-neutral-300 transition">Terms of Service</a></nav>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>
