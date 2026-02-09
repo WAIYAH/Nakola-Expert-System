@@ -1,0 +1,11 @@
+# Nakola Expert Systems — robots.txt
+# https://nakolaexpertsystems.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nakolaexpertsystems.com/sitemap.xml
+
+# Disallow build artifacts
+Disallow: /src/
+Disallow: /node_modules/

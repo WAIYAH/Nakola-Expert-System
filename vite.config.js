@@ -9,6 +9,21 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+
+    /* ── Asset optimization ────────────────────────────── */
+    assetsInlineLimit: 4096,         // inline assets < 4 KB
+    cssMinify: 'lightningcss',       // fast CSS minification
+    minify: 'terser',                // advanced JS minification
+    terserOptions: {
+      compress: {
+        drop_console: true,          // strip console.log in prod
+        drop_debugger: true,
+        passes: 2,
+      },
+      format: { comments: false },
+    },
+
+    /* ── Code splitting ───────────────────────────────── */
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
@@ -19,7 +34,19 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         careers: resolve(__dirname, 'careers.html'),
       },
+      output: {
+        manualChunks: {
+          vendor: [],                // reserved for future deps
+        },
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+      },
     },
+
+    /* ── Reporting ────────────────────────────────────── */
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 150,      // warn if chunk > 150 KB
   },
   server: {
     open: true,
