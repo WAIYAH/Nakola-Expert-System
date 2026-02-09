@@ -1,0 +1,1590 @@
+# 🚀 NAKOLA EXPERT SYSTEMS — COMPREHENSIVE STRATEGIC BLUEPRINT v2.0
+
+> **Last Updated:** February 2026
+> **Status:** EXECUTION-READY
+> **Purpose:** Establish a globally competitive digital foundation that converts qualified visitors into premium clients, while positioning Nakola Expert Systems as a trusted African-global technology partner.
+
+---
+
+## 📋 EXECUTIVE SUMMARY
+
+This blueprint outlines the complete transformation of Nakola Expert Systems' digital presence into a world-class, client-converting, technically excellent platform. It bridges strategic vision with tactical execution details, ensuring every design and development decision serves business growth objectives.
+
+---
+
+## A. BUSINESS CONTEXT & COMPETITIVE ANALYSIS
+
+### 1.1 Target Client Personas (Priority Order)
+
+#### Persona 1: High-Growth African Startups
+
+- **Pain Points:** Speed to market, technical debt accumulation, scaling challenges
+- **Decision Makers:** Founders (70%), CTOs (25%), Product Leads (5%)
+- **Key Needs:** MVP acceleration, scalable architecture, investor-ready products
+- **Budget Range:** $10K – $50K per project
+- **Success Metrics:** Time to launch, user growth, funding readiness
+
+#### Persona 2: SMEs (Regional & Pan-African)
+
+- **Pain Points:** Legacy systems, operational inefficiencies, unclear tech ROI
+- **Decision Makers:** CEOs (50%), COOs (30%), IT Managers (20%)
+- **Key Needs:** Digital transformation, system integration, ongoing support
+- **Budget Range:** $20K – $100K+
+- **Success Metrics:** Process efficiency, cost reduction, revenue growth
+
+#### Persona 3: Enterprises & Government
+
+- **Pain Points:** Risk mitigation, compliance, vendor reliability, security
+- **Decision Makers:** CIOs (40%), Procurement (30%), Program Managers (30%)
+- **Key Needs:** Complex integrations, SLAs, governance, long-term support
+- **Budget Range:** $100K – $500K+
+- **Success Metrics:** Risk reduction, compliance adherence, stakeholder satisfaction
+
+#### Persona 4: International Tech Partners
+
+- **Pain Points:** Need reliable African delivery partner with global standards
+- **Decision Makers:** Partner Managers (50%), CTOs (30%), Business Development (20%)
+- **Key Needs:** Quality assurance, communication standards, domain expertise
+- **Budget Range:** Project-based or retainer
+- **Success Metrics:** Delivery quality, communication effectiveness, client satisfaction
+
+---
+
+### 1.2 Competitive Landscape Analysis
+
+#### Global Competitors (Benchmarks)
+
+- **Andela:** Strong brand, excellent talent positioning, but less founder-focused
+- **ThoughtWorks:** Premium positioning, strong enterprise focus, higher price point
+- **And Digital:** Modern approach, good visual design, less African context
+- **Shopify Partners:** Clear service packaging, strong case studies
+
+#### Competitive Advantages to Leverage
+
+- **Local Market Understanding:** Deep knowledge of African business contexts
+- **Agility:** Founder-led means faster decisions and personalized service
+- **Price-to-Value Ratio:** Global quality at African-market-informed pricing
+- **Vertical Integration:** Strategy through implementation to support
+
+#### Market Gaps to Exploit
+
+- **Clear Pricing Transparency:** Most competitors hide pricing
+- **African Success Stories:** Limited case studies from African context
+- **Startup-Friendly Processes:** Flexible engagement models for early-stage
+- **Technical Thought Leadership:** Localized content for African tech ecosystem
+
+---
+
+### 1.3 Unique Value Proposition
+
+**Primary UVP:** *"African-grounded technical expertise delivering global-standard digital solutions that drive measurable business outcomes."*
+
+**Supporting Proof Points:**
+
+- Founder-led senior technical oversight on every project
+- Hybrid agile methodology balancing speed with quality
+- Outcome-based pricing alignment with client success
+- Pan-African operational experience across 8+ countries
+
+---
+
+### 1.4 Conversion Funnel Architecture
+
+```
+VISITOR JOURNEY MAP:
+[Entry Point] → [Trust Signal] → [Value Confirmation] → [Action] → [Nurture]
+
+1. Entry (0-3 seconds):
+   - Source: Organic search (40%), LinkedIn (30%), Referral (20%), Direct (10%)
+   - First Impression: Design quality, clarity of offering, social proof
+
+2. Trust Building (3-30 seconds):
+   - Visual Indicators: Professional design, client logos, certifications
+   - Content Indicators: Clear value prop, social proof, credibility markers
+   - Technical Indicators: Fast loading, mobile optimization, security signals
+
+3. Value Exploration (30 seconds - 2 minutes):
+   - Services: Clear problem-solution-outcome framing
+   - Case Studies: Measurable results with client context
+   - Process: Transparent methodology and collaboration approach
+
+4. Decision Point (2-3 minutes):
+   - CTA Match: Appropriate action for visitor intent
+   - Risk Reduction: Guarantees, testimonials, process clarity
+   - Urgency/Scarcity: Limited capacity indicators
+
+5. Conversion (3+ minutes):
+   - Form Completion: Minimized fields, clear value exchange
+   - Confirmation: Immediate acknowledgement, next steps
+   - Follow-up: Automated + personal touchpoints
+```
+
+---
+
+## B. DESIGN PHILOSOPHY: "AFRICAN GLOBAL TECH"
+
+### 2.1 Visual Identity Framework
+
+**Core Design Principles:**
+
+- **Confident Modernity:** Clean, spacious, intentional — no clutter
+- **Technical Sophistication:** Subtle tech cues without geekiness
+- **Professional Warmth:** Approachable expertise, not corporate coldness
+- **African Contextualization:** Colors, patterns, imagery reflecting African innovation
+
+**Design Mood Keywords:**
+Premium, Trustworthy, Innovative, Precise, Grounded, Forward-thinking
+
+---
+
+### 2.2 Complete Color System
+
+#### Primary Palette
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| Trust Blue | `#2563eb` | Primary action, headlines, key accents |
+| Innovation Purple | `#7c3aed` | Secondary actions, innovation highlights |
+| Growth Green | `#059669` | Success indicators, positive metrics |
+| Professional Gray | `#4b5563` | Body text, borders, neutral elements |
+
+#### Secondary / Accent Palette
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| Accent Gold | `#d97706` | Premium offerings, excellence indicators |
+| Tech Teal | `#0d9488` | Technology references, code elements |
+| Warning Amber | `#f59e0b` | Cautions, important notices |
+| Error Red | `#dc2626` | Form errors, critical alerts |
+
+#### Background Palette
+
+**Light Mode:**
+
+| Token | Hex |
+|-------|-----|
+| Primary BG | `#ffffff` |
+| Secondary BG | `#f9fafb` |
+| Tertiary BG | `#f3f4f6` |
+
+**Dark Mode:**
+
+| Token | Hex |
+|-------|-----|
+| Primary BG | `#111827` |
+| Secondary BG | `#1f2937` |
+| Tertiary BG | `#374151` |
+
+#### Gradient Library
+
+| Name | Value |
+|------|-------|
+| Primary Gradient | `linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)` |
+| Success Gradient | `linear-gradient(135deg, #059669 0%, #10b981 100%)` |
+| Premium Gradient | `linear-gradient(135deg, #d97706 0%, #f59e0b 100%)` |
+
+---
+
+### 2.3 Typography System
+
+#### Font Stack
+
+```css
+--font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+--font-body: 'Source Sans Pro', 'Segoe UI', Roboto, sans-serif;
+--font-mono: 'JetBrains Mono', 'Courier New', monospace;
+```
+
+#### Type Scale (Mobile First)
+
+```
+Headings:
+  h1: 2rem (32px) → 3.5rem (56px) desktop
+  h2: 1.75rem (28px) → 2.5rem (40px) desktop
+  h3: 1.5rem (24px) → 2rem (32px) desktop
+  h4: 1.25rem (20px) → 1.5rem (24px) desktop
+  h5: 1.125rem (18px) → 1.25rem (20px) desktop
+  h6: 1rem (16px) → 1.125rem (18px) desktop
+
+Body:
+  Large:       1.125rem (18px) → 1.25rem (20px) desktop
+  Base:        1rem (16px) → 1.125rem (18px) desktop
+  Small:       0.875rem (14px) → 1rem (16px) desktop
+  Extra Small: 0.75rem (12px) → 0.875rem (14px) desktop
+```
+
+#### Type Pairing Rules
+
+| Context | Heading | Body |
+|---------|---------|------|
+| Hero Sections | h1 | body-large |
+| Section Headers | h2 | body-base |
+| Card Headers | h3 | body-small |
+| Testimonials | h4 | body-large (italic) |
+| Metrics | h2 | body-small (uppercase label) |
+
+---
+
+### 2.4 Spacing & Layout System
+
+**Base Unit: 4px**
+
+```css
+--space-0:  0;
+--space-1:  0.25rem;   /* 4px   */
+--space-2:  0.5rem;    /* 8px   */
+--space-3:  0.75rem;   /* 12px  */
+--space-4:  1rem;      /* 16px  */
+--space-5:  1.25rem;   /* 20px  */
+--space-6:  1.5rem;    /* 24px  */
+--space-8:  2rem;      /* 32px  */
+--space-10: 2.5rem;    /* 40px  */
+--space-12: 3rem;      /* 48px  */
+--space-16: 4rem;      /* 64px  */
+--space-20: 5rem;      /* 80px  */
+--space-24: 6rem;      /* 96px  */
+--space-32: 8rem;      /* 128px */
+```
+
+#### Layout Grid
+
+| Breakpoint | Columns | Padding |
+|------------|---------|---------|
+| Mobile | 1 column | 16px |
+| Tablet | 2 columns | 24px |
+| Desktop | 12-column grid | 32px |
+| Wide Desktop | 12-column grid | 5% |
+
+#### Container Sizes
+
+```css
+--container-sm:  640px;
+--container-md:  768px;
+--container-lg:  1024px;
+--container-xl:  1280px;
+--container-2xl: 1536px;
+```
+
+---
+
+### 2.5 Imagery & Visual Asset Strategy
+
+#### Photography Style
+
+- **Authentic over Stock:** Real team, real work environments
+- **African Context:** Local settings, diverse team representation
+- **Technical Focus:** Workspaces, collaboration, problem-solving
+- **Outcome Visualization:** Before/after, process flows, architecture diagrams
+
+#### Icon System
+
+- **Library:** Lucide Icons (consistent stroke width: 2px)
+- **Usage Rules:**
+  - Action icons: 20px
+  - Feature icons: 24px
+  - Decorative icons: 32px+
+  - Monochrome or two-color max
+
+#### Illustration Style
+
+- **Custom Technical Diagrams:** Architecture flows, process maps
+- **Minimal Abstract Shapes:** Geometric, connected dots, circuit patterns
+- **Color Usage:** Primary palette only, consistent styling
+
+---
+
+## C. TECHNICAL ARCHITECTURE DECISIONS
+
+### 3.1 Technology Stack Justification
+
+#### Core Stack
+
+| Technology | Role |
+|------------|------|
+| **HTML5** | Semantic structure, accessibility foundation |
+| **Tailwind CSS** | Utility-first with custom design tokens |
+| **Vanilla JavaScript (ES6+)** | No framework lock-in, optimal performance |
+| **Vite Build Tool** | Fast development, optimized production output |
+
+#### Why This Stack
+
+- **Performance First:** Minimal runtime overhead
+- **Maintainability:** Clear separation, easy onboarding
+- **Scalability:** Component-based without framework complexity
+- **Cost Effective:** No licensing, minimal hosting requirements
+
+---
+
+### 3.2 File Structure Architecture
+
+```
+/src
+│
+├── /assets
+│   ├── /fonts          # Custom fonts (Inter, Source Sans Pro)
+│   ├── /icons          # SVG icons (Lucide, custom)
+│   ├── /images         # Optimized images (WebP + fallbacks)
+│   └── /documents      # PDFs, case studies, resources
+│
+├── /components
+│   ├── /atoms          # Buttons, inputs, badges, icons
+│   ├── /molecules      # Cards, form groups, testimonial blocks
+│   ├── /organisms      # Header, footer, navigation, hero sections
+│   └── /templates      # Page layouts, content frameworks
+│
+├── /layouts
+│   ├── base.html       # Base template with head/body structure
+│   ├── default.html    # Default page layout
+│   └── /partials       # Reusable layout partials
+│
+├── /pages
+│   ├── index.html      # Home page
+│   ├── about.html      # About page
+│   ├── services.html   # Services page
+│   ├── work.html       # Case studies
+│   ├── insights.html   # Blog/thought leadership
+│   ├── contact.html    # Contact page
+│   └── careers.html    # Careers page
+│
+├── /styles
+│   ├── main.css        # Tailwind imports, custom CSS
+│   ├── components.css  # Component-specific styles
+│   └── utilities.css   # Custom utility classes
+│
+├── /scripts
+│   ├── /modules        # ES6 modules (navigation, forms, animations)
+│   ├── /utils          # Helper functions, validators
+│   └── main.js         # Main application script
+│
+├── /data               # JSON data (testimonials, case studies, team)
+└── /public             # Built assets for production
+```
+
+---
+
+### 3.3 Component Architecture (Atomic Design)
+
+#### Atoms (Basic Building Blocks)
+
+```
+Button System
+  - ButtonPrimary (solid, gradient)
+  - ButtonSecondary (outline)
+  - ButtonText (text-only)
+  - ButtonIcon (icon + text)
+
+Form Elements
+  - InputText (with validation states)
+  - InputSelect
+  - TextArea
+  - Checkbox, Radio
+
+Typography
+  - Heading (h1-h6 with consistent styling)
+  - BodyText (paragraph, lead, small)
+  - Label, Caption
+
+Icons & Graphics
+  - Icon (size, color variants)
+  - Badge (status, category)
+  - Avatar (team, client logos)
+```
+
+#### Molecules (Combinations of Atoms)
+
+```
+Navigation
+  - NavItem (link + icon)
+  - NavDropdown (trigger + menu)
+
+Content Blocks
+  - FeatureCard (icon + heading + text)
+  - TestimonialCard (avatar + quote + author)
+  - StatsCard (number + label + trend)
+
+Form Groups
+  - FormField (label + input + error)
+  - FormGroup (multiple related fields)
+
+Interactive Elements
+  - AccordionItem (trigger + content)
+  - TabItem (trigger + panel)
+```
+
+#### Organisms (Complete Sections)
+
+```
+Layout Organisms
+  - Header (logo + navigation + CTA)
+  - Footer (columns, copyright, social)
+  - HeroSection (heading, subheading, CTAs, visual)
+
+Content Organisms
+  - TestimonialSection (heading + card grid)
+  - CaseStudyGrid (filter + cards)
+  - TeamGrid (bios + roles)
+
+Interactive Organisms
+  - ContactForm (all fields + submission)
+  - ServiceSelector (interactive wizard)
+  - PricingTable (comparison matrix)
+```
+
+---
+
+### 3.4 State Management Strategy
+
+#### Frontend-Only State Approach
+
+```javascript
+// 1. URL State (for filtering, pagination)
+// Example: /services?type=development&budget=50k
+
+// 2. DOM State (for UI interactions)
+// - Active navigation item
+// - Open/closed accordions
+// - Form validation states
+
+// 3. LocalStorage (for user preferences)
+// - Theme preference (light/dark)
+// - Form draft saving
+// - Viewed case studies
+
+// 4. Session State (temporary)
+// - Selected service packages
+// - Consultation booking details
+```
+
+#### State Implementation Pattern
+
+```javascript
+// Module-based state management
+const FormState = {
+  values: {},
+  errors: {},
+  touched: {},
+
+  update(field, value) {
+    this.values[field] = value;
+    this.validate(field);
+    this.render(field);
+  },
+
+  validate(field) {
+    // Validation logic
+  },
+
+  render(field) {
+    // Update UI
+  }
+};
+```
+
+---
+
+### 3.5 Performance Optimization Roadmap
+
+#### Critical Path Optimization
+
+- Inline Critical CSS (above-the-fold styles)
+- Preload Key Resources (fonts, hero images)
+- Lazy Load Everything Else (images, components, scripts)
+
+#### Asset Optimization
+
+```
+Image Strategy
+  - WebP format with JPEG/PNG fallbacks
+  - Responsive images (srcset attribute)
+  - Lazy loading (loading="lazy")
+  - Compression (85% quality target)
+
+Font Strategy
+  - WOFF2 format only
+  - Font display: swap
+  - Subset for required characters
+  - Preload critical fonts
+
+JavaScript Strategy
+  - ES6 modules (tree-shakeable)
+  - Code splitting by route
+  - Minification + compression
+  - Defer non-critical scripts
+```
+
+#### Caching Strategy
+
+- Service Worker for offline capability
+- Cache static assets (CSS, JS, fonts)
+- Stale-while-revalidate for dynamic content
+
+---
+
+### 3.6 SEO Architecture Implementation
+
+#### Technical SEO Foundation
+
+```html
+<!-- Semantic HTML5 Structure -->
+<header role="banner">
+<nav role="navigation">
+<main role="main">
+<article>
+<section aria-labelledby="section-heading">
+<aside role="complementary">
+<footer role="contentinfo">
+```
+
+#### Meta Strategy Per Page Type
+
+| Page | Title | Description |
+|------|-------|-------------|
+| **Home** | Nakola Expert Systems \| African-Global Technology Solutions | Transform your business with expert software engineering. African innovation meets global standards for startups, SMEs, and enterprises. |
+| **Services** | Technology Services \| Custom Software Development | End-to-end technology services from strategy to support. MVP development, system modernization, and ongoing technical partnership. |
+| **Case Studies** | Client Success Stories \| Nakola Expert Systems Portfolio | See how we helped businesses achieve measurable results through technology. Real projects, real metrics, real impact. |
+
+#### JSON-LD Structured Data
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nakola Expert Systems",
+  "description": "African-grounded technical expertise delivering global-standard digital solutions",
+  "areaServed": ["KE", "UG", "TZ", "RW", "Global"],
+  "serviceType": ["Software Development", "Technical Consulting", "Digital Transformation"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Kenya"
+  }
+}
+```
+
+#### Sitemap Strategy
+
+```xml
+<!-- Auto-generated sitemap.xml -->
+<!-- Priority:
+  Home:         1.0
+  Services:     0.9
+  Case Studies: 0.8
+  Contact:      0.7
+  Blog Posts:   0.6
+  Other pages:  0.5
+-->
+<!-- Update frequency: Weekly for blog, monthly for others -->
+```
+
+---
+
+## D. INFORMATION ARCHITECTURE
+
+### 4.1 Complete Page Architecture
+
+#### Core Pages (Navigation Primary)
+
+**Home (`/`)**
+- Hero with primary value proposition
+- Trust indicators (client logos, certifications)
+- Service highlights with outcomes
+- Featured case study
+- Primary CTAs (Get Quote, Book Consultation)
+
+**Services (`/services`)**
+- Service categories (Strategy, Development, Support)
+- Detailed service offerings with pricing indicators
+- Process visualization (how we work)
+- Technology stack showcase
+- CTA: Get Custom Proposal
+
+**Our Work (`/work`)**
+- Case study grid with filtering
+- Project details: Challenge → Solution → Results
+- Client testimonials integrated
+- Metrics emphasis (ROI, efficiency gains)
+- CTA: Start Similar Project
+
+**About (`/about`)**
+- Company story and mission
+- Values and principles
+- Team showcase with bios
+- Company culture highlights
+- CTA: Join Our Team, Partner With Us
+
+**Insights (`/insights`)**
+- Blog/articles on technology trends
+- Case study deep dives
+- Technical tutorials
+- Industry analysis
+- Newsletter signup
+- CTA: Subscribe, Read More
+
+**Contact (`/contact`)**
+- Structured contact forms by inquiry type
+- Direct contact information
+- Response time promise
+- Location/map integration
+- CTA: Send Message, Call Now
+
+**Careers (`/careers`)**
+- Company culture showcase
+- Open positions with details
+- Application process
+- Employee testimonials
+- CTA: Apply Now, Learn More
+
+#### Utility Pages (Footer / Legal)
+
+- Privacy Policy
+- Terms of Service
+- Cookie Policy
+- Sitemap
+- 404 Page (helpful, with navigation)
+
+---
+
+### 4.2 Content Hierarchy Strategy
+
+#### For Skimmers (80% of Visitors)
+
+```
+[Page Load]
+  ↓ Hero Section (Headline + Subhead + CTA)
+  ↓ Section Headers (h2 with clear benefit)
+  ↓ Bulleted Lists / Feature Grids
+  ↓ Visual Elements (Images, Icons, Charts)
+  ↓ Testimonials / Proof Points
+  ↓ Final CTA
+```
+
+#### For Deep Readers (20% of Visitors)
+
+```
+[All Skimmer Content]
+  ↓ Detailed Paragraph Explanations
+  ↓ Process Diagrams / Flowcharts
+  ↓ Case Study Details
+  ↓ Technical Specifications
+  ↓ FAQ Section
+  ↓ Additional Resources
+```
+
+---
+
+### 4.3 Mobile Navigation Strategy
+
+#### Primary Mobile Navigation
+
+```html
+<!-- Sticky Header (always visible) -->
+<header class="sticky top-0">
+  <div class="logo">NES</div>
+  <button class="menu-toggle">☰</button>
+</header>
+
+<!-- Slide-out Navigation -->
+<nav class="mobile-nav">
+  <div class="nav-header">
+    <div class="logo">Nakola Expert Systems</div>
+    <button class="close-menu">×</button>
+  </div>
+
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/work">Our Work</a>
+    <a href="/about">About</a>
+    <a href="/insights">Insights</a>
+  </div>
+
+  <div class="nav-cta">
+    <a href="/contact" class="btn-primary">Get in Touch</a>
+    <a href="tel:+254XXXXXXXXX" class="btn-secondary">Call Now</a>
+  </div>
+</nav>
+```
+
+#### Mobile-Specific Considerations
+
+- **CTAs Always Visible:** Floating action button on interior pages
+- **Touch Targets:** Minimum 44×44px for all interactive elements
+- **Form Optimization:** Fewer fields, larger inputs, appropriate keyboards
+- **Image Optimization:** Smaller file sizes, priority loading
+- **Reduced Animations:** Respect `prefers-reduced-motion`
+
+---
+
+## E. UX & CONVERSION STRATEGY
+
+### 5.1 Trust Signal Placement Matrix
+
+#### Above the Fold (Immediate Trust)
+
+- **Visual Design Quality:** Premium aesthetics signal professional capability
+- **Client Logos:** "Trusted by" section with recognizable brands
+- **Certifications Badges:** Relevant industry certifications
+- **Social Proof:** Brief testimonial or star rating
+
+#### During Exploration (Ongoing Validation)
+
+- **Case Study Metrics:** Real numbers showing results
+- **Process Transparency:** Clear methodology visualization
+- **Team Credentials:** Expertise demonstration
+- **Guarantees / Warranties:** Risk reduction statements
+
+#### At Decision Point (Final Confidence)
+
+- **Detailed Testimonials:** Client stories with photos
+- **Pricing Transparency:** Clear value proposition
+- **Response Time Promise:** "We'll reply within X hours"
+- **Contract Samples:** Show professional engagement process
+
+---
+
+### 5.2 CTA Strategy by Visitor Intent
+
+| Intent | Primary CTA | Form Fields | Follow-up | Placement |
+|--------|------------|-------------|-----------|-----------|
+| Quick Price Check | "Get Custom Quote" | Name, Email, Project Type, Budget Range | Immediate email with pricing guide | Hero, services, case studies |
+| Complex Problem Solving | "Book Strategy Session" | Name, Email, Company, Role, Challenge Description | Calendly booking for 45-min consultation | Service detail, complex case studies |
+| Technical Evaluation | "Schedule Technical Review" | Name, Email, GitHub/Portfolio, Questions | Technical lead contact within 24h | Blog posts, architecture case studies |
+| General Inquiry | "Send Message" | Name, Email, Message | Response within 4 business hours | Contact page, footer, sidebars |
+
+---
+
+### 5.3 Form Optimization Strategy
+
+#### Quote Request Form (3-Step Progressive)
+
+```
+Step 1: Basic Info (3 fields)
+  - Name (text)
+  - Email (email)
+  - Company (text, optional)
+
+Step 2: Project Details (conditional fields)
+  - Project Type (select: Web App, Mobile, E-commerce, etc.)
+  - Budget Range (select: <$10K, $10K-50K, $50K-100K, $100K+)
+  - Timeline (select: ASAP, 1-3 months, 3-6 months, Flexible)
+
+Step 3: Additional Details (optional)
+  - Description (textarea, optional)
+  - Reference (how did you hear about us?)
+```
+
+#### Form UX Best Practices
+
+- **Inline Validation:** Real-time feedback on field entry
+- **Progress Indicators:** Show steps for multi-step forms
+- **Smart Defaults:** Pre-fill where possible (country, phone code)
+- **Error Prevention:** Clear labels, examples, helper text
+- **Save & Continue:** LocalStorage draft saving
+
+---
+
+### 5.4 Objection Handling Through Design
+
+| Objection | Design Response | Content | Visual | Alternative |
+|-----------|----------------|---------|--------|-------------|
+| "Too Expensive" | Value-first messaging, ROI calculators | Case studies showing 3-5x ROI | Investment vs. return graphics | Flexible pricing tiers, payment plans |
+| "Not Enough Experience" | Social proof prominence | Detailed case studies with metrics | Client logos, testimonials with photos | Free discovery session |
+| "Process Uncertainty" | Transparent process visualization | Step-by-step methodology | Timeline graphics, milestone markers | Sample project plan |
+| "Location Concerns" | "Global Remote Delivery" messaging | Client locations map, timezone flexibility | World map with client markers | Video intro calls |
+
+---
+
+### 5.5 Post-Conversion Experience
+
+#### Immediate Response (0-5 minutes)
+
+- **On-screen Confirmation:** Clear success message
+- **Email Auto-responder:**
+  - Thank you message
+  - What happens next
+  - Expected response time
+  - Additional resources
+- **Optional:** Text message acknowledgment (for high-value leads)
+
+#### Follow-up Sequence (First 72 hours)
+
+```
+Hour  1:  Auto-responder email
+Hour  4:  Personal acknowledgment from team member
+Hour 24:  Additional relevant resources based on inquiry type
+Hour 48:  Follow-up if no response
+Hour 72:  Final follow-up or closure
+```
+
+#### Lead Qualification & Routing
+
+```javascript
+// Lead Scoring Algorithm
+const leadScore = {
+  budget:   calculateBudgetScore(formData.budget),
+  timeline: calculateTimelineScore(formData.timeline),
+  fit:      calculateServiceFitScore(formData.projectType),
+  source:   calculateSourceScore(formData.reference)
+};
+
+// Routing Logic
+if (leadScore > 80) routeToFounder();
+else if (leadScore > 60) routeToSeniorEngineer();
+else routeToBusinessDevelopment();
+```
+
+---
+
+## F. IMPLEMENTATION ROADMAP
+
+### 6.1 Phase 1: Foundation & Design System (Week 1-2)
+
+#### Week 1.1: Project Setup & Architecture
+
+- [ ] Initialize Git repository
+- [ ] Set up Vite + Tailwind CSS
+- [ ] Configure development environment
+- [ ] Create file structure
+- [ ] Set up basic build pipeline
+- [ ] Implement design tokens (colors, typography, spacing)
+- [ ] Create base CSS with custom properties
+- [ ] Set up Tailwind configuration
+- [ ] Create utility classes
+- [ ] Build atomic components (buttons, inputs, typography)
+- [ ] Create molecule components (cards, form groups)
+- [ ] Implement dark/light theme system
+- [ ] Set up component documentation
+
+#### Week 1.2: Global Components
+
+- [ ] Build responsive header component
+- [ ] Implement mobile navigation
+- [ ] Create footer component
+- [ ] Add social media integration
+- [ ] Create layout templates
+- [ ] Implement grid system
+- [ ] Build hero section component
+- [ ] Create section wrapper components
+- [ ] Implement utility scripts
+- [ ] Set up form validation system
+- [ ] Create animation utilities
+- [ ] Performance optimization foundation
+
+**Phase 1 Deliverables:**
+- Complete design system
+- Global components (header, footer, navigation)
+- Base templates and layouts
+- Utility functions and helpers
+- Development environment ready
+
+**Phase 1 Quality Gates:**
+- All components pass accessibility check
+- Design system consistency verified
+- Mobile responsiveness confirmed
+- Performance budget met (LCP < 2.5s)
+
+---
+
+### 6.2 Phase 2: Core Conversion Pages (Week 3-4)
+
+#### Week 2.1: Home Page
+
+- [ ] Hero section with primary CTAs
+- [ ] Trust indicators section (client logos, certifications)
+- [ ] Value proposition section
+- [ ] Services overview section
+- [ ] Featured case study component
+- [ ] Testimonial carousel
+- [ ] Process visualization section
+- [ ] Final CTA section
+- [ ] SEO optimization
+- [ ] Performance testing
+
+#### Week 2.2: Services & Contact Pages
+
+- [ ] Services landing page
+- [ ] Service category components
+- [ ] Pricing indicators
+- [ ] Contact page with form variations
+- [ ] Form validation and submission
+- [ ] Thank you page
+- [ ] Integration with calendaring
+- [ ] Email automation setup
+- [ ] Cross-page consistency check
+
+**Phase 2 Deliverables:**
+- Complete home page
+- Services overview page
+- Contact system with forms
+- Basic lead capture functionality
+
+**Phase 2 Quality Gates:**
+- Conversion paths clear and functional
+- Forms submit and process correctly
+- Mobile navigation optimized
+- SEO structure implemented
+
+---
+
+### 6.3 Phase 3: Proof & Credibility (Week 5-6)
+
+#### Week 3.1: Case Studies & About Pages
+
+- [ ] Case study grid with filtering
+- [ ] Individual case study template
+- [ ] Metrics visualization components
+- [ ] About page structure
+- [ ] Team showcase component
+- [ ] Company story timeline
+- [ ] Values and principles section
+- [ ] Integration with testimonials
+- [ ] Social proof enhancements
+
+#### Week 3.2: Insights & Additional Pages
+
+- [ ] Blog/insights listing page
+- [ ] Individual article template
+- [ ] Category filtering
+- [ ] Careers page structure
+- [ ] Application form
+- [ ] Culture showcase
+- [ ] Legal pages (privacy, terms)
+- [ ] 404 page
+- [ ] Sitemap generation
+
+**Phase 3 Deliverables:**
+- Complete case studies section
+- About page with team and story
+- Blog/insights foundation
+- Careers page
+- Legal pages
+
+**Phase 3 Quality Gates:**
+- All case studies follow consistent format
+- Team information complete and professional
+- Blog functionality working
+- Legal pages comprehensive
+
+---
+
+### 6.4 Phase 4: Polish & Optimization (Week 7)
+
+- [ ] Performance optimization audit
+- [ ] Image optimization batch process
+- [ ] Code splitting implementation
+- [ ] Accessibility audit and fixes
+- [ ] Cross-browser testing
+- [ ] Mobile device testing
+- [ ] SEO fine-tuning
+- [ ] Analytics implementation
+- [ ] Conversion tracking setup
+- [ ] Content review and refinement
+- [ ] Proofreading and error checking
+- [ ] Final responsive testing
+
+**Phase 4 Deliverables:**
+- Performance-optimized site
+- Accessibility compliant
+- SEO fully implemented
+- Analytics and tracking
+
+**Phase 4 Quality Gates:**
+- Lighthouse scores all > 90
+- WCAG 2.1 AA compliance
+- Cross-browser compatibility
+- Mobile performance optimized
+
+---
+
+### 6.5 Phase 5: Launch & Monitoring (Week 8)
+
+#### Pre-Launch Preparation
+
+- [ ] Final quality assurance
+- [ ] Production build optimization
+- [ ] Backup of current site
+- [ ] DNS configuration check
+- [ ] SSL certificate verification
+- [ ] Redirect setup (if changing domains)
+- [ ] Launch execution
+- [ ] Post-launch monitoring
+- [ ] Immediate issue response
+
+#### Post-Launch Week 1
+
+- [ ] Daily performance monitoring
+- [ ] Error tracking review
+- [ ] User behavior analysis
+- [ ] Conversion rate analysis
+- [ ] A/B test planning
+- [ ] First optimization iteration
+
+**Phase 5 Deliverables:**
+- Live, production website
+- Monitoring systems active
+- Analytics collecting data
+- Optimization backlog
+
+**Phase 5 Quality Gates:**
+- Site live and accessible
+- All forms functioning
+- Analytics tracking correctly
+- Performance maintained
+
+---
+
+## G. QUALITY & SUCCESS METRICS
+
+### 7.1 Performance Benchmarks (Non-Negotiable)
+
+#### Lighthouse Targets
+
+| Category | Target |
+|----------|--------|
+| Performance | 95+ |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+#### Core Web Vitals
+
+| Metric | Target |
+|--------|--------|
+| Largest Contentful Paint (LCP) | < 2.0 seconds |
+| First Input Delay (FID) | < 100 milliseconds |
+| Cumulative Layout Shift (CLS) | < 0.1 |
+| Time to Interactive (TTI) | < 3.5 seconds on 3G |
+
+#### Load Performance
+
+| Metric | Target |
+|--------|--------|
+| First Byte | < 200ms |
+| Speed Index | < 3.0 |
+| Total Blocking Time | < 200ms |
+| Total Page Weight | < 1.5MB |
+
+---
+
+### 7.2 Accessibility Standards (WCAG 2.1 AA)
+
+**Perceivable:**
+- Text alternatives for non-text content
+- Captions and alternatives for multimedia
+- Content can be presented in different ways
+- Content is easier to see and hear
+
+**Operable:**
+- All functionality available from keyboard
+- Enough time to read and use content
+- Content does not cause seizures
+- Navigation is clear and consistent
+
+**Understandable:**
+- Text is readable and understandable
+- Content appears and operates predictably
+- Input assistance is provided
+
+**Robust:**
+- Content is compatible with current and future tools
+
+---
+
+### 7.3 SEO Success Metrics
+
+#### Technical SEO
+
+- Valid HTML5 markup
+- Proper heading hierarchy
+- Semantic structure
+- JSON-LD structured data
+- XML sitemap
+- Robots.txt
+- Canonical tags
+
+#### Content SEO
+
+- Unique meta titles/descriptions per page
+- Target keyword incorporation
+- Internal linking structure
+- Image alt text optimization
+- Content freshness strategy
+
+#### Ranking Goals (3 Months)
+
+- Service keywords on page 1 Google Kenya
+- Brand name dominance
+- Local business listings
+- Featured snippets for key questions
+
+---
+
+### 7.4 Business & Conversion Metrics
+
+#### Lead Generation Targets
+
+| Metric | Target |
+|--------|--------|
+| Form Submission Rate | > 5% of visitors |
+| Contact Form Completion | > 80% of starts |
+| Consultation Booking Rate | > 30% of qualified leads |
+| Lead to Client Conversion | > 20% of consultations |
+
+#### Engagement Metrics
+
+| Metric | Target |
+|--------|--------|
+| Bounce Rate | < 40% |
+| Pages per Session | > 3 |
+| Average Session Duration | > 2 minutes |
+| Return Visitors | > 30% |
+
+#### Quality Signals
+
+- Mobile Traffic: > 60%
+- Organic Traffic Growth: > 20% month-over-month
+- Referral Traffic: Evidence of word-of-mouth
+- Social Shares: Content being shared
+
+---
+
+### 7.5 Technical Quality Metrics
+
+#### Code Quality
+
+- **Test Coverage:** Critical paths only (forms, navigation)
+- **Code Review:** All components reviewed
+- **Documentation:** Components, setup, deployment
+- **Dependencies:** Minimal, well-maintained
+
+#### Maintainability
+
+- **Component Reusability:** > 70% of components reusable
+- **CSS Specificity:** Low, predictable
+- **JavaScript Complexity:** Modular, simple functions
+- **Build Time:** < 30 seconds
+
+#### Security
+
+- **HTTPS Enforcement:** Always
+- **Form Security:** CSRF protection
+- **Dependency Security:** Regular updates
+- **Header Security:** Appropriate HTTP headers
+
+---
+
+### 7.6 Browser & Device Support Matrix
+
+#### Required Support
+
+| Browser | Requirement |
+|---------|-------------|
+| Chrome | Latest 2 versions (99% coverage) |
+| Firefox | Latest 2 versions (95% coverage) |
+| Safari | Latest 2 versions (90% coverage) |
+| Edge | Latest 2 versions (85% coverage) |
+
+#### Mobile Devices
+
+- **iOS Safari:** Latest 2 versions
+- **Android Chrome:** Latest 2 versions
+- **Screen Sizes:** 320px to 2560px width
+- **Touch Support:** All interactive elements
+
+#### Graceful Degradation
+
+- **JavaScript disabled:** Core content accessible
+- **CSS disabled:** Readable content structure
+- **Images disabled:** Alt text provides context
+- **Slow connections:** Content progressively enhances
+
+---
+
+## H. VISUAL DESIGN SPECIFICATIONS
+
+### 8.1 Complete Component Library
+
+#### Button System
+
+```css
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-secondary:hover {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+/* Size Variants */
+.btn-sm { padding: 8px 16px; font-size: 0.875rem; }
+.btn-lg { padding: 16px 32px; font-size: 1.125rem; }
+.btn-xl { padding: 20px 40px; font-size: 1.25rem; }
+
+/* State Variants */
+.btn-loading  { opacity: 0.7; cursor: wait; }
+.btn-disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-success  { background: #059669; }
+.btn-error    { background: #dc2626; }
+```
+
+#### Card System
+
+```css
+/* Base Card */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Variants */
+.card-elevated   { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+.card-bordered   { border: 1px solid #e5e7eb; }
+.card-interactive { cursor: pointer; }
+.card-featured   { border-left: 4px solid #2563eb; }
+
+/* Card Components */
+.card-header   { margin-bottom: 16px; }
+.card-title    { font-size: 1.25rem; font-weight: 600; }
+.card-subtitle { color: #6b7280; font-size: 0.875rem; }
+.card-body     { margin-bottom: 16px; }
+.card-footer   { margin-top: 16px; padding-top: 16px; border-top: 1px solid #f3f4f6; }
+```
+
+#### Form Elements
+
+```css
+/* Input Base */
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Input States */
+.input-error    { border-color: #dc2626; }
+.input-error:focus { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1); }
+.input-success  { border-color: #059669; }
+.input-disabled { background: #f9fafb; cursor: not-allowed; }
+
+/* Label */
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+.label-required::after {
+  content: " *";
+  color: #dc2626;
+}
+
+/* Helper Text */
+.helper-text { display: block; margin-top: 4px; font-size: 0.875rem; color: #6b7280; }
+.error-text  { color: #dc2626; font-size: 0.875rem; margin-top: 4px; }
+```
+
+---
+
+### 8.2 Animation & Interaction Specifications
+
+#### Animation Principles
+
+- **Purposeful:** Every animation serves a clear UX purpose
+- **Performance-First:** 60fps target, GPU-accelerated properties only
+- **Consistent:** Timing and easing consistent across site
+- **Accessible:** Respects `prefers-reduced-motion`
+
+#### Timing & Easing
+
+```css
+--timing-fast: 150ms;
+--timing-base: 300ms;
+--timing-slow: 500ms;
+
+--ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+--ease-out:    cubic-bezier(0, 0, 0.2, 1);
+--ease-in:     cubic-bezier(0.4, 0, 1, 1);
+```
+
+#### Standard Animations
+
+```css
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Slide Up */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Stagger Children */
+.stagger > * {
+  animation: slideUp var(--timing-base) var(--ease-out) forwards;
+  opacity: 0;
+}
+.stagger > *:nth-child(1) { animation-delay: 100ms; }
+.stagger > *:nth-child(2) { animation-delay: 200ms; }
+.stagger > *:nth-child(3) { animation-delay: 300ms; }
+```
+
+#### Scroll-Triggered Animations
+
+```javascript
+// Using Intersection Observer
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
+```
+
+---
+
+### 8.3 Responsive Breakpoint Strategy
+
+#### Breakpoint Definitions
+
+```css
+/* Mobile First Approach */
+/* Base styles apply to mobile (320px+) */
+
+@media (min-width: 640px)  { /* Small tablets, large phones */ }
+@media (min-width: 768px)  { /* Tablets                    */ }
+@media (min-width: 1024px) { /* Desktop                    */ }
+@media (min-width: 1280px) { /* Large Desktop              */ }
+@media (min-width: 1536px) { /* Extra Large                */ }
+```
+
+#### Content Adaptation Rules
+
+```css
+/* Navigation */
+.nav-menu        { display: none; }      /* Mobile: hidden  */
+
+@media (min-width: 1024px) {
+  .nav-menu           { display: flex; }  /* Desktop: visible */
+  .mobile-menu-toggle { display: none; }  /* Desktop: hidden  */
+}
+
+/* Grid */
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+
+@media (min-width: 768px)  { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .card-grid { grid-template-columns: repeat(3, 1fr); } }
+```
+
+---
+
+## I. CONTENT STRATEGY & MESSAGING
+
+### 9.1 Core Messaging Framework
+
+#### Primary Value Proposition
+
+**Headline Options (A/B Test):**
+
+1. "African Innovation, Global Standards: Technology Solutions That Deliver"
+2. "Transform Your Business with Expert Software Engineering"
+3. "Build, Scale, Innovate — With Technical Partners You Can Trust"
+4. "From Strategy to Support: End-to-End Technology Partnership"
+
+**Sub-headline Options:**
+
+1. "We help startups, SMEs, and enterprises across Africa and globally achieve measurable business outcomes through expert technology solutions."
+2. "Founder-led technical expertise delivering scalable, secure, and innovative software solutions tailored to your business goals."
+
+#### Service Messaging Template
+
+```
+[Service Name]
+[Headline: Clear benefit statement]
+
+Problem: What pain point this solves
+  "Many [target persona] struggle with [specific problem]
+   which leads to [negative consequence]."
+
+Solution: How we solve it
+  "We provide [specific solution] that [how it works]
+   to deliver [key benefit]."
+
+Outcome: Measurable results
+  "Typically results in [quantifiable outcome 1],
+   [quantifiable outcome 2], and [quantifiable outcome 3]."
+
+Proof: Supporting evidence
+  "As seen in our work with [Client Name] where we
+   achieved [specific metric improvement]."
+```
+
+#### Industry-Specific Messaging
+
+| Persona | Focus | Language |
+|---------|-------|----------|
+| Startups | Speed to market, investor readiness, scalable architecture | Agile, lean, MVP, product-market fit, growth |
+| SMEs | ROI, efficiency, digital transformation, competitive advantage | Business outcomes, process improvement, cost reduction |
+| Enterprises | Risk mitigation, compliance, scalability, integration | Governance, security, SLA, enterprise architecture |
+| International Partners | Quality assurance, communication, reliability, expertise | Nearshore, distributed teams, global standards |
+
+---
+
+### 9.2 Call-to-Action Language Matrix
+
+#### By Funnel Stage
+
+| Stage | CTA Options |
+|-------|-------------|
+| Awareness | "Learn More", "Explore Services", "See How It Works" |
+| Consideration | "Get Custom Quote", "Compare Plans", "View Case Studies", "Download Guide" |
+| Decision | "Start Project", "Book Consultation", "Schedule Demo", "Get Proposal" |
+| Conversion | "Get Started Now", "Begin Your Project", "Secure Your Spot" |
+
+#### By Visitor Intent
+
+| Intent | CTA Options |
+|--------|-------------|
+| Price Sensitive | "Get Free Quote", "See Pricing", "Calculate Cost" |
+| Research Focused | "Download Whitepaper", "Read Case Study", "Watch Demo" |
+| Ready to Buy | "Start Today", "Book Discovery Call", "Get Proposal" |
+| Technical Evaluation | "Technical Review", "Architecture Assessment", "Code Audit" |
+
+---
+
+### 9.3 Social Proof & Trust Content
+
+#### Testimonial Format
+
+```
+[Client Photo/Logo]
+"[Direct quote focusing on results, not just satisfaction]"
+— [Client Name], [Position], [Company]
+  [Optional: Metric achieved, e.g., "Resulted in 40% faster processing"]
+```
+
+#### Case Study Structure
+
+1. **Client Background** (2-3 sentences)
+2. **The Challenge** (Specific problems faced)
+3. **Our Solution** (What we built / how we approached)
+4. **The Results** (Quantifiable metrics + qualitative benefits)
+5. **Client Testimonial** (Direct quote)
+6. **Technologies Used** (Relevant tech stack)
+7. **Project Details** (Timeline, team size, budget range)
+
+#### Metrics to Highlight
+
+| Category | Example Metrics |
+|----------|----------------|
+| Efficiency | % time saved, % cost reduction, % process improvement |
+| Revenue | % revenue increase, $ new revenue, % conversion improvement |
+| Growth | % user growth, % market share, X new customers |
+| Quality | % defect reduction, % satisfaction increase, % retention improvement |
+
+---
+
+### 9.4 Content Types & Calendar
+
+#### Immediate Launch Content
+
+- [ ] Hero headline + subheadline
+- [ ] Value proposition statements (3-4)
+- [ ] Service overview blurbs (all services)
+- [ ] Client testimonials (minimum 3)
+- [ ] Service descriptions (detailed)
+- [ ] Process explanation
+- [ ] Technology stack lists
+- [ ] Pricing indications
+- [ ] Company story
+- [ ] Mission / vision / values
+- [ ] Team bios (founder at minimum)
+- [ ] Company principles
+- [ ] Minimum 2 detailed case studies
+- [ ] 3-5 additional project highlights
+
+#### Phase 2 Content (First 30 Days)
+
+- [ ] 3-5 foundational articles
+- [ ] Industry analysis pieces
+- [ ] Technical tutorials
+- [ ] Case study deep dives
+- [ ] FAQ section
+- [ ] Resource library
+- [ ] Tool recommendations
+- [ ] Partnership information
+
+#### Ongoing Content Strategy
+
+| Cadence | Items |
+|---------|-------|
+| Weekly | 1 technical blog post, 2-3 social media updates, newsletter (if applicable) |
+| Monthly | 1 case study highlight, 1 industry analysis, content refresh review |
+| Quarterly | Website content audit, service offering review, success metrics update |
+
+---
+
+## APPROVAL CHECKLIST
+
+Before any code changes begin:
+
+- [ ] Blueprint reviewed and approved
+- [ ] Design philosophy confirmed
+- [ ] Service positioning validated
+- [ ] Conversion funnel agreed
+- [ ] Quality targets accepted
+
+---
+
+> **Next Step:** Confirm approval to proceed with **Phase 1 — Foundation & Design System**.
