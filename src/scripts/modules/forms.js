@@ -5,9 +5,11 @@
 
 /**
  * Auto-initializes all forms with `[data-validate]`.
+ * Also sets up multi-step forms with `[data-multistep]`.
  */
 export function initForms() {
   document.querySelectorAll('form[data-validate]').forEach(setupForm);
+  document.querySelectorAll('form[data-multistep]').forEach(setupMultistep);
 }
 
 /* ── Setup a single form ──────────────────────────────────── */
@@ -26,20 +28,90 @@ function setupForm(form) {
   // Submit handler
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    let isValid = true;
 
-    fields.forEach((field) => {
+    // For multistep, only validate current step's visible fields
+    const isMultistep = form.hasAttribute('data-multistep');
+    const fieldsToCheck = isMultistep
+      ? form.querySelector('.form-step:not(.hidden)')?.querySelectorAll('[data-rules]') || []
+      : fields;
+
+    let isValid = true;
+    fieldsToCheck.forEach((field) => {
       if (!validateField(field)) isValid = false;
     });
 
     if (!isValid) {
-      // Focus first error
       form.querySelector('.input-error')?.focus();
       return;
     }
 
     handleSubmit(form);
   });
+}
+
+/* ── Multi-step Form Logic ────────────────────────────────── */
+function setupMultistep(form) {
+  const steps     = form.querySelectorAll('.form-step');
+  const nextBtns  = form.querySelectorAll('[data-step-next]');
+  const prevBtns  = form.querySelectorAll('[data-step-prev]');
+  let currentStep = 1;
+
+  function showStep(n) {
+    steps.forEach((s) => {
+      const stepNum = parseInt(s.dataset.step, 10);
+      s.classList.toggle('hidden', stepNum !== n);
+    });
+
+    // Update progress indicators
+    document.querySelectorAll('[data-step-indicator]').forEach((ind) => {
+      const num = parseInt(ind.dataset.stepIndicator, 10);
+      ind.classList.remove('active', 'completed');
+      if (num === n) ind.classList.add('active');
+      if (num < n)  ind.classList.add('completed');
+    });
+
+    document.querySelectorAll('[data-step-line]').forEach((line) => {
+      const num = parseInt(line.dataset.stepLine, 10);
+      line.classList.remove('active', 'completed');
+      if (num < n)  line.classList.add('completed');
+      if (num === n - 1) line.classList.add('completed');
+    });
+
+    currentStep = n;
+
+    // Smooth scroll to form top
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Next buttons — validate current step before advancing
+  nextBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const currentStepEl = form.querySelector(`.form-step[data-step="${currentStep}"]`);
+      const fields = currentStepEl?.querySelectorAll('[data-rules]') || [];
+      let isValid = true;
+
+      fields.forEach((field) => {
+        if (!validateField(field)) isValid = false;
+      });
+
+      if (!isValid) {
+        currentStepEl?.querySelector('.input-error')?.focus();
+        return;
+      }
+
+      showStep(currentStep + 1);
+    });
+  });
+
+  // Previous buttons
+  prevBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      showStep(currentStep - 1);
+    });
+  });
+
+  // Initialize step 1
+  showStep(1);
 }
 
 /* ── Validate a single field ──────────────────────────────── */
@@ -115,7 +187,16 @@ async function handleSubmit(form) {
   // Success state
   const successEl = form.querySelector('.form-success');
   if (successEl) {
-    form.classList.add('hidden');
+    // Hide all form steps and show success
+    form.querySelectorAll('.form-step').forEach((s) => s.classList.add('hidden'));
+    const progress = document.getElementById('step-progress');
+    if (progress) progress.classList.add('hidden');
+
+    // Populate success email if present
+    const emailField = form.querySelector('[name="email"]');
+    const emailDisplay = form.querySelector('#success-email');
+    if (emailField && emailDisplay) emailDisplay.textContent = emailField.value;
+
     successEl.classList.remove('hidden');
   } else {
     form.reset();
