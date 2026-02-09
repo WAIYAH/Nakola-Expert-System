@@ -1,0 +1,27 @@
+{
+  "name": "nakola-expert-system",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Nakola Expert Systems - African-grounded, global-grade technology solutions.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WAIYAH/Nakola-Expert-System.git"
+  },
+  "author": "Nakola Expert Systems",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WAIYAH/Nakola-Expert-System/issues"
+  },
+  "homepage": "https://github.com/WAIYAH/Nakola-Expert-System#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.1"
+  }
+}
