@@ -33,6 +33,8 @@ export default defineConfig({
         insights: resolve(__dirname, 'insights.html'),
         contact: resolve(__dirname, 'contact.html'),
         careers: resolve(__dirname, 'careers.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
+        terms: resolve(__dirname, 'terms.html'),
       },
       output: {
         manualChunks: {
