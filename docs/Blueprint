@@ -335,6 +335,8 @@ text
 │
 ├── /data               # JSON data (testimonials, case studies, team)
 └── /public             # Built assets for production
+
+
 3.3 Component Architecture (Atomic Design)
 Atoms (Basic Building Blocks):
 javascript
@@ -359,6 +361,7 @@ javascript
 - Icon (size, color variants)
 - Badge (status, category)
 - Avatar (team, client logos)
+
 Molecules (Combinations of Atoms):
 javascript
 // Navigation
@@ -466,6 +469,7 @@ html
 <!-- Service Worker for offline capability -->
 <!-- Cache static assets (CSS, JS, fonts) -->
 <!-- Stale-while-revalidate for dynamic content -->
+
 3.6 SEO Architecture Implementation
 Technical SEO Foundation:
 html
@@ -477,6 +481,8 @@ html
 <section aria-labelledby="section-heading">
 <aside role="complementary">
 <footer role="contentinfo">
+
+
 Meta Strategy Per Page Type:
 javascript
 // Home Page
@@ -505,6 +511,8 @@ json
     "addressCountry": "Kenya"
   }
 }
+
+
 Sitemap Strategy:
 xml
 <!-- Auto-generated sitemap.xml -->
@@ -517,6 +525,8 @@ xml
   Other pages: 0.5
 -->
 <!-- Update frequency: Weekly for blog, monthly for others -->
+
+
 D. INFORMATION ARCHITECTURE
 4.1 Complete Page Architecture
 Core Pages (Navigation Primary):
