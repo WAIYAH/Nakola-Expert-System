@@ -201,126 +201,387 @@
       </div>
     </section>
 
-    <!-- ── TRUST BAR ────────────────────────────────────── -->
+    <!-- ── HERO 2 — PROJECT SHOWCASE ────────────────────── -->
+    <section class="relative py-16 lg:py-24 overflow-hidden bg-neutral-900" aria-label="Project showcase">
+      <!-- Subtle background gradient -->
+      <div class="absolute inset-0 bg-gradient-mesh opacity-30"></div>
+      <div class="absolute inset-0 hero-grid-overlay" style="background-size: 80px 80px;"></div>
+
+      <div class="container-nes relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <!-- Project screenshots column -->
+          <div class="relative order-2 lg:order-1">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4" data-parallax="0.08">
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-primary-500/10 border border-white/5" data-tilt="5">
+                  <img src="images/WEBSITES/NES-Hospitality.png" alt="NES Hospitality project" loading="lazy" decoding="async" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-purple-500/10 border border-white/5" data-tilt="5">
+                  <img src="images/WEBSITES/SwifTiba.png" alt="SwifTiba project" loading="lazy" decoding="async" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-green-500/10 border border-white/5" data-tilt="5">
+                  <img src="images/WEBSITES/KIATUKICKS.png" alt="KiatuKicks project" loading="lazy" decoding="async" class="w-full h-auto object-cover">
+                </div>
+              </div>
+              <div class="space-y-4 pt-8" data-parallax="0.12">
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-primary-500/10 border border-white/5" data-tilt="5">
+                  <img src="images/WEBSITES/FreshHarvest.png" alt="FreshHarvest project" loading="lazy" decoding="async" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-purple-500/10 border border-white/5" data-tilt="5">
+                  <img src="images/WEBSITES/The%20Grand%20Hotel.png" alt="The Grand Hotel project" loading="lazy" decoding="async" class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-green-500/10 border border-white/5" data-tilt="5">
+                  <img src="images/WEBSITES/Verdant.png" alt="Verdant project" loading="lazy" decoding="async" class="w-full h-auto object-cover">
+                </div>
+              </div>
+            </div>
+            <!-- Glow accents -->
+            <div class="absolute -top-16 -left-16 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -right-16 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          </div>
+
+          <!-- Copy column -->
+          <div class="order-1 lg:order-2 max-w-xl">
+            <div class="reveal">
+              <span class="badge badge-green mb-5">🚀 Our Portfolio</span>
+            </div>
+            <h2 class="reveal reveal-delay-1 text-3xl lg:text-4xl font-extrabold text-white mb-6 text-balance">
+              Websites &amp; Apps That <span class="gradient-text-animated">Speak for Themselves</span>
+            </h2>
+            <p class="reveal reveal-delay-2 text-lg text-neutral-400 leading-relaxed mb-8">
+              From hospitality and healthcare to e-commerce and fintech — we've built <strong class="text-white">50+ digital products</strong> that drive real revenue for businesses across Africa and beyond.
+            </p>
+            <div class="reveal reveal-delay-3 grid grid-cols-3 gap-4 mb-8">
+              <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                <p class="font-heading font-extrabold text-2xl text-primary-400">50+</p>
+                <p class="text-xs text-neutral-500 mt-1">Projects</p>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                <p class="font-heading font-extrabold text-2xl text-green-400">8+</p>
+                <p class="text-xs text-neutral-500 mt-1">Countries</p>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                <p class="font-heading font-extrabold text-2xl text-purple-400">98%</p>
+                <p class="text-xs text-neutral-500 mt-1">Satisfaction</p>
+              </div>
+            </div>
+            <div class="reveal reveal-delay-4 flex flex-wrap gap-4">
+              <a href="/work.html" class="btn btn-primary btn-lg" data-magnetic="0.3">
+                View All Projects
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href="/contact.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition" data-magnetic="0.2">Start Your Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TRUST BAR — Infinite Marquee ─────────────────── -->
     <section class="section-sm bg-neutral-50 border-y border-neutral-100" aria-label="Trusted by">
       <div class="container-nes text-center">
         <p class="text-sm font-medium text-neutral-400 uppercase tracking-wider mb-6">Trusted by innovative businesses across Africa and beyond</p>
-        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-40 grayscale">
-          <span class="font-heading font-bold text-xl text-neutral-600">Client A</span>
-          <span class="font-heading font-bold text-xl text-neutral-600">Client B</span>
-          <span class="font-heading font-bold text-xl text-neutral-600">Client C</span>
-          <span class="font-heading font-bold text-xl text-neutral-600">Client D</span>
-          <span class="font-heading font-bold text-xl text-neutral-600">Client E</span>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <img src="images/Background%20images/client1.png" alt="AMG Realtors" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400">
+          <img src="images/Background%20images/client2.png" alt="Zurimax Constructions" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400">
+          <img src="images/Background%20images/client3.png" alt="Organizers Paradise" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400">
+          <img src="images/Background%20images/client4.jpg" alt="T&amp;J Decor" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400">
+          <img src="images/Background%20images/client5.jpg" alt="Adrite Limited" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400">
+          <img src="images/Background%20images/client6.png" alt="Kotirah Investments" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400">
+          <img src="images/Background%20images/client7.jpg" alt="Fua ChapChap Dry Cleaners" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400">
+          <!-- Duplicate set for seamless infinite loop -->
+          <img src="images/Background%20images/client1.png" alt="AMG Realtors" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400" aria-hidden="true">
+          <img src="images/Background%20images/client2.png" alt="Zurimax Constructions" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400" aria-hidden="true">
+          <img src="images/Background%20images/client3.png" alt="Organizers Paradise" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400" aria-hidden="true">
+          <img src="images/Background%20images/client4.jpg" alt="T&amp;J Decor" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400" aria-hidden="true">
+          <img src="images/Background%20images/client5.jpg" alt="Adrite Limited" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400" aria-hidden="true">
+          <img src="images/Background%20images/client6.png" alt="Kotirah Investments" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400" aria-hidden="true">
+          <img src="images/Background%20images/client7.jpg" alt="Fua ChapChap Dry Cleaners" loading="lazy" decoding="async" class="h-14 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-400" aria-hidden="true">
         </div>
       </div>
     </section>
 
     <!-- ── SERVICES OVERVIEW ────────────────────────────── -->
-    <section id="services" class="section" aria-labelledby="services-heading">
-      <div class="container-nes">
-        <div class="section-header reveal">
-          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> What We Do</span>
-          <h2 id="services-heading" class="section-title">Technology Solutions That Drive <span class="gradient-text">Real Results</span></h2>
-          <p class="section-description">From strategy to deployment and beyond — we deliver end-to-end technology solutions tailored to your business goals.</p>
+    <section id="services" class="section relative overflow-hidden bg-neutral-950" aria-labelledby="services-heading">
+      <!-- Ambient background effects -->
+      <div class="absolute inset-0 opacity-30" style="background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37,99,235,0.15), transparent), radial-gradient(ellipse 60% 40% at 80% 100%, rgba(124,58,237,0.1), transparent);"></div>
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M60 0H0v60&quot; fill=&quot;none&quot; stroke=&quot;%23fff&quot; stroke-width=&quot;.5&quot;/%3E%3C/svg%3E');"></div>
+
+      <div class="container-nes relative z-10">
+        <div class="section-header reveal text-center">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase text-blue-400 border border-blue-500/20 bg-blue-500/5 mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span> What We Do
+          </span>
+          <h2 id="services-heading" class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-4">
+            Technology Solutions That Drive<br><span class="gradient-text-animated">Real Results</span>
+          </h2>
+          <p class="max-w-2xl mx-auto text-neutral-400 text-lg leading-relaxed">From strategy to deployment and beyond — we deliver end-to-end technology solutions tailored to your business goals.</p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger>
-          <!-- Card 1 -->
-          <div class="card card-hover reveal p-6 group" data-tilt="6" data-glow-track data-stagger-child>
-            <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-5 group-hover:bg-primary-100 transition"><svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></div>
-            <h3 class="text-lg font-bold text-neutral-900 mb-2">Custom Software Development</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed mb-4">Scalable web and mobile applications built with modern architectures. From MVPs to enterprise platforms.</p>
-            <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-primary">Web Apps</span><span class="badge badge-purple">Mobile</span><span class="badge badge-green">APIs</span></div>
-            <a href="/services.html" class="text-sm font-semibold text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 transition">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 mt-14" data-stagger>
+          <!-- Card 1 – Custom Software -->
+          <div class="service-card group reveal" data-tilt="5" data-glow-track data-stagger-child>
+            <div class="service-glow -top-10 -left-10 bg-blue-500/20"></div>
+            <span class="service-number">01</span>
+            <div class="service-icon-wrap bg-blue-500/10 text-blue-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Custom Software Development</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">Scalable web and mobile applications built with modern architectures. From MVPs to enterprise platforms.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-blue-500/10 text-blue-300 border border-blue-500/10">Web Apps</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-purple-500/10 text-purple-300 border border-purple-500/10">Mobile</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/10">APIs</span>
+            </div>
+            <a href="/services.html" class="text-sm font-semibold text-blue-400 hover:text-blue-300 inline-flex items-center gap-1.5 transition group/link">Learn more <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
           </div>
-          <!-- Card 2 -->
-          <div class="card card-hover reveal reveal-delay-1 p-6 group" data-tilt="6" data-glow-track data-stagger-child>
-            <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mb-5 group-hover:bg-purple-100 transition"><svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg></div>
-            <h3 class="text-lg font-bold text-neutral-900 mb-2">Technology Consulting</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed mb-4">Strategic guidance on architecture, technology selection, and digital roadmaps. Make confident technology decisions.</p>
-            <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-primary">Strategy</span><span class="badge badge-purple">Architecture</span><span class="badge badge-gold">Audit</span></div>
-            <a href="/services.html" class="text-sm font-semibold text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 transition">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+
+          <!-- Card 2 – Technology Consulting -->
+          <div class="service-card group reveal reveal-delay-1" data-tilt="5" data-glow-track data-stagger-child>
+            <div class="service-glow -top-10 -right-10 bg-purple-500/20"></div>
+            <span class="service-number">02</span>
+            <div class="service-icon-wrap bg-purple-500/10 text-purple-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Technology Consulting</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">Strategic guidance on architecture, technology selection, and digital roadmaps. Make confident technology decisions.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-blue-500/10 text-blue-300 border border-blue-500/10">Strategy</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-purple-500/10 text-purple-300 border border-purple-500/10">Architecture</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-amber-500/10 text-amber-300 border border-amber-500/10">Audit</span>
+            </div>
+            <a href="/services.html" class="text-sm font-semibold text-purple-400 hover:text-purple-300 inline-flex items-center gap-1.5 transition group/link">Learn more <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
           </div>
-          <!-- Card 3 -->
-          <div class="card card-hover reveal reveal-delay-2 p-6 group" data-tilt="6" data-glow-track data-stagger-child>
-            <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-5 group-hover:bg-green-100 transition"><svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992"/></svg></div>
-            <h3 class="text-lg font-bold text-neutral-900 mb-2">Digital Transformation</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed mb-4">Modernize legacy systems, optimize processes, and build digital capabilities that accelerate growth.</p>
-            <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-primary">Migration</span><span class="badge badge-green">Automation</span><span class="badge badge-gold">Cloud</span></div>
-            <a href="/services.html" class="text-sm font-semibold text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 transition">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+
+          <!-- Card 3 – Digital Transformation -->
+          <div class="service-card group reveal reveal-delay-2" data-tilt="5" data-glow-track data-stagger-child>
+            <div class="service-glow -bottom-10 -left-10 bg-emerald-500/20"></div>
+            <span class="service-number">03</span>
+            <div class="service-icon-wrap bg-emerald-500/10 text-emerald-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Digital Transformation</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">Modernize legacy systems, optimize processes, and build digital capabilities that accelerate growth.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-blue-500/10 text-blue-300 border border-blue-500/10">Migration</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/10">Automation</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-amber-500/10 text-amber-300 border border-amber-500/10">Cloud</span>
+            </div>
+            <a href="/services.html" class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1.5 transition group/link">Learn more <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
           </div>
-          <!-- Card 4 -->
-          <div class="card card-hover reveal p-6 group" data-tilt="6" data-glow-track data-stagger-child>
-            <div class="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-5 group-hover:bg-teal-100 transition"><svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg></div>
-            <h3 class="text-lg font-bold text-neutral-900 mb-2">Cloud &amp; DevOps</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed mb-4">Cloud infrastructure, CI/CD pipelines, and DevOps practices that ensure reliable, scalable deployments.</p>
-            <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-primary">AWS</span><span class="badge badge-purple">Azure</span><span class="badge badge-green">CI/CD</span></div>
-            <a href="/services.html" class="text-sm font-semibold text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 transition">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+
+          <!-- Card 4 – Cloud & DevOps -->
+          <div class="service-card group reveal" data-tilt="5" data-glow-track data-stagger-child>
+            <div class="service-glow -top-10 -left-10 bg-cyan-500/20"></div>
+            <span class="service-number">04</span>
+            <div class="service-icon-wrap bg-cyan-500/10 text-cyan-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Cloud &amp; DevOps</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">Cloud infrastructure, CI/CD pipelines, and DevOps practices that ensure reliable, scalable deployments.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-blue-500/10 text-blue-300 border border-blue-500/10">AWS</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-purple-500/10 text-purple-300 border border-purple-500/10">Azure</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/10">CI/CD</span>
+            </div>
+            <a href="/services.html" class="text-sm font-semibold text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1.5 transition group/link">Learn more <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
           </div>
-          <!-- Card 5 -->
-          <div class="card card-hover reveal reveal-delay-1 p-6 group" data-tilt="6" data-glow-track data-stagger-child>
-            <div class="w-12 h-12 rounded-xl bg-gold-50 flex items-center justify-center mb-5 group-hover:bg-gold-100 transition"><svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
-            <h3 class="text-lg font-bold text-neutral-900 mb-2">Quality Assurance</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed mb-4">Comprehensive testing strategies — automated, manual, and security testing to ensure bulletproof releases.</p>
-            <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-primary">Testing</span><span class="badge badge-purple">Security</span><span class="badge badge-gold">Performance</span></div>
-            <a href="/services.html" class="text-sm font-semibold text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 transition">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+
+          <!-- Card 5 – Quality Assurance -->
+          <div class="service-card group reveal reveal-delay-1" data-tilt="5" data-glow-track data-stagger-child>
+            <div class="service-glow -bottom-10 -right-10 bg-amber-500/20"></div>
+            <span class="service-number">05</span>
+            <div class="service-icon-wrap bg-amber-500/10 text-amber-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Quality Assurance</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">Comprehensive testing strategies — automated, manual, and security testing to ensure bulletproof releases.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-blue-500/10 text-blue-300 border border-blue-500/10">Testing</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-purple-500/10 text-purple-300 border border-purple-500/10">Security</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-amber-500/10 text-amber-300 border border-amber-500/10">Performance</span>
+            </div>
+            <a href="/services.html" class="text-sm font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 transition group/link">Learn more <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
           </div>
-          <!-- Card 6 -->
-          <div class="card card-hover reveal reveal-delay-2 p-6 group" data-tilt="6" data-glow-track data-stagger-child>
-            <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-5 group-hover:bg-primary-100 transition"><svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg></div>
-            <h3 class="text-lg font-bold text-neutral-900 mb-2">Managed Support</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed mb-4">Ongoing maintenance, monitoring, and support to keep your systems running at peak performance.</p>
-            <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-primary">24/7</span><span class="badge badge-green">SLA</span><span class="badge badge-gold">Monitoring</span></div>
-            <a href="/services.html" class="text-sm font-semibold text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 transition">Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+
+          <!-- Card 6 – Managed Support -->
+          <div class="service-card group reveal reveal-delay-2" data-tilt="5" data-glow-track data-stagger-child>
+            <div class="service-glow -bottom-10 -left-10 bg-rose-500/20"></div>
+            <span class="service-number">06</span>
+            <div class="service-icon-wrap bg-rose-500/10 text-rose-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Managed Support</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">Ongoing maintenance, monitoring, and support to keep your systems running at peak performance.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-blue-500/10 text-blue-300 border border-blue-500/10">24/7</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/10">SLA</span>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-amber-500/10 text-amber-300 border border-amber-500/10">Monitoring</span>
+            </div>
+            <a href="/services.html" class="text-sm font-semibold text-rose-400 hover:text-rose-300 inline-flex items-center gap-1.5 transition group/link">Learn more <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
           </div>
         </div>
-        <div class="text-center mt-12 reveal">
-          <a href="/services.html" class="btn btn-secondary btn-lg">Explore All Services <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+
+        <div class="text-center mt-14 reveal">
+          <a href="/services.html" class="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(37,99,235,0.3)] hover:scale-105">
+            Explore All Services <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- ── Section Divider ──────────────────────────────── -->
+    <div class="relative bg-neutral-950">
+      <div class="h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+      <div class="h-px bg-gradient-to-r from-transparent via-purple-500/10 to-transparent mt-px"></div>
+    </div>
+
     <!-- ── WHY CHOOSE US ────────────────────────────────── -->
-    <section id="why-us" class="section bg-neutral-50" aria-labelledby="why-heading">
-      <div class="container-nes">
-        <div class="section-header reveal">
-          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg> Why NES</span>
-          <h2 id="why-heading" class="section-title">What Makes Us <span class="gradient-text">Different</span></h2>
-          <p class="section-description">We don't just write code — we solve business problems with technology, backed by senior technical leadership on every project.</p>
+    <section id="why-us" class="section relative overflow-hidden bg-neutral-900" aria-labelledby="why-heading">
+      <!-- Ambient glow effects -->
+      <div class="absolute inset-0 opacity-30" style="background: radial-gradient(ellipse 70% 50% at 20% 50%, rgba(124,58,237,0.12), transparent), radial-gradient(ellipse 60% 40% at 80% 20%, rgba(37,99,235,0.1), transparent);"></div>
+
+      <div class="container-nes relative z-10">
+        <div class="section-header reveal text-center">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase text-purple-400 border border-purple-500/20 bg-purple-500/5 mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span> Why NES
+          </span>
+          <h2 id="why-heading" class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-4">
+            What Makes Us <span class="gradient-text-animated">Different</span>
+          </h2>
+          <p class="max-w-2xl mx-auto text-neutral-400 text-lg leading-relaxed">We don't just write code — we solve business problems with technology, backed by senior technical leadership on every project.</p>
         </div>
-        <div class="grid md:grid-cols-2 gap-6 lg:gap-8" data-stagger>
-          <div class="card card-elevated reveal p-6 flex gap-5" data-tilt="4" data-stagger-child>
-            <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg></div>
-            <div><h3 class="font-bold text-neutral-900 mb-1">Founder-Led Delivery</h3><p class="text-sm text-neutral-500 leading-relaxed">Every project has direct senior technical oversight. No juniors learning on your dime — you get experienced engineers from day one.</p></div>
+
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 mt-14" data-stagger>
+
+          <!-- Card 1 – Founder-Led (large – spans 7 cols) -->
+          <div class="diff-card lg:col-span-7 bg-gradient-to-br from-neutral-900 to-neutral-800/60 border border-white/[0.06] group reveal" data-tilt="3" data-glow-track data-stagger-child>
+            <div class="diff-visual right-0 top-0 w-48 h-48" style="background: radial-gradient(circle, rgba(37,99,235,0.2), transparent 70%);"></div>
+            <div class="flex flex-col h-full">
+              <div class="diff-icon bg-blue-500/10 text-blue-400 mb-5 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+              </div>
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Founder-Led Delivery</h3>
+              <p class="text-neutral-400 leading-relaxed mb-5">Every project has direct senior technical oversight. No juniors learning on your dime — you get experienced engineers from day one.</p>
+              <div class="mt-auto flex items-center gap-3">
+                <div class="flex -space-x-2">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-2 border-neutral-900 flex items-center justify-center text-[10px] font-bold text-white">NK</div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-600 border-2 border-neutral-900 flex items-center justify-center text-[10px] font-bold text-white">SE</div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 border-2 border-neutral-900 flex items-center justify-center text-[10px] font-bold text-white">DM</div>
+                </div>
+                <span class="text-xs text-neutral-500">Senior team on every engagement</span>
+              </div>
+            </div>
           </div>
-          <div class="card card-elevated reveal reveal-delay-1 p-6 flex gap-5" data-tilt="4" data-stagger-child>
-            <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg></div>
-            <div><h3 class="font-bold text-neutral-900 mb-1">Outcome-Focused</h3><p class="text-sm text-neutral-500 leading-relaxed">We measure success by your business metrics — revenue growth, efficiency gains, user adoption — not lines of code shipped.</p></div>
+
+          <!-- Card 2 – Outcome-Focused (spans 5 cols) -->
+          <div class="diff-card lg:col-span-5 bg-gradient-to-br from-neutral-900 to-neutral-800/60 border border-white/[0.06] group reveal reveal-delay-1" data-tilt="3" data-glow-track data-stagger-child>
+            <div class="diff-visual left-0 bottom-0 w-40 h-40" style="background: radial-gradient(circle, rgba(124,58,237,0.2), transparent 70%);"></div>
+            <div class="diff-icon bg-purple-500/10 text-purple-400 mb-5 group-hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Outcome-Focused</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">We measure success by your business metrics — revenue growth, efficiency gains, user adoption — not lines of code shipped.</p>
+            <!-- Mini stat bars -->
+            <div class="space-y-3 mt-auto">
+              <div>
+                <div class="flex justify-between text-xs mb-1"><span class="text-neutral-500">Revenue Impact</span><span class="text-emerald-400 font-semibold">+42%</span></div>
+                <div class="h-1.5 rounded-full bg-neutral-800 overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500" style="width:84%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1"><span class="text-neutral-500">Efficiency Gain</span><span class="text-blue-400 font-semibold">+67%</span></div>
+                <div class="h-1.5 rounded-full bg-neutral-800 overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500" style="width:67%"></div></div>
+              </div>
+            </div>
           </div>
-          <div class="card card-elevated reveal reveal-delay-2 p-6 flex gap-5" data-tilt="4" data-stagger-child>
-            <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
-            <div><h3 class="font-bold text-neutral-900 mb-1">African-Global Perspective</h3><p class="text-sm text-neutral-500 leading-relaxed">We understand African market realities while delivering to global standards. Solutions that work in Nairobi, Lagos, and London.</p></div>
+
+          <!-- Card 3 – African-Global (spans 5 cols) -->
+          <div class="diff-card lg:col-span-5 bg-gradient-to-br from-neutral-900 to-neutral-800/60 border border-white/[0.06] group reveal reveal-delay-2" data-tilt="3" data-glow-track data-stagger-child>
+            <div class="diff-visual right-0 top-0 w-44 h-44" style="background: radial-gradient(circle, rgba(16,185,129,0.15), transparent 70%);"></div>
+            <div class="diff-icon bg-emerald-500/10 text-emerald-400 mb-5 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">African-Global Perspective</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-5">We understand African market realities while delivering to global standards. Solutions that work everywhere.</p>
+            <!-- Location tags -->
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/10">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Nairobi
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-blue-500/10 text-blue-300 border border-blue-500/10">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Lagos
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-purple-500/10 text-purple-300 border border-purple-500/10">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> London
+              </span>
+            </div>
           </div>
-          <div class="card card-elevated reveal reveal-delay-3 p-6 flex gap-5" data-tilt="4" data-stagger-child>
-            <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
-            <div><h3 class="font-bold text-neutral-900 mb-1">Startup Speed, Enterprise Quality</h3><p class="text-sm text-neutral-500 leading-relaxed">Agile delivery with the governance and quality standards that enterprises demand. No trade-offs between speed and reliability.</p></div>
+
+          <!-- Card 4 – Startup Speed (spans 7 cols) -->
+          <div class="diff-card lg:col-span-7 bg-gradient-to-br from-neutral-900 to-neutral-800/60 border border-white/[0.06] group reveal reveal-delay-3" data-tilt="3" data-glow-track data-stagger-child>
+            <div class="diff-visual left-0 top-0 w-48 h-48" style="background: radial-gradient(circle, rgba(245,158,11,0.15), transparent 70%);"></div>
+            <div class="flex flex-col h-full">
+              <div class="diff-icon bg-amber-500/10 text-amber-400 mb-5 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+              </div>
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Startup Speed, Enterprise Quality</h3>
+              <p class="text-neutral-400 leading-relaxed mb-5">Agile delivery with the governance and quality standards that enterprises demand. No trade-offs between speed and reliability.</p>
+              <!-- Speed indicators -->
+              <div class="mt-auto grid grid-cols-3 gap-4">
+                <div class="text-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.04]">
+                  <div class="text-2xl font-extrabold text-amber-400 font-heading">2x</div>
+                  <div class="text-[11px] text-neutral-500 mt-0.5">Faster Delivery</div>
+                </div>
+                <div class="text-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.04]">
+                  <div class="text-2xl font-extrabold text-blue-400 font-heading">99.9%</div>
+                  <div class="text-[11px] text-neutral-500 mt-0.5">Uptime SLA</div>
+                </div>
+                <div class="text-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.04]">
+                  <div class="text-2xl font-extrabold text-emerald-400 font-heading">A+</div>
+                  <div class="text-[11px] text-neutral-500 mt-0.5">Code Quality</div>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- ── PROCESS ──────────────────────────────────────── -->
-    <section id="process" class="section" aria-labelledby="process-heading">
-      <div class="container-nes">
+    <section id="process" class="section relative overflow-hidden bg-white" aria-labelledby="process-heading">
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;40&quot; height=&quot;40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Ccircle cx=&quot;1&quot; cy=&quot;1&quot; r=&quot;0.8&quot; fill=&quot;%23000&quot;/%3E%3C/svg%3E');"></div>
+      <div class="container-nes relative z-10">
         <div class="section-header reveal">
           <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"/></svg> Our Process</span>
           <h2 id="process-heading" class="section-title">From Idea to <span class="gradient-text">Impact</span></h2>
           <p class="section-description">A proven four-phase methodology that ensures clarity, quality, and on-time delivery.</p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="reveal text-center lg:text-left"><div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 font-heading font-extrabold text-xl mb-4">01</div><h3 class="font-bold text-neutral-900 mb-2">Discovery</h3><p class="text-sm text-neutral-500 leading-relaxed">We listen, analyze, and map your business challenges to technical solutions. No assumptions — just deep understanding.</p></div>
-          <div class="reveal reveal-delay-1 text-center lg:text-left"><div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 font-heading font-extrabold text-xl mb-4">02</div><h3 class="font-bold text-neutral-900 mb-2">Design &amp; Plan</h3><p class="text-sm text-neutral-500 leading-relaxed">Architecture, prototypes, and a detailed roadmap. You see exactly what we'll build before we write a single line of code.</p></div>
-          <div class="reveal reveal-delay-2 text-center lg:text-left"><div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-green-50 text-green-600 font-heading font-extrabold text-xl mb-4">03</div><h3 class="font-bold text-neutral-900 mb-2">Build &amp; Test</h3><p class="text-sm text-neutral-500 leading-relaxed">Iterative development with continuous testing. Bi-weekly demos keep you in the loop and in control of the direction.</p></div>
-          <div class="reveal reveal-delay-3 text-center lg:text-left"><div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold-50 text-gold-600 font-heading font-extrabold text-xl mb-4">04</div><h3 class="font-bold text-neutral-900 mb-2">Launch &amp; Grow</h3><p class="text-sm text-neutral-500 leading-relaxed">Smooth deployment, knowledge transfer, and ongoing support. We're with you long after the first launch.</p></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="reveal text-center lg:text-left group">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-50 text-primary-600 font-heading font-extrabold text-xl mb-5 transition group-hover:bg-primary-100 group-hover:scale-105">01</div>
+            <h3 class="font-bold text-neutral-900 mb-2 text-lg">Discovery</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">We listen, analyze, and map your business challenges to technical solutions. No assumptions — just deep understanding.</p>
+          </div>
+          <div class="reveal reveal-delay-1 text-center lg:text-left group">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-purple-50 text-purple-600 font-heading font-extrabold text-xl mb-5 transition group-hover:bg-purple-100 group-hover:scale-105">02</div>
+            <h3 class="font-bold text-neutral-900 mb-2 text-lg">Design &amp; Plan</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Architecture, prototypes, and a detailed roadmap. You see exactly what we'll build before we write a single line of code.</p>
+          </div>
+          <div class="reveal reveal-delay-2 text-center lg:text-left group">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-green-50 text-green-600 font-heading font-extrabold text-xl mb-5 transition group-hover:bg-green-100 group-hover:scale-105">03</div>
+            <h3 class="font-bold text-neutral-900 mb-2 text-lg">Build &amp; Test</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Iterative development with continuous testing. Bi-weekly demos keep you in the loop and in control of the direction.</p>
+          </div>
+          <div class="reveal reveal-delay-3 text-center lg:text-left group">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold-50 text-gold-600 font-heading font-extrabold text-xl mb-5 transition group-hover:bg-gold-100 group-hover:scale-105">04</div>
+            <h3 class="font-bold text-neutral-900 mb-2 text-lg">Launch &amp; Grow</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Smooth deployment, knowledge transfer, and ongoing support. We're with you long after the first launch.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -339,7 +600,7 @@
     </section>
 
     <!-- ── FEATURED CASE STUDY ───────────────────────────── -->
-    <section class="section" aria-labelledby="case-study-heading">
+    <section class="section bg-neutral-50" aria-labelledby="case-study-heading">
       <div class="container-nes">
         <div class="section-header reveal">
           <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg> Featured Project</span>
@@ -361,7 +622,7 @@
               </div>
               <a href="/work.html" class="btn btn-primary btn-md self-start">Read Full Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
             </div>
-            <div class="p-10 lg:p-14 bg-neutral-50 flex flex-col justify-center">
+            <div class="p-10 lg:p-14 bg-white flex flex-col justify-center">
               <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider mb-5">What We Delivered</h4>
               <div class="space-y-4">
                 <div class="flex items-start gap-3"><svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-sm text-neutral-600">Multi-vendor marketplace with real-time inventory sync</span></div>
@@ -384,7 +645,7 @@
     </section>
 
     <!-- ── PORTFOLIO PREVIEW ──────────────────────────── -->
-    <section class="section bg-neutral-50 border-y border-neutral-100" aria-labelledby="portfolio-preview-heading" data-parallax="0.15">
+    <section class="section bg-white border-t border-neutral-100" aria-labelledby="portfolio-preview-heading" data-parallax="0.15">
       <div class="container-nes">
         <div class="section-header reveal">
           <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.5h16.5m-16.5 7.5h16.5m-16.5 7.5h16.5"/></svg> Our Portfolio</span>
