@@ -96,14 +96,15 @@
   <main id="main-content" role="main">
 
     <!-- ── HERO ─────────────────────────────────────────── -->
-    <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden bg-gradient-mesh" aria-labelledby="about-hero-heading">
+    <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden section-bg" style="background-image: url('images/Background%20images/blue%20beatiful%20forest.jpg')" aria-labelledby="about-hero-heading">
+      <div class="section-bg-overlay section-bg-overlay--dark"></div>
       <div class="container-nes relative z-10">
         <div class="max-w-3xl mx-auto text-center">
           <div class="reveal"><span class="badge badge-primary mb-5">About Us</span></div>
-          <h1 id="about-hero-heading" class="reveal reveal-delay-1 text-balance mb-6">
+          <h1 id="about-hero-heading" class="reveal reveal-delay-1 text-balance mb-6 text-white">
             Built in Africa. <span class="gradient-text">Delivering Globally.</span>
           </h1>
-          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto">
+          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
             Nakola Expert Systems was founded on a simple conviction: African engineering talent, when backed by the right leadership and processes, can compete with anyone in the world.
           </p>
         </div>
@@ -313,9 +314,42 @@
       </div>
     </section>
 
+    <!-- ── DELIVERED PROJECTS ───────────────────────────── -->
+    <section class="section bg-neutral-50 border-y border-neutral-100" aria-labelledby="about-projects-heading">
+      <div class="container-nes">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg> Our Work</span>
+          <h2 id="about-projects-heading" class="section-title">Projects We're <span class="gradient-text">Proud Of</span></h2>
+          <p class="section-description">A selection of websites and platforms we've designed and built for clients across industries.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card card-elevated reveal p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/The Nairobi Hotel.png" alt="The Nairobi Hotel website preview" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">The Nairobi Hotel</h3></div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-1 p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/KcauAjira.png" alt="KcauAjira job platform preview" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">KcauAjira</h3></div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-2 p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/Heaadphones.png" alt="Heaadphones e-commerce website preview" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">Heaadphones</h3></div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-3 p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/Lucky-Portfolio.jpg" alt="Lucky Portfolio website preview" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">Lucky Portfolio</h3></div>
+          </div>
+        </div>
+        <div class="text-center mt-10 reveal">
+          <a href="/work.html" class="btn btn-secondary btn-lg">Explore All Projects <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ── CTA ──────────────────────────────────────────── -->
-    <section class="section bg-gradient-primary text-white" aria-labelledby="about-cta-heading">
-      <div class="container-nes text-center max-w-3xl mx-auto">
+    <section class="section relative section-bg text-white" style="background-image: url('images/Background%20images/deep%20blue%20flowers.jpg')" aria-labelledby="about-cta-heading">
+      <div class="section-bg-overlay section-bg-overlay--primary"></div>
+      <div class="container-nes text-center max-w-3xl mx-auto relative z-10">
         <h2 id="about-cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white">Ready to Work Together?</h2>
         <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed">Whether you need a technical partner, a dedicated team, or a strategic advisor — we'd love to hear about your challenge.</p>
         <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-4">

@@ -94,15 +94,16 @@
   <main id="main-content" role="main">
 
     <!-- ── HERO ─────────────────────────────────────────── -->
-    <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden bg-gradient-mesh" aria-labelledby="services-hero-heading">
+    <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden section-bg" style="background-image: url('images/Background%20images/hd%20image%20green%20tech.jpg')" aria-labelledby="services-hero-heading">
+      <div class="section-bg-overlay section-bg-overlay--dark"></div>
       <div class="container-nes relative z-10">
         <div class="max-w-3xl mx-auto text-center">
           <div class="reveal"><span class="badge badge-primary mb-5">Our Services</span></div>
-          <h1 id="services-hero-heading" class="reveal reveal-delay-1 text-balance mb-6">
+          <h1 id="services-hero-heading" class="reveal reveal-delay-1 text-balance mb-6 text-white">
             Technology Solutions That Drive <span class="gradient-text">Real Results</span>
           </h1>
-          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-neutral-500 leading-relaxed mb-8 max-w-2xl mx-auto">
-            From strategy to deployment and beyond — we deliver end-to-end technology solutions tailored to your business goals. Every service is designed for <strong class="text-neutral-700">measurable outcomes</strong>.
+          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-white/70 leading-relaxed mb-8 max-w-2xl mx-auto">
+            From strategy to deployment and beyond — we deliver end-to-end technology solutions tailored to your business goals. Every service is designed for <strong class="text-white">measurable outcomes</strong>.
           </p>
           <div class="reveal reveal-delay-3 flex flex-wrap gap-4 justify-center">
             <a href="/contact.html" class="btn btn-primary btn-lg">Get a Custom Proposal <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
@@ -345,6 +346,46 @@
       </div>
     </section>
 
+    <!-- ── RECENT WORK SHOWCASE ──────────────────────── -->
+    <section class="section border-y border-neutral-100" aria-labelledby="services-work-heading">
+      <div class="container-nes">
+        <div class="section-header reveal">
+          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg> Recent Work</span>
+          <h2 id="services-work-heading" class="section-title">See Our Services <span class="gradient-text">In Action</span></h2>
+          <p class="section-description">Real projects we've delivered across e-commerce, healthcare, fintech, and hospitality.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card card-elevated reveal p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/Instacure.png" alt="InstaCure healthcare platform" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">InstaCure</h3><p class="text-xs text-neutral-500 mt-1">Healthcare · Custom Software</p></div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-1 p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/The Grand Hotel.png" alt="The Grand Hotel hospitality website" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">The Grand Hotel</h3><p class="text-xs text-neutral-500 mt-1">Hospitality · Digital Transformation</p></div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-2 p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/NexusAuth.png" alt="NexusAuth fintech authentication platform" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">NexusAuth</h3><p class="text-xs text-neutral-500 mt-1">Fintech · Cloud &amp; DevOps</p></div>
+          </div>
+          <div class="card card-elevated reveal p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/UsafiKonect.png" alt="UsafiKonect enterprise platform" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">UsafiKonect</h3><p class="text-xs text-neutral-500 mt-1">Enterprise · Managed Support</p></div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-1 p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/KIATUKICKS.png" alt="KiatuKicks e-commerce website" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">KiatuKicks</h3><p class="text-xs text-neutral-500 mt-1">E-Commerce · Custom Software</p></div>
+          </div>
+          <div class="card card-elevated reveal reveal-delay-2 p-0 overflow-hidden group">
+            <figure class="aspect-[16/9] overflow-hidden"><img src="images/WEBSITES/Verdant.png" alt="Verdant website preview" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></figure>
+            <div class="p-4"><h3 class="font-bold text-neutral-900 text-sm">Verdant</h3><p class="text-xs text-neutral-500 mt-1">Consulting · Quality Assurance</p></div>
+          </div>
+        </div>
+        <div class="text-center mt-10 reveal">
+          <a href="/work.html" class="btn btn-secondary btn-lg">View All Case Studies <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ── ENGAGEMENT MODELS ────────────────────────────── -->
     <section class="section bg-neutral-50" aria-labelledby="engagement-heading">
       <div class="container-nes">
@@ -435,8 +476,9 @@
     </section>
 
     <!-- ── FINAL CTA ────────────────────────────────────── -->
-    <section class="section bg-gradient-primary text-white" aria-labelledby="services-cta-heading">
-      <div class="container-nes text-center max-w-3xl mx-auto">
+    <section class="section relative section-bg text-white" style="background-image: url('images/Background%20images/blue%20tech.jpg')" aria-labelledby="services-cta-heading">
+      <div class="section-bg-overlay section-bg-overlay--primary"></div>
+      <div class="container-nes text-center max-w-3xl mx-auto relative z-10">
         <h2 id="services-cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white">Have a Project in Mind?</h2>
         <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed">Every great product starts with a conversation. Tell us about your challenge — we'll show you how technology can solve it.</p>
         <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-4">
