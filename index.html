@@ -178,8 +178,12 @@
   <main id="main-content" role="main">
 
     <!-- ── HERO ─────────────────────────────────────────── -->
-    <section class="relative min-h-[90vh] flex items-center overflow-hidden section-bg pt-20 lg:pt-24" style="background-image: url('images/Background%20images/hd%20hero.jpg')" aria-labelledby="hero-heading" data-hero-parallax>
-      <div class="section-bg-overlay section-bg-overlay--dark"></div>
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden pt-20 lg:pt-24" aria-labelledby="hero-heading" data-hero-parallax>
+      <!-- Background video -->
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="images/Background%20images/hd%20hero.jpg">
+        <source src="/videos/hero%20background.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/60 to-neutral-900/80"></div>
 
       <!-- Grid overlay -->
       <div class="hero-grid-overlay"></div>
