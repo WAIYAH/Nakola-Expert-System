@@ -927,8 +927,3 @@ img {
 a img, button img {
   pointer-events: auto;
 }
-
-/* Hidden utility — used by multi-step form JS */
-.hidden {
-  display: none !important;
-}
