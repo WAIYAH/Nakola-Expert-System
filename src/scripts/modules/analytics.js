@@ -23,6 +23,9 @@ function loadGA4() {
     return;
   }
 
+  // Prevent duplicate injection on re-init
+  if (document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) return;
+
   const script = document.createElement('script');
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;

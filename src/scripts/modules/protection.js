@@ -21,20 +21,16 @@ function disableContextMenu() {
 /** Block common keyboard shortcuts used for copying / viewing source */
 function disableCopyShortcuts() {
   document.addEventListener('keydown', (e) => {
+    // Allow normal shortcuts inside form fields so users can type/copy in inputs
+    const tag = document.activeElement?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) {
+      return;
+    }
+
     const key = e.key.toLowerCase();
 
     // Ctrl+C / Ctrl+A / Ctrl+U (view source) / Ctrl+S (save) / Ctrl+P (print)
     if (e.ctrlKey && ['c', 'a', 'u', 's', 'p'].includes(key)) {
-      e.preventDefault();
-    }
-
-    // Ctrl+Shift+I (DevTools) / Ctrl+Shift+J (Console) / Ctrl+Shift+C (Inspect)
-    if (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(key)) {
-      e.preventDefault();
-    }
-
-    // F12 (DevTools)
-    if (e.key === 'F12') {
       e.preventDefault();
     }
   });

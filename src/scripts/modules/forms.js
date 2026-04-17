@@ -152,6 +152,8 @@ function validateField(field) {
     if (errorEl) {
       errorEl.textContent = errorMsg;
       errorEl.classList.remove('hidden');
+      errorEl.setAttribute('role', 'alert');
+      errorEl.setAttribute('aria-live', 'polite');
     }
     return false;
   }
@@ -161,12 +163,19 @@ function validateField(field) {
   if (errorEl) {
     errorEl.textContent = '';
     errorEl.classList.add('hidden');
+    errorEl.removeAttribute('role');
+    errorEl.removeAttribute('aria-live');
   }
   return true;
 }
 
 /* ── Handle form submission ───────────────────────────────── */
+let _submitting = false;
+
 async function handleSubmit(form) {
+  if (_submitting) return; // prevent double-submit
+  _submitting = true;
+
   const submitBtn = form.querySelector('[type="submit"]');
   const original  = submitBtn?.innerHTML;
 
@@ -181,32 +190,45 @@ async function handleSubmit(form) {
       Sending…`;
   }
 
-  // Simulate send (replace with real endpoint later)
-  await new Promise((r) => setTimeout(r, 1500));
+  try {
+    // Simulate send (replace with real endpoint later)
+    await new Promise((r) => setTimeout(r, 1500));
 
-  // Success state
-  const successEl = form.querySelector('.form-success');
-  if (successEl) {
-    // Hide all form steps and show success
-    form.querySelectorAll('.form-step').forEach((s) => s.classList.add('hidden'));
-    const progress = document.getElementById('step-progress');
-    if (progress) progress.classList.add('hidden');
+    // Success state
+    const successEl = form.querySelector('.form-success');
+    if (successEl) {
+      // Hide all form steps and show success
+      form.querySelectorAll('.form-step').forEach((s) => s.classList.add('hidden'));
+      const progress = document.getElementById('step-progress');
+      if (progress) progress.classList.add('hidden');
 
-    // Populate success email if present
-    const emailField = form.querySelector('[name="email"]');
-    const emailDisplay = form.querySelector('#success-email');
-    if (emailField && emailDisplay) emailDisplay.textContent = emailField.value;
+      // Populate success email if present
+      const emailField = form.querySelector('[name="email"]');
+      const emailDisplay = form.querySelector('#success-email');
+      if (emailField && emailDisplay) emailDisplay.textContent = emailField.value;
 
-    successEl.classList.remove('hidden');
-  } else {
-    form.reset();
-    if (submitBtn) {
-      submitBtn.innerHTML = '✓ Sent!';
-      setTimeout(() => {
-        submitBtn.innerHTML = original;
-        submitBtn.disabled = false;
-      }, 3000);
+      successEl.classList.remove('hidden');
+      successEl.setAttribute('tabindex', '-1');
+      successEl.focus();
+    } else {
+      form.reset();
+      if (submitBtn) {
+        submitBtn.innerHTML = '✓ Sent!';
+        setTimeout(() => {
+          submitBtn.innerHTML = original;
+          submitBtn.disabled = false;
+        }, 3000);
+      }
     }
+  } catch (err) {
+    console.error('[NES Forms] Submission failed:', err);
+    if (submitBtn) {
+      submitBtn.innerHTML = 'Error — try again';
+      submitBtn.disabled = false;
+      setTimeout(() => { submitBtn.innerHTML = original; }, 4000);
+    }
+  } finally {
+    _submitting = false;
   }
 }
 
@@ -217,20 +239,26 @@ export function initDraftSaving(formId) {
 
   const key = `nes_draft_${formId}`;
 
-  // Restore
-  const saved = JSON.parse(localStorage.getItem(key) || '{}');
-  Object.entries(saved).forEach(([name, value]) => {
-    const field = form.elements[name];
-    if (field) field.value = value;
-  });
+  // Restore (wrapped for private-browsing safety)
+  try {
+    const saved = JSON.parse(localStorage.getItem(key) || '{}');
+    Object.entries(saved).forEach(([name, value]) => {
+      const field = form.elements[name];
+      if (field) field.value = value;
+    });
+  } catch { /* localStorage unavailable */ }
 
   // Save on input
   form.addEventListener('input', () => {
-    const data = {};
-    new FormData(form).forEach((v, k) => { data[k] = v; });
-    localStorage.setItem(key, JSON.stringify(data));
+    try {
+      const data = {};
+      new FormData(form).forEach((v, k) => { data[k] = v; });
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch { /* localStorage unavailable */ }
   });
 
   // Clear on submit
-  form.addEventListener('submit', () => localStorage.removeItem(key));
+  form.addEventListener('submit', () => {
+    try { localStorage.removeItem(key); } catch { /* ignore */ }
+  });
 }

@@ -6,18 +6,24 @@
 /**
  * Initialize all advanced homepage effects
  */
+const isMobile = window.innerWidth < 768 || 'ontouchstart' in window;
+
 export function initEffects() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  initParallax();
-  initTiltCards();
-  initMagneticButtons();
+  // Skip mouse-only & GPU-heavy effects on mobile/touch devices
+  if (!isMobile) {
+    initParallax();
+    initTiltCards();
+    initMagneticButtons();
+    initSmoothParallaxHero();
+    initGlowTrack();
+  }
+
   initTextScramble();
   initMorphingBlobs();
-  initSmoothParallaxHero();
   initStaggeredReveals();
   initFloatingElements();
-  initGlowTrack();
 }
 
 /* ── Parallax Background Scrolling ───────────────────────── */
@@ -198,6 +204,8 @@ function initMorphingBlobs() {
   });
 }
 
+const _blobTimers = [];
+
 function animateBlob(blob) {
   const shapes = [
     '30% 70% 70% 30% / 30% 30% 70% 70%',
@@ -212,11 +220,17 @@ function animateBlob(blob) {
   function morph() {
     currentShape = (currentShape + 1) % shapes.length;
     blob.style.borderRadius = shapes[currentShape];
-    setTimeout(morph, 3000 + Math.random() * 2000);
+    const id = setTimeout(morph, 3000 + Math.random() * 2000);
+    _blobTimers.push(id);
   }
 
   morph();
 }
+
+// Cleanup animation timers when page is unloaded
+window.addEventListener('pagehide', () => {
+  _blobTimers.forEach(clearTimeout);
+});
 
 /* ── Staggered Reveals with 3D ───────────────────────────── */
 function initStaggeredReveals() {
@@ -245,6 +259,8 @@ function initStaggeredReveals() {
 }
 
 /* ── Floating Elements Animation ─────────────────────────── */
+const _floatFrames = [];
+
 function initFloatingElements() {
   const floaters = document.querySelectorAll('[data-float]');
   if (!floaters.length) return;
@@ -254,6 +270,7 @@ function initFloatingElements() {
     const speed = parseFloat(el.dataset.floatSpeed) || 3;
     const delay = parseFloat(el.dataset.floatDelay) || 0;
     const startTime = performance.now() + delay * 1000;
+    let frameId;
 
     function animate(timestamp) {
       const elapsed = (timestamp - startTime) / 1000;
@@ -261,12 +278,18 @@ function initFloatingElements() {
       const x = Math.cos(elapsed * (2 * Math.PI / (speed * 1.3))) * (amplitude * 0.4);
       const rotate = Math.sin(elapsed * (2 * Math.PI / (speed * 1.7))) * 5;
       el.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rotate}deg)`;
-      requestAnimationFrame(animate);
+      frameId = requestAnimationFrame(animate);
     }
 
-    requestAnimationFrame(animate);
+    frameId = requestAnimationFrame(animate);
+    _floatFrames.push(() => cancelAnimationFrame(frameId));
   });
 }
+
+// Cleanup floating animation frames when page is unloaded
+window.addEventListener('pagehide', () => {
+  _floatFrames.forEach((cancel) => cancel());
+});
 
 /* ── Glow Tracking on Mouse ──────────────────────────────── */
 function initGlowTrack() {

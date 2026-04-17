@@ -11,16 +11,25 @@ import { initFilters }      from './scripts/modules/filters.js';
 import { initAnalytics }    from './scripts/modules/analytics.js';
 import { initContentProtection } from './scripts/modules/protection.js';
 
+/** Safely run an init function — logs errors without crashing other modules */
+function safeInit(name, fn) {
+  try {
+    fn();
+  } catch (err) {
+    console.error(`[NES] ${name} failed to initialize:`, err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  initNavigation();
-  initScrollReveal();
-  initCounters();
-  initEffects();
-  initForms();
-  initFilters();
-  initAnalytics();
-  initScrollProgress();
-  initContentProtection();
+  safeInit('Navigation',         initNavigation);
+  safeInit('ScrollReveal',       initScrollReveal);
+  safeInit('Counters',           initCounters);
+  safeInit('Effects',            initEffects);
+  safeInit('Forms',              initForms);
+  safeInit('Filters',            initFilters);
+  safeInit('Analytics',          initAnalytics);
+  safeInit('ScrollProgress',     initScrollProgress);
+  safeInit('ContentProtection',  initContentProtection);
 });
 
 function initScrollProgress() {

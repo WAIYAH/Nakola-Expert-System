@@ -224,8 +224,8 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
+    text-rendering: optimizeLegibility;    /* Ensure content avoids notch on modern phones */
+    padding-top: env(safe-area-inset-top, 0px);  }
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -385,7 +385,7 @@
   }
 
   /* Sizes */
-  .btn-sm  { padding: 0.5rem 1rem;   font-size: 0.875rem; }
+  .btn-sm  { padding: 0.5rem 1rem;   font-size: 0.875rem; min-height: 44px; }
   .btn-md  { padding: 0.75rem 1.5rem; font-size: 1rem; }
   .btn-lg  { padding: 1rem 2rem;     font-size: 1.125rem; }
   .btn-xl  { padding: 1.125rem 2.5rem; font-size: 1.125rem; }
@@ -402,6 +402,7 @@
     color: #ffffff;
   }
   .btn-primary:active { transform: translateY(0); }
+  .btn:active { transform: scale(0.98); }
 
   /* Secondary – outline */
   .btn-secondary {
@@ -537,6 +538,8 @@
     margin-top: 0.25rem;
     font-size: 0.8125rem;
     color: var(--color-error-600);
+    border-left: 3px solid var(--color-error-500);
+    padding-left: 0.5rem;
   }
 
   /* ── Gradient text ─────────────────────────────────────── */
@@ -568,7 +571,7 @@
     position: absolute;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     animation: morphBlob 8s ease-in-out infinite;
-    will-change: border-radius;
+    will-change: auto;
     pointer-events: none;
   }
 
@@ -919,4 +922,13 @@
 img {
   pointer-events: none;
   -webkit-user-drag: none;
+}
+/* Allow pointer events on linked and button images (logos, CTAs) */
+a img, button img {
+  pointer-events: auto;
+}
+
+/* Hidden utility — used by multi-step form JS */
+.hidden {
+  display: none !important;
 }

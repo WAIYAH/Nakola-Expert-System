@@ -97,7 +97,7 @@
   <style>.overlay-visible{opacity:1!important;pointer-events:auto!important}</style>
 
   <!-- Mobile Drawer -->
-  <aside id="mobile-drawer" class="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" role="dialog" aria-label="Mobile navigation">
+  <aside id="mobile-drawer" class="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <div class="flex items-center justify-between p-5 border-b border-neutral-100">
       <span class="font-heading font-bold text-lg text-neutral-900">Menu</span>
       <button id="mobile-close" class="p-2 -mr-2 text-neutral-500 hover:text-neutral-700 transition" aria-label="Close menu">
@@ -296,7 +296,7 @@
           <div class="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mx-auto mb-5"><svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
           <h2 id="newsletter-heading" class="text-2xl lg:text-3xl font-extrabold text-neutral-900 mb-3">Stay in the Loop</h2>
           <p class="text-neutral-500 leading-relaxed mb-6">Get our best articles, case studies, and tech insights delivered to your inbox. No spam — just practical knowledge, once a month.</p>
-          <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-validate>
+          <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-validate>
             <div class="flex-1">
               <label for="newsletter-email" class="sr-only">Email address</label>
               <input type="email" id="newsletter-email" name="email" placeholder="you@company.com" required data-rules="required|email" data-label="Email" class="input w-full" />
