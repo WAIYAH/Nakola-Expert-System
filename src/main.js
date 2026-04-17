@@ -9,6 +9,7 @@ import { initEffects }      from './scripts/modules/effects.js';
 import { initForms }        from './scripts/modules/forms.js';
 import { initFilters }      from './scripts/modules/filters.js';
 import { initAnalytics }    from './scripts/modules/analytics.js';
+import { initContentProtection } from './scripts/modules/protection.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFilters();
   initAnalytics();
   initScrollProgress();
+  initContentProtection();
 });
 
 function initScrollProgress() {

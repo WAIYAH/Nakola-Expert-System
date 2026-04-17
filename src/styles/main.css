@@ -903,3 +903,20 @@
     background: linear-gradient(135deg, rgba(17, 24, 39, 0.90), rgba(17, 24, 39, 0.85));
   }
 }
+
+/* ============================================================
+   CONTENT PROTECTION
+   ============================================================ */
+
+/* Prevent printing of the page */
+@media print {
+  html, body {
+    display: none !important;
+  }
+}
+
+/* Prevent image saving via pointer-events overlay */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
