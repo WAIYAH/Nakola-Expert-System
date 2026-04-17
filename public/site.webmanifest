@@ -1,0 +1,17 @@
+{
+  "name": "Nakola Expert Systems",
+  "short_name": "NES",
+  "description": "Best software & website development company in Nairobi, Kenya. Affordable custom solutions for startups, SMEs & enterprises.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/images/Logos/NES-Symbols Only.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

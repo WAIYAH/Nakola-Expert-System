@@ -1,21 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
-    <link rel="stylesheet" href="src/styles/main.css">
-    <style>
-        body { text-align: center; padding: 5%; font-family: Arial, sans-serif; background: #f8f8f8; }
-        h1 { font-size: 5em; color: #e74c3c; }
-        p { font-size: 1.5em; color: #333; }
-        a { color: #3498db; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Nakola Expert Systems</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Nakola Expert Systems — affordable software & website development in Nairobi, Kenya." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="icon" type="image/png" href="/images/Logos/NES-Symbols Only.png" />
+  <link rel="apple-touch-icon" href="/images/Logos/NES-Symbols Only.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script type="module" src="/src/main.js"></script>
 </head>
-<body>
-    <h1>404</h1>
-    <p>Sorry, the page you are looking for does not exist.</p>
-    <p><a href="/index.html">Return to Home</a></p>
+
+<body class="bg-white text-neutral-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Minimal header with logo -->
+  <header class="w-full py-6 px-6 md:px-12">
+    <a href="/" aria-label="Nakola Expert Systems Home">
+      <img src="/images/Logos/NES logo-with Wording.png" alt="Nakola Expert Systems" class="h-12" />
+    </a>
+  </header>
+
+  <!-- 404 content -->
+  <main class="flex-1 flex items-center justify-center px-6">
+    <div class="text-center max-w-lg">
+      <p class="text-blue-600 font-bold text-7xl md:text-9xl mb-4">404</p>
+      <h1 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">Page Not Found</h1>
+      <p class="text-neutral-600 text-lg mb-8">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+          Back to Home
+        </a>
+        <a href="/contact.html" class="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+          Contact Us
+        </a>
+      </div>
+      <nav class="mt-12 text-sm text-neutral-500" aria-label="Quick links">
+        <p class="mb-3 font-medium text-neutral-700">Or try one of these:</p>
+        <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <li><a href="/services.html" class="hover:text-blue-600 transition-colors">Services</a></li>
+          <li><a href="/work.html" class="hover:text-blue-600 transition-colors">Our Work</a></li>
+          <li><a href="/about.html" class="hover:text-blue-600 transition-colors">About</a></li>
+          <li><a href="/insights.html" class="hover:text-blue-600 transition-colors">Insights</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Minimal footer -->
+  <footer class="py-6 text-center text-sm text-neutral-400">
+    &copy; 2025 Nakola Expert Systems. All rights reserved.
+  </footer>
+
 </body>
 </html>
