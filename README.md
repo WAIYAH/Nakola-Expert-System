@@ -191,12 +191,13 @@ This project is licensed under the [ISC License](LICENSE).
 
 ## 🤝 Contributing
 
-This is a private project for Nakola Expert Systems. For inquiries, visit [nakolaexpertsystems.com](https://nakolaexpertsystems.com) or reach out via the [contact page](https://nakolaexpertsystems.com/contact.html).
+This is a private project solely built and maintained by **Lucky Nakola**. No external contributions are accepted. For inquiries, visit [nakolaexpertsystems.com](https://nakolaexpertsystems.com) or reach out via the [contact page](https://nakolaexpertsystems.com/contact.html).
 
 ---
 
 <p align="center">
   <strong>Nakola Expert Systems</strong><br>
+  Built by Lucky Nakola<br>
   Nairobi, Kenya 🇰🇪<br>
   <em>Building technology that matters.</em>
 </p>
