@@ -180,7 +180,7 @@
     <!-- ── HERO ─────────────────────────────────────────── -->
     <section class="relative min-h-[90vh] flex items-center overflow-hidden pt-20 lg:pt-24" aria-labelledby="hero-heading" data-hero-parallax>
       <!-- Background video -->
-      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/images/backgrounds/hero-bg-nakola-expert-systems.webp">
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="assets/images/backgrounds/hero-bg-nakola-expert-systems.webp">
         <source src="/videos/hero%20background.mp4" type="video/mp4" />
       </video>
       <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/60 to-neutral-900/80"></div>
@@ -211,25 +211,26 @@
             <div class="reveal"><span class="badge badge-primary mb-6">🌍 Trusted Across Africa &amp; Beyond</span></div>
 
             <h1 id="hero-heading" class="reveal reveal-delay-1 text-balance mb-6 text-white">
-              Build Smarter. Scale Faster. <span class="gradient-text-animated">Innovate Globally.</span>
+              <span data-ab-key="hero_headline_prefix">Build Smarter. Ship Faster.</span> <span class="gradient-text-animated" data-ab-key="hero_headline_accent">Grow With Confidence.</span>
             </h1>
 
             <p class="reveal reveal-delay-2 text-lg lg:text-xl text-white/70 leading-relaxed mb-8 max-w-xl" data-scramble data-scramble-duration="1800">
-              We partner with ambitious startups, growing SMEs, and forward-thinking enterprises to deliver custom software solutions that drive <strong class="text-white">measurable business outcomes</strong>.
+              <span data-ab-key="hero_body_prefix">We help startups, SMEs, and enterprises launch custom software that drives </span><strong class="text-white" data-ab-key="hero_body_emphasis">measurable revenue, efficiency, and growth</strong><span data-ab-key="hero_body_suffix"> with senior engineering oversight from day one.</span>
             </p>
 
             <div class="reveal reveal-delay-3 flex flex-wrap gap-4 mb-10">
               <a href="/contact.html" class="btn btn-primary btn-lg" data-magnetic="0.3">
-                Get a Proposal
+                <span data-ab-key="hero_primary_cta">Get Your Free Proposal</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
-              <a href="/work.html" class="btn btn-secondary btn-lg border-white/30 text-white hover:bg-white/10" data-magnetic="0.2">View Our Work</a>
+              <a href="/work.html" class="btn btn-secondary btn-lg border-white/30 text-white hover:bg-white/10" data-magnetic="0.2"><span data-ab-key="hero_secondary_cta">See Case Studies</span></a>
             </div>
 
-            <div class="reveal reveal-delay-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/50">
-              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>50+ Projects Delivered</span>
-              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>8+ Countries Served</span>
-              <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Enterprise-Grade Quality</span>
+            <div class="reveal reveal-delay-4 grid sm:grid-cols-2 gap-3 text-sm max-w-2xl">
+              <div class="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white/85"><span class="font-semibold text-white">50+</span> Projects Delivered</div>
+              <div class="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white/85"><span class="font-semibold text-white">98%</span> Client Satisfaction</div>
+              <div class="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white/85">Founder-Led Senior Team</div>
+              <div class="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white/85">Response Within 4 Business Hours</div>
             </div>
           </div>
 
@@ -263,11 +264,25 @@
       </div>
 
       <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/30">
+      <a href="#services" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition" aria-label="Scroll to services section">
         <span class="text-xs uppercase tracking-widest">Scroll</span>
         <div class="w-5 h-8 rounded-full border-2 border-white/20 flex justify-center pt-1.5">
           <div class="w-1 h-2.5 bg-white/40 rounded-full animate-bounce"></div>
         </div>
+      </a>
+    </section>
+
+    <!-- ── QUICK EXPLORE ─────────────────────────────────── -->
+    <section class="home-quick-nav section-sm bg-white border-b border-neutral-100" aria-label="Quick explore">
+      <div class="container-nes">
+        <nav class="home-quick-nav__track reveal" aria-label="Homepage quick links">
+          <a href="#services" data-section-link class="home-quick-nav__link">What We Do</a>
+          <a href="#why-us" data-section-link class="home-quick-nav__link">Why NES</a>
+          <a href="#process" data-section-link class="home-quick-nav__link">Our Process</a>
+          <a href="#portfolio-preview" data-section-link class="home-quick-nav__link">Portfolio</a>
+          <a href="#testimonials" data-section-link class="home-quick-nav__link">Testimonials</a>
+          <a href="/contact.html" class="home-quick-nav__link home-quick-nav__link--cta">Get Proposal</a>
+        </nav>
       </div>
     </section>
 
@@ -320,7 +335,7 @@
               Websites &amp; Apps That <span class="gradient-text-animated">Speak for Themselves</span>
             </h2>
             <p class="reveal reveal-delay-2 text-lg text-neutral-400 leading-relaxed mb-8">
-              From hospitality and healthcare to e-commerce and fintech — we've built <strong class="text-white">50+ digital products</strong> that drive real revenue for businesses across Africa and beyond.
+              From hospitality and healthcare to e-commerce and fintech, we build production-ready platforms that improve conversion, cut manual work, and scale operations.
             </p>
             <div class="reveal reveal-delay-3 grid grid-cols-3 gap-4 mb-8">
               <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
@@ -338,10 +353,10 @@
             </div>
             <div class="reveal reveal-delay-4 flex flex-wrap gap-4">
               <a href="/work.html" class="btn btn-primary btn-lg" data-magnetic="0.3">
-                View All Projects
+                Review Project Results
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
-              <a href="/contact.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition" data-magnetic="0.2">Start Your Project</a>
+              <a href="/contact.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition" data-magnetic="0.2">Request a Similar Build</a>
             </div>
           </div>
         </div>
@@ -351,7 +366,8 @@
     <!-- ── TRUST BAR — Infinite Marquee ─────────────────── -->
     <section class="section-sm bg-neutral-50 border-y border-neutral-100" aria-label="Trusted by">
       <div class="container-nes text-center">
-        <p class="text-sm font-medium text-neutral-400 uppercase tracking-wider mb-6">Trusted by innovative businesses across Africa and beyond</p>
+        <p class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-2">Trusted by ambitious teams across Africa and beyond</p>
+        <p class="text-xs text-neutral-400 mb-6">Startups, SMEs, and enterprise operators building serious digital products.</p>
       </div>
       <div class="marquee-wrapper">
         <div class="marquee-track">
@@ -495,11 +511,27 @@
           </div>
         </div>
 
-        <div class="text-center mt-14 reveal">
-          <a href="/services.html" class="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(37,99,235,0.3)] hover:scale-105">
-            Explore All Services <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        <div class="text-center mt-14 reveal flex flex-wrap justify-center gap-4">
+          <a href="/contact.html" class="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(37,99,235,0.3)] hover:scale-105">
+            Book a Free Discovery Call <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
+          <a href="/services.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">Explore All Services</a>
         </div>
+      </div>
+    </section>
+
+    <!-- ── MOTION QUOTE ───────────────────────────────────── -->
+    <section class="tech-motion-quote section-sm relative overflow-hidden section-bg" style="background-image: url('images/Background%20Images/pngtree-beautiful-aerial-landscape-of-a-peaceful-beach-with-calm-ocean-and-image_21038691.webp');" aria-label="Technology quote">
+      <div class="tech-motion-quote__overlay"></div>
+      <div class="tech-motion-quote__grid"></div>
+      <span class="tech-motion-quote__orb tech-motion-quote__orb--one" aria-hidden="true"></span>
+      <span class="tech-motion-quote__orb tech-motion-quote__orb--two" aria-hidden="true"></span>
+      <div class="container-nes relative z-10">
+        <blockquote class="tech-motion-quote__inner reveal">
+          <p class="tech-motion-quote__eyebrow">Our Technology Philosophy</p>
+          <p class="tech-motion-quote__text">"Technology creates real change when bold ideas are engineered into reliable systems people can trust every day."</p>
+          <cite class="tech-motion-quote__credit">Nakola Expert Systems</cite>
+        </blockquote>
       </div>
     </section>
 
@@ -690,7 +722,7 @@
                 <div class="text-center p-3 bg-white/70 rounded-xl"><p class="font-heading font-extrabold text-2xl text-green-600">14wk</p><p class="text-[11px] text-neutral-500 font-medium">Delivery Time</p></div>
                 <div class="text-center p-3 bg-white/70 rounded-xl"><p class="font-heading font-extrabold text-2xl text-purple-600">5</p><p class="text-[11px] text-neutral-500 font-medium">Markets Served</p></div>
               </div>
-              <a href="/work.html" class="btn btn-primary btn-md self-start">Read Full Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+              <a href="/work.html" class="btn btn-primary btn-md self-start">See Full Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
             </div>
             <div class="p-10 lg:p-14 bg-white flex flex-col justify-center">
               <h4 class="font-bold text-neutral-900 text-sm uppercase tracking-wider mb-5">What We Delivered</h4>
@@ -715,7 +747,7 @@
     </section>
 
     <!-- ── PORTFOLIO PREVIEW ──────────────────────────── -->
-    <section class="section bg-white border-t border-neutral-100" aria-labelledby="portfolio-preview-heading" data-parallax="0.15">
+    <section id="portfolio-preview" class="section bg-white border-t border-neutral-100" aria-labelledby="portfolio-preview-heading" data-parallax="0.15">
       <div class="container-nes">
         <div class="section-header reveal">
           <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.5h16.5m-16.5 7.5h16.5m-16.5 7.5h16.5"/></svg> Our Portfolio</span>
@@ -791,8 +823,9 @@
             </article>
           </div>
         </div>
-        <div class="text-center mt-10 reveal">
+        <div class="text-center mt-10 reveal flex flex-wrap justify-center gap-4">
           <a href="/work.html" class="btn btn-secondary btn-lg">View All Projects <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="/contact.html" class="btn btn-primary btn-lg">Talk to Our Team</a>
         </div>
       </div>
     </section>
@@ -865,44 +898,114 @@
     </section>
 
     <!-- ── TECH STACK ───────────────────────────────────── -->
-    <section class="section bg-neutral-50" aria-labelledby="tech-heading">
-      <div class="container-nes">
-        <div class="section-header reveal">
-          <span class="section-label"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"/></svg> Tech Stack</span>
-          <h2 id="tech-heading" class="section-title">Built With <span class="gradient-text">Modern Technology</span></h2>
-          <p class="section-description">We use industry-leading tools and frameworks to deliver performant, maintainable, and scalable solutions.</p>
+    <section class="section tech-stack-section relative overflow-hidden bg-amber-50 text-neutral-900" aria-labelledby="tech-heading">
+      <div class="container-nes relative z-10">
+        <div class="section-header reveal text-center">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase text-amber-800 border border-amber-600/35 bg-amber-300/20 mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-700 animate-pulse"></span> Tech Stack
+          </span>
+          <h2 id="tech-heading" class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-neutral-900 mb-4">
+            Built on a <span class="tech-stack-highlight">Scalable Engineering Stack</span>
+          </h2>
+          <p class="max-w-3xl mx-auto text-neutral-600 text-lg leading-relaxed">From product UI to cloud infrastructure, we choose proven technologies that keep delivery fast, secure, and future-ready.</p>
         </div>
-        <div class="flex flex-wrap justify-center gap-4 reveal">
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">React</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Next.js</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Node.js</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Python</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">TypeScript</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">PostgreSQL</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">MongoDB</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">AWS</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Docker</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Flutter</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">React Native</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">GraphQL</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Tailwind CSS</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Firebase</span>
-          <span class="px-5 py-2.5 bg-white border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:border-primary-300 hover:text-primary-600 transition">Laravel</span>
+
+        <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-12" data-stagger>
+          <article class="tech-stack-card reveal" data-stagger-child>
+            <h3 class="text-lg font-bold text-neutral-900">Frontend Engineering</h3>
+            <p class="text-sm text-neutral-600 mt-2">Interfaces optimized for speed, clarity, and conversion.</p>
+            <div class="tech-stack-pills">
+              <span class="tech-stack-pill">React</span>
+              <span class="tech-stack-pill">Next.js</span>
+              <span class="tech-stack-pill">TypeScript</span>
+              <span class="tech-stack-pill">Tailwind CSS</span>
+            </div>
+          </article>
+
+          <article class="tech-stack-card reveal reveal-delay-1" data-stagger-child>
+            <h3 class="text-lg font-bold text-neutral-900">Backend Systems</h3>
+            <p class="text-sm text-neutral-600 mt-2">Robust APIs and services engineered for scale.</p>
+            <div class="tech-stack-pills">
+              <span class="tech-stack-pill">Node.js</span>
+              <span class="tech-stack-pill">Python</span>
+              <span class="tech-stack-pill">Laravel</span>
+              <span class="tech-stack-pill">GraphQL</span>
+            </div>
+          </article>
+
+          <article class="tech-stack-card reveal reveal-delay-2" data-stagger-child>
+            <h3 class="text-lg font-bold text-neutral-900">Data Layer</h3>
+            <p class="text-sm text-neutral-600 mt-2">Reliable data architecture for analytics and growth.</p>
+            <div class="tech-stack-pills">
+              <span class="tech-stack-pill">PostgreSQL</span>
+              <span class="tech-stack-pill">MongoDB</span>
+              <span class="tech-stack-pill">Firebase</span>
+              <span class="tech-stack-pill">Redis</span>
+            </div>
+          </article>
+
+          <article class="tech-stack-card reveal reveal-delay-3" data-stagger-child>
+            <h3 class="text-lg font-bold text-neutral-900">Cloud &amp; DevOps</h3>
+            <p class="text-sm text-neutral-600 mt-2">Automated deployment pipelines with high reliability.</p>
+            <div class="tech-stack-pills">
+              <span class="tech-stack-pill">AWS</span>
+              <span class="tech-stack-pill">Docker</span>
+              <span class="tech-stack-pill">CI/CD</span>
+              <span class="tech-stack-pill">Monitoring</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="tech-stack-marquee-wrap mt-10 reveal" aria-label="Technologies we work with">
+          <div class="tech-stack-marquee">
+            <span>React Native</span>
+            <span>Flutter</span>
+            <span>Microservices</span>
+            <span>API Integrations</span>
+            <span>Automation</span>
+            <span>Security Testing</span>
+            <span>Performance Tuning</span>
+            <span>Cloud Architecture</span>
+            <span>React Native</span>
+            <span>Flutter</span>
+            <span>Microservices</span>
+            <span>API Integrations</span>
+            <span>Automation</span>
+            <span>Security Testing</span>
+            <span>Performance Tuning</span>
+            <span>Cloud Architecture</span>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-4 mt-10 reveal">
+          <div class="tech-stack-kpi">
+            <p class="tech-stack-kpi__label">Delivery Model</p>
+            <p class="tech-stack-kpi__value">Agile Sprints</p>
+          </div>
+          <div class="tech-stack-kpi">
+            <p class="tech-stack-kpi__label">Engineering Standard</p>
+            <p class="tech-stack-kpi__value">Secure by Design</p>
+          </div>
+          <div class="tech-stack-kpi">
+            <p class="tech-stack-kpi__label">Architecture Focus</p>
+            <p class="tech-stack-kpi__value">Cloud-Native Scale</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ── FINAL CTA ────────────────────────────────────── -->
-    <section class="section relative section-bg text-white" style="background-image: url('assets/images/backgrounds/contact-section-bg.webp')" aria-labelledby="cta-heading">
-      <div class="section-bg-overlay section-bg-overlay--primary"></div>
-      <div class="container-nes text-center max-w-3xl mx-auto relative z-10">
-        <h2 id="cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white">Ready to Build Something <span class="gradient-text-animated">Extraordinary?</span></h2>
-        <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed">Whether you're launching a new product, scaling an existing platform, or modernizing your systems — we're ready to partner with you.</p>
+    <section class="section relative section-bg cta-section-enhanced text-white" style="background-image: url('assets/images/backgrounds/contact-section-bg.webp')" aria-labelledby="cta-heading">
+      <div class="section-bg-overlay section-bg-overlay--primary section-bg-overlay--cta"></div>
+      <div class="container-nes cta-section-panel text-center max-w-3xl mx-auto relative z-10">
+        <h2 id="cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white"><span data-ab-key="final_cta_prefix">Ready to Start Your</span> <span class="gradient-text-animated" data-ab-key="final_cta_accent">Next Revenue-Driving Project?</span></h2>
+        <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed"><span data-ab-key="final_cta_body">Share your project goals and we will send a clear plan, delivery timeline, and pricing options tailored to your business.</span></p>
         <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-4">
-          <a href="/contact.html" class="btn btn-white btn-lg" data-magnetic="0.3">Get a Free Proposal <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-          <a href="/services.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">Explore Services</a>
+          <a href="/contact.html" class="btn btn-white btn-lg" data-magnetic="0.3"><span data-ab-key="final_cta_primary">Get My Free Proposal</span> <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="https://wa.me/254715674828?text=Hello%20Lucky%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Nakola%20Expert%20Systems." target="_blank" rel="noopener noreferrer" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition"><span data-ab-key="final_cta_whatsapp">Chat on WhatsApp</span></a>
+          <a href="tel:+254715674828" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition"><span data-ab-key="final_cta_call">Call +254 715 674 828</span></a>
         </div>
-        <p class="reveal reveal-delay-3 text-sm text-white/50 mt-6">✓ Free consultation · ✓ No obligation · ✓ Response within 4 hours</p>
+        <p class="reveal reveal-delay-3 text-sm text-white/50 mt-6"><span data-ab-key="final_cta_micro">✓ Free consultation · ✓ No obligation · ✓ Senior-team review · ✓ Response within 4 business hours</span></p>
       </div>
     </section>
 
@@ -954,6 +1057,11 @@
       </div>
     </div>
   </footer>
+
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m0 0l-6 6m6-6l6 6"/></svg>
+    <span>Top</span>
+  </button>
 
 </body>
 </html>

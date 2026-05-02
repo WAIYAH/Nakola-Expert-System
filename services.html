@@ -185,7 +185,7 @@
 
     <!-- ── HERO ─────────────────────────────────────────── -->
     <section class="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden" aria-labelledby="services-hero-heading">
-      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/images/backgrounds/services-technology-bg.webp">
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="assets/images/backgrounds/services-technology-bg.webp">
         <source src="/videos/coding.mp4" type="video/mp4" />
       </video>
       <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/60 to-neutral-900/80"></div>
@@ -193,15 +193,39 @@
         <div class="max-w-3xl mx-auto text-center">
           <div class="reveal"><span class="badge badge-primary mb-5">Our Services</span></div>
           <h1 id="services-hero-heading" class="reveal reveal-delay-1 text-balance mb-6 text-white">
-            Technology Solutions That Drive <span class="gradient-text">Real Results</span>
+            <span data-services-ab-key="hero_headline_prefix">Technology Solutions That Drive</span> <span class="gradient-text" data-services-ab-key="hero_headline_accent">Real Results</span>
           </h1>
           <p class="reveal reveal-delay-2 text-lg lg:text-xl text-white/70 leading-relaxed mb-8 max-w-2xl mx-auto">
-            From strategy to deployment and beyond — we deliver end-to-end technology solutions tailored to your business goals. Every service is designed for <strong class="text-white">measurable outcomes</strong>.
+            <span data-services-ab-key="hero_body_prefix">From strategy to deployment and beyond, we deliver end-to-end technology solutions tailored to your business goals with </span><strong class="text-white" data-services-ab-key="hero_body_emphasis">clear ROI, speed, and reliability</strong><span data-services-ab-key="hero_body_suffix">.</span>
           </p>
           <div class="reveal reveal-delay-3 flex flex-wrap gap-4 justify-center">
-            <a href="/contact.html" class="btn btn-primary btn-lg">Get a Custom Proposal <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-            <a href="#service-grid" class="btn btn-secondary btn-lg">Explore Services</a>
+            <a href="/contact.html" class="btn btn-primary btn-lg"><span data-services-ab-key="hero_primary_cta">Get a Custom Proposal</span> <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="#service-grid" class="btn btn-secondary btn-lg"><span data-services-ab-key="hero_secondary_cta">Explore Services</span></a>
           </div>
+          <p class="reveal reveal-delay-4 text-sm text-white/60 mt-6"><span data-services-ab-key="hero_micro">✓ Free discovery call · ✓ Transparent pricing · ✓ Response within 4 business hours</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES QUICK NAV + TRUST PROOF ─────────────── -->
+    <section class="home-quick-nav section-sm bg-white border-b border-neutral-100" aria-label="Jump to service">
+      <div class="container-nes">
+        <nav class="home-quick-nav__track reveal" aria-label="Services quick links">
+          <a href="#custom-software" data-section-link class="home-quick-nav__link">Custom Software</a>
+          <a href="#consulting" data-section-link class="home-quick-nav__link">Consulting</a>
+          <a href="#digital-transformation" data-section-link class="home-quick-nav__link">Transformation</a>
+          <a href="#cloud-devops" data-section-link class="home-quick-nav__link">Cloud &amp; DevOps</a>
+          <a href="#qa" data-section-link class="home-quick-nav__link">Quality Assurance</a>
+          <a href="#managed-support" data-section-link class="home-quick-nav__link">Managed Support</a>
+          <a href="#engagement-heading" data-section-link class="home-quick-nav__link">Engagement Models</a>
+          <a href="/contact.html" class="home-quick-nav__link home-quick-nav__link--cta">Request Proposal</a>
+        </nav>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6 reveal reveal-delay-1">
+          <div class="rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-600"><span class="font-bold text-neutral-900">50+</span> Projects Delivered</div>
+          <div class="rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-600"><span class="font-bold text-neutral-900">98%</span> Client Satisfaction</div>
+          <div class="rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-600"><span class="font-bold text-neutral-900">Founder-Led</span> Senior Technical Oversight</div>
+          <div class="rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-600"><span class="font-bold text-neutral-900">4 Business Hours</span> Typical Response Time</div>
         </div>
       </div>
     </section>
@@ -569,16 +593,17 @@
     </section>
 
     <!-- ── FINAL CTA ────────────────────────────────────── -->
-    <section class="section relative section-bg text-white" style="background-image: url('assets/images/backgrounds/services-technology-bg.webp')" aria-labelledby="services-cta-heading">
-      <div class="section-bg-overlay section-bg-overlay--primary"></div>
-      <div class="container-nes text-center max-w-3xl mx-auto relative z-10">
-        <h2 id="services-cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white">Have a Project in Mind?</h2>
-        <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed">Every great product starts with a conversation. Tell us about your challenge — we'll show you how technology can solve it.</p>
+    <section class="section relative section-bg cta-section-enhanced text-white" style="background-image: url('assets/images/backgrounds/services-technology-bg.webp')" aria-labelledby="services-cta-heading">
+      <div class="section-bg-overlay section-bg-overlay--primary section-bg-overlay--cta"></div>
+      <div class="container-nes cta-section-panel text-center max-w-3xl mx-auto relative z-10">
+        <h2 id="services-cta-heading" class="reveal text-3xl lg:text-4xl font-extrabold mb-4 text-white"><span data-services-ab-key="final_cta_prefix">Have a Project in Mind?</span> <span class="gradient-text-animated" data-services-ab-key="final_cta_accent">Let's Plan It Right.</span></h2>
+        <p class="reveal reveal-delay-1 text-lg text-white/80 mb-8 leading-relaxed"><span data-services-ab-key="final_cta_body">Tell us your goals and we will share a practical delivery plan with scope, timeline, and pricing options built for your business stage.</span></p>
         <div class="reveal reveal-delay-2 flex flex-wrap justify-center gap-4">
-          <a href="/contact.html" class="btn btn-white btn-lg">Get a Free Proposal <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-          <a href="/work.html" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">View Case Studies</a>
+          <a href="/contact.html" class="btn btn-white btn-lg"><span data-services-ab-key="final_cta_primary">Get a Free Proposal</span> <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="https://wa.me/254715674828?text=Hello%20Lucky%2C%20I%20would%20like%20to%20discuss%20a%20service%20for%20my%20project%20with%20Nakola%20Expert%20Systems." target="_blank" rel="noopener noreferrer" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition"><span data-services-ab-key="final_cta_whatsapp">Chat on WhatsApp</span></a>
+          <a href="tel:+254715674828" class="btn btn-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition"><span data-services-ab-key="final_cta_call">Call +254 715 674 828</span></a>
         </div>
-        <p class="reveal reveal-delay-3 text-sm text-white/50 mt-6">✓ Free consultation · ✓ No obligation · ✓ Response within 4 hours</p>
+        <p class="reveal reveal-delay-3 text-sm text-white/50 mt-6"><span data-services-ab-key="final_cta_micro">✓ Free consultation · ✓ No obligation · ✓ Senior-team review · ✓ Response within 4 business hours</span></p>
       </div>
     </section>
 

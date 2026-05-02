@@ -158,12 +158,14 @@ function initTextScramble() {
 
   els.forEach((el) => {
     el.dataset.scrambleOriginal = el.textContent;
+    el.dataset.scrambleOriginalHtml = el.innerHTML;
     observer.observe(el);
   });
 }
 
 function scrambleText(el, chars) {
   const original = el.dataset.scrambleOriginal;
+  const originalHtml = el.dataset.scrambleOriginalHtml;
   const duration = parseInt(el.dataset.scrambleDuration || '1500', 10);
   const len = original.length;
   const startTime = performance.now();
@@ -187,7 +189,11 @@ function scrambleText(el, chars) {
     if (progress < 1) {
       requestAnimationFrame(step);
     } else {
-      el.textContent = original;
+      if (originalHtml) {
+        el.innerHTML = originalHtml;
+      } else {
+        el.textContent = original;
+      }
     }
   }
 
