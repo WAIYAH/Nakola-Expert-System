@@ -706,6 +706,74 @@
     transition: none;
   }
 
+  /* ── Floating WhatsApp CTA ────────────────────────────── */
+  .whatsapp-float {
+    position: fixed;
+    right: clamp(0.75rem, 2vw, 1.25rem);
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 9600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1rem 0.55rem 0.55rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    box-shadow: 0 12px 30px rgba(18, 140, 126, 0.35);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+  .whatsapp-float:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    filter: saturate(1.04);
+    box-shadow: 0 16px 34px rgba(18, 140, 126, 0.42);
+  }
+  .whatsapp-float:active {
+    transform: translateY(0);
+  }
+
+  .whatsapp-float__icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+    flex-shrink: 0;
+  }
+  .whatsapp-float__icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+  }
+
+  .whatsapp-float__label {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    .whatsapp-float {
+      right: 0.75rem;
+      bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+      font-size: 0.8125rem;
+      padding-right: 0.85rem;
+      box-shadow: 0 10px 24px rgba(18, 140, 126, 0.34);
+    }
+
+    .whatsapp-float__icon {
+      width: 1.9rem;
+      height: 1.9rem;
+    }
+  }
+
   /* ── Infinite Marquee / Logo Slider ────────────────────── */
   .marquee-wrapper {
     overflow: hidden;
@@ -724,6 +792,37 @@
 
   .marquee-track:hover {
     animation-play-state: paused;
+  }
+
+  .marquee-wrapper--portfolio,
+  .marquee-wrapper--testimonials {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+
+  .marquee-track--portfolio {
+    gap: 1.25rem;
+    animation-duration: 42s;
+  }
+
+  .marquee-track--testimonials {
+    gap: 1.25rem;
+    animation-duration: 58s;
+    animation-direction: reverse;
+  }
+
+  .marquee-track--continuous:hover {
+    animation-play-state: running;
+  }
+
+  @media (max-width: 1024px) {
+    .marquee-track--portfolio {
+      animation-duration: 34s;
+    }
+
+    .marquee-track--testimonials {
+      animation-duration: 46s;
+    }
   }
 
   /* ── Service Showcase Cards ────────────────────────────── */
