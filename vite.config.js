@@ -34,6 +34,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         careers: resolve(__dirname, 'careers.html'),
         careersApply: resolve(__dirname, 'careers-apply.html'),
+        affiliateApplication: resolve(__dirname, 'affiliate-application.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         terms: resolve(__dirname, 'terms.html'),
       },
