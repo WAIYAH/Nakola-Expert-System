@@ -1594,73 +1594,6 @@
     transform: translateY(-2px);
   }
 
-  .tech-pulse-track {
-    border-radius: 1rem;
-    border: 1px solid rgba(148, 163, 184, 0.3);
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-
-  .tech-pulse-track:hover {
-    transform: translateY(-6px);
-    border-color: rgba(37, 99, 235, 0.32);
-    box-shadow: 0 22px 36px rgba(30, 64, 175, 0.12);
-  }
-
-  .tech-pulse-track h4 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 800;
-    color: #111827;
-  }
-
-  .tech-pulse-track__icon {
-    width: 2.35rem;
-    height: 2.35rem;
-    border-radius: 0.75rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    border: 1px solid rgba(37, 99, 235, 0.22);
-    background: linear-gradient(150deg, rgba(239, 246, 255, 0.95), rgba(224, 231, 255, 0.72));
-    box-shadow: inset 0 -8px 16px rgba(255, 255, 255, 0.45);
-    margin-bottom: 0.75rem;
-    transition: transform 0.3s ease;
-  }
-
-  .tech-pulse-track:hover .tech-pulse-track__icon {
-    transform: scale(1.08) rotate(-4deg);
-  }
-
-  .tech-pulse-track p {
-    margin: 0.55rem 0 0;
-    color: #6b7280;
-    font-size: 0.88rem;
-    line-height: 1.55;
-  }
-
-  .tech-pulse-meta {
-    margin-top: 0.85rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-  }
-
-  .tech-pulse-meta span {
-    display: inline-flex;
-    align-items: center;
-    border-radius: 9999px;
-    border: 1px solid rgba(37, 99, 235, 0.22);
-    background: rgba(239, 246, 255, 0.95);
-    color: #1d4ed8;
-    padding: 0.22rem 0.58rem;
-    font-size: 0.72rem;
-    font-weight: 700;
-  }
-
   .tech-pulse-mini {
     border-radius: 1rem;
     border: 1px solid rgba(37, 99, 235, 0.18);
@@ -1730,21 +1663,11 @@
     animation: gradientShift 9s ease infinite;
   }
 
-  @media (max-width: 1024px) {
-    .tech-pulse-track {
-      min-height: 100%;
-    }
-  }
-
   @media (max-width: 768px) {
     .tech-pulse-gateway::before,
     .tech-pulse-gateway::after {
       width: 250px;
       height: 250px;
-    }
-
-    .tech-pulse-track {
-      padding: 0.92rem;
     }
 
     .tech-pulse-mini {
@@ -1762,8 +1685,104 @@
     }
 
     .tech-pulse-btn,
-    .tech-pulse-track,
     .tech-pulse-link {
+      transition: none !important;
+    }
+  }
+
+  /* ── Careers: Role Card Flex Layout ───────────────────── */
+  .careers-role-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .careers-role-card {
+    position: relative;
+    flex: 1 1 100%;
+    max-width: 100%;
+    border-radius: 1rem;
+    border: 1px solid rgba(37, 99, 235, 0.16);
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9));
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    padding: 1.2rem;
+    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+  }
+
+  .careers-role-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 22px 44px rgba(30, 64, 175, 0.16);
+  }
+
+  .careers-role-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .careers-role-meta span {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(37, 99, 235, 0.22);
+    background: rgba(239, 246, 255, 0.85);
+    padding: 0.22rem 0.62rem;
+    font-size: 0.73rem;
+    color: #1d4ed8;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .careers-role-points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.42rem;
+  }
+
+  .careers-role-points li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.86rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  .careers-role-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.53rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+  }
+
+  @media (min-width: 768px) {
+    .careers-role-card {
+      flex: 1 1 calc((100% - 1rem) / 2);
+      max-width: calc((100% - 1rem) / 2);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .careers-role-card {
+      flex: 1 1 calc((100% - 2rem) / 3);
+      max-width: calc((100% - 2rem) / 3);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .careers-role-card {
+      padding: 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .careers-role-card {
       transition: none !important;
     }
   }
