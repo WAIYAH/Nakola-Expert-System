@@ -4,6 +4,9 @@
   "private": true,
   "description": "Nakola Expert Systems - African-grounded, global-grade technology solutions.",
   "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
