@@ -884,20 +884,76 @@
     .whatsapp-float {
       right: 0.75rem;
       bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-      font-size: 0.8125rem;
-      padding-right: 0.85rem;
+      padding: 0.7rem;
       box-shadow: 0 10px 24px rgba(18, 140, 126, 0.34);
+    }
+
+    /* Icon-only on small screens: the text label made the button wide
+       enough to consistently overlap page content while scrolling. */
+    .whatsapp-float__label {
+      display: none;
     }
 
     .whatsapp-float__icon {
       width: 1.9rem;
       height: 1.9rem;
+      background: transparent;
+      box-shadow: none;
     }
 
     .back-to-top {
       font-size: 0.73rem;
       padding: 0.52rem 0.8rem;
     }
+  }
+
+  /* ── Cookie Consent Banner ────────────────────────────── */
+  .cookie-consent {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 9700;
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    border-radius: 1rem;
+    background: #0f172a;
+    color: #e2e8f0;
+    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.35);
+  }
+  .cookie-consent__text {
+    flex: 1 1 260px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .cookie-consent__text a {
+    color: #93c5fd;
+    text-decoration: underline;
+  }
+  .cookie-consent__actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+  .cookie-consent .btn-secondary {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+  .cookie-consent .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+
+  /* Both sit bottom-right; avoid stacking on top of the consent banner */
+  body.has-cookie-banner .whatsapp-float,
+  body.has-cookie-banner .back-to-top {
+    display: none;
   }
 
   /* ── Infinite Marquee / Logo Slider ────────────────────── */

@@ -4,13 +4,17 @@
    Replace GA_MEASUREMENT_ID with your actual GA4 ID to activate.
    ============================================================ */
 
+import { hasAnalyticsConsent } from './cookieConsent.js';
+
 const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // ← Replace with real GA4 ID
 
 /**
- * Initializes GA4 + sets up conversion event listeners.
+ * Initializes GA4 (only once cookie consent is granted) + sets up
+ * conversion event listeners.
  */
 export function initAnalytics() {
-  loadGA4();
+  if (hasAnalyticsConsent()) loadGA4();
+  document.addEventListener('nes:consent-granted', loadGA4);
   trackConversions();
   trackOutboundLinks();
 }

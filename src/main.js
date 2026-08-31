@@ -9,6 +9,7 @@ import { initEffects }      from './scripts/modules/effects.js';
 import { initForms }        from './scripts/modules/forms.js';
 import { initFilters }      from './scripts/modules/filters.js';
 import { initAnalytics }    from './scripts/modules/analytics.js';
+import { initCookieConsent } from './scripts/modules/cookieConsent.js';
 import { initContentProtection } from './scripts/modules/protection.js';
 import { initAffiliateForm } from './scripts/modules/affiliateForm.js';
 import { initCareersRolePrefill } from './scripts/modules/careersRolePrefill.js';
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   safeInit('Effects',            initEffects);
   safeInit('Forms',              initForms);
   safeInit('Filters',            initFilters);
+  safeInit('CookieConsent',      initCookieConsent);
   safeInit('Analytics',          initAnalytics);
   safeInit('ScrollProgress',     initScrollProgress);
   safeInit('SectionQuickNav',    initSectionQuickNav);
