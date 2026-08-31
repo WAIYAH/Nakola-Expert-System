@@ -37,6 +37,7 @@ export default defineConfig({
         affiliateApplication: resolve(__dirname, 'affiliate-application.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         terms: resolve(__dirname, 'terms.html'),
+        notFound: resolve(__dirname, '404.html'),
       },
       output: {
         manualChunks: {

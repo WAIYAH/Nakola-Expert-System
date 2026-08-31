@@ -191,8 +191,19 @@ async function handleSubmit(form) {
   }
 
   try {
-    // Simulate send (replace with real endpoint later)
-    await new Promise((r) => setTimeout(r, 1500));
+    if (form.action) {
+      // FormSubmit's plain endpoint renders an HTML page; the /ajax/ variant
+      // returns JSON and is the documented way to submit via fetch().
+      const ajaxAction = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+      const response = await fetch(ajaxAction, {
+        method: form.method || 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      const data = await response.json().catch(() => ({}));
+      const isSuccess = response.ok && (data.success === true || data.success === 'true' || typeof data.success === 'undefined');
+      if (!isSuccess) throw new Error(data.message || `Submission failed with status ${response.status}`);
+    }
 
     // Success state
     const successEl = form.querySelector('.form-success');

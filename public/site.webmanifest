@@ -8,7 +8,7 @@
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/images/Logos/NES-Symbols Only.png",
+      "src": "/brand/favicon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

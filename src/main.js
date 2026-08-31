@@ -10,6 +10,8 @@ import { initForms }        from './scripts/modules/forms.js';
 import { initFilters }      from './scripts/modules/filters.js';
 import { initAnalytics }    from './scripts/modules/analytics.js';
 import { initContentProtection } from './scripts/modules/protection.js';
+import { initAffiliateForm } from './scripts/modules/affiliateForm.js';
+import { initCareersRolePrefill } from './scripts/modules/careersRolePrefill.js';
 
 /** Safely run an init function — logs errors without crashing other modules */
 function safeInit(name, fn) {
@@ -36,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   safeInit('HeroMedia',          initHeroMedia);
   safeInit('WhatsAppFloat',      initWhatsAppFloat);
   safeInit('ContentProtection',  initContentProtection);
+  safeInit('AffiliateForm',      initAffiliateForm);
+  safeInit('CareersRolePrefill', initCareersRolePrefill);
 });
 
 function initAbCopyTest() {
