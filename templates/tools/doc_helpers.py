@@ -35,6 +35,9 @@ COMPANY = {
     "location": "Nairobi, Kenya",
     "founder": "Lucky Nakola",
     "founder_title": "Founder",
+    "linkedin": "https://www.linkedin.com/company/nakola-expert-systems",
+    "github": "https://github.com/WAIYAH",
+    "twitter": "https://twitter.com/NakolaExpert",
 }
 
 PLACEHOLDER_LEGEND = (
@@ -226,6 +229,73 @@ def numbered(doc, text):
     run.font.size = Pt(10.5)
     run.font.color.rgb = BODY_TEXT
     return p
+
+
+def checklist_item(doc, text, is_placeholder=False):
+    p = doc.add_paragraph()
+    p.paragraph_format.space_after = Pt(4)
+    p.paragraph_format.left_indent = Pt(6)
+    run = p.add_run(f"☐  {text}")
+    run.font.size = Pt(10.5)
+    if is_placeholder:
+        run.italic = True
+        run.font.color.rgb = PLACEHOLDER_COLOR
+    else:
+        run.font.color.rgb = BODY_TEXT
+    return p
+
+
+def color_swatch_row(doc, name, hex_code, usage=""):
+    table = doc.add_table(rows=1, cols=3)
+    table.autofit = False
+    swatch_cell, name_cell, usage_cell = table.rows[0].cells
+    swatch_cell.width = Inches(0.5)
+    name_cell.width = Inches(2.0)
+    usage_cell.width = Inches(4.0)
+    _set_cell_background(swatch_cell, hex_code)
+    swatch_cell.text = ""
+
+    p = name_cell.paragraphs[0]
+    r1 = p.add_run(name)
+    r1.bold = True
+    r1.font.size = Pt(10)
+    r1.font.color.rgb = BODY_TEXT
+    p2 = name_cell.add_paragraph()
+    r2 = p2.add_run(f"#{hex_code}")
+    r2.font.size = Pt(9)
+    r2.font.color.rgb = GRAY
+
+    p3 = usage_cell.paragraphs[0]
+    r3 = p3.add_run(usage)
+    r3.font.size = Pt(9.5)
+    r3.font.color.rgb = BODY_TEXT
+    return table
+
+
+def copy_block(doc, lines):
+    """A shaded box containing ready-to-copy text (signatures, bios, message scripts)."""
+    table = doc.add_table(rows=1, cols=1)
+    cell = table.rows[0].cells[0]
+    _set_cell_background(cell, "F1F5F9")
+    first = True
+    for line in lines:
+        p = cell.paragraphs[0] if first else cell.add_paragraph()
+        first = False
+        p.paragraph_format.space_after = Pt(2)
+        if line == "":
+            continue
+        is_ph = line.startswith('[') and ']' in line
+        run = p.add_run(line)
+        run.font.size = Pt(10)
+        run.font.name = "Consolas"
+        if is_ph:
+            run.italic = True
+            run.font.color.rgb = PLACEHOLDER_COLOR
+        else:
+            run.font.color.rgb = BODY_TEXT
+    spacer = doc.add_paragraph()
+    spacer.paragraph_format.space_after = Pt(10)
+    return table
 
 
 def field(doc, label, value, is_placeholder=False):
