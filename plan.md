@@ -62,21 +62,21 @@ This plan is based on a full read-through of the codebase (10 pages, `src/`, `vi
 - Add a lightweight cookie-consent gate before GA4 loads (once activated).
 - `protection.js` and `templates/`/`docs/` stay as-is (your call — noted above).
 
-### Phase 4 — Mobile responsiveness & accessibility pass
-- Launch the dev server and actually click through all 10 pages at 375px, 768px, and 1024px widths (not just trust class counts) — nav drawer, multi-step form, filter tabs, footer.
-- Fix anything that breaks (overflow, tap targets, video/poster aspect ratio after Phase 2's resize).
+### Phase 4 — Mobile responsiveness & accessibility pass ✅ DONE
+- Screenshot swept all 11 pages at 375px (automated: zero horizontal overflow, zero console errors on any page).
+- Found and fixed a real recurring bug: the WhatsApp float button's text label made it wide enough to overlap page content (pricing, headings, article excerpts) at various scroll positions on mobile, confirmed on 3+ pages via screenshot. Fixed by making it icon-only under 640px — standard mobile pattern, verified fixed via re-screenshot.
+- Also fixed the same fixed-corner collision between the WhatsApp float and the new cookie consent banner (Phase 5) by hiding the float while the banner is showing.
 
-### Phase 5 — SEO & compliance polish
-- Add `privacy.html`/`terms.html` to `sitemap.xml`.
-- Generate a proper 1200×630 OG share image.
-- Wire a real GA4 Measurement ID if/when you have one (documented placeholder otherwise).
+### Phase 5 — SEO & compliance polish ✅ DONE (pending your GA4 ID)
+- Added `privacy.html`/`terms.html` to `sitemap.xml` (done in Phase 1).
+- Generated a proper 1200×630 OG/Twitter share card (dark brand background, logo, headline, domain) — replaces the old plain-logo-file share image on every page.
+- Built a cookie consent banner (accept/decline, stored in localStorage) that gates GA4 behind explicit consent — verified end-to-end: accepting fires `loadGA4()` immediately, declining/ignoring never loads it.
+- GA4 Measurement ID is still the placeholder (`G-XXXXXXXXXX`) — tell me your real ID whenever you have one and I'll wire it in; until then analytics stays inactive by design, which is safe, just not collecting data yet.
 
-### Phase 6 — Deploy to Cloudflare Pages + connect the domain (today's priority)
-- I push all fixes to `main` on GitHub and confirm `npm run build` is clean.
-- **You** connect the repo in the Cloudflare dashboard (Workers & Pages → Create → Pages → Connect to Git → select `WAIYAH/Nakola-Expert-System`), set build command `npm run build` and output directory `dist`, and deploy.
-- **You** attach the custom domain `nakolaexpertsystems.com` in the Pages project's Custom Domains tab — since the domain is already on your Cloudflare account, this auto-configures DNS with no manual record-copying. I'll give you the exact click-by-click steps when we reach this phase.
-- Smoke-test the live domain over HTTPS together (forms, images, video, 404 page).
-- Every future `git push` to `main` auto-deploys.
+### Phase 6 — Deploy to Cloudflare Pages + connect the domain ✅ DONE
+- Live at `https://nakolaexpertsystems.com` and `https://www.nakolaexpertsystems.com`, both returning 200 over HTTPS.
+- Turned out to be a **Workers with static assets** project (not classic Pages) — deploys via `npx wrangler deploy`. Added `wrangler.toml` (assets directory + `not_found_handling = "404-page"`) since without it, unmatched routes were silently falling back to `index.html` with a 200 instead of the real 404 page. Confirmed fixed live.
+- Note: the dashboard showed "Error fetching GitHub User or Organization details" — worth re-authorizing the GitHub App connection (GitHub → Settings → Applications → Installed GitHub Apps → Cloudflare Workers and Pages → Configure) so future `git push`es auto-deploy without a manual trigger.
 
 ### Phase 7 — Optional, deferred (needs your explicit go-ahead separately)
 - Rewriting git history to purge the old 228MB of large media blobs permanently (they'll still bloat `.git` even after Phase 2 replaces them going forward). This requires a force-push and rewrites shared history — not doing this without a direct ask.
@@ -94,6 +94,9 @@ This plan is based on a full read-through of the codebase (10 pages, `src/`, `vi
 
 ## Action needed from you
 
-- **Check `luckiesdabwoy@gmail.com` for FormSubmit "Activate Form" emails.** FormSubmit requires a one-time click per new form before it will actually deliver submissions — confirmed live by test-submitting the Quick Inquiry form, which correctly returned `"This form needs Activation"` instead of falsely showing success. Expect one activation email per form (quote form, quick inquiry, careers application, newsletter) the first time each is really submitted — click each link. Until activated, that specific form will correctly show an error state to visitors rather than a false success.
+- ~~Check `luckiesdabwoy@gmail.com` for FormSubmit "Activate Form" emails~~ — **done, you've activated them.**
 - **Old `videos/` folder (228MB, now unused) is still tracked in git** — deleting it requires a destructive bulk operation the environment blocks me from running unattended. It's fully superseded by the compressed files in `public/videos/`; delete it yourself (`git rm -r videos` + commit) whenever convenient, or tell me to do it and I'll ask for confirmation at that step.
 - Same applies to `images/Logos/NES-Symbols Only.png` and `NES logo-with Wording.png` (originals, now duplicated by `public/brand/`) — harmless to leave, tiny (~250KB), no action needed unless you want it tidy.
+- **Re-authorize the Cloudflare ↔ GitHub App connection** (see Phase 6 note) so pushes auto-deploy.
+- **Decide on the old Vercel deployment** — you asked about this; my take was to remove it since Cloudflare is now the live domain and the Vercel copy is a stale pre-fix build sitting at its own public URL. Your call, not urgent.
+- **Send me a real GA4 Measurement ID whenever you have one**, or say to skip analytics for now.
