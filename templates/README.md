@@ -3,6 +3,19 @@
 ## Overview
 This `/templates` directory converts the Nakola Expert Systems website content into reusable business documentation for sales, operations, branding, legal preparedness, and client delivery workflows.
 
+## Word (.docx) Versions
+The 9 core business + legal documents (Company Profile, Letterhead, Quotation, Invoice, Receipt, Proposal, NDA, Service Agreement, Terms & Conditions) each have a generated `.docx` file alongside their `.md` source, with:
+- A letterhead header (logo + name + tagline) and footer (contact info + page number) on every page
+- Branded heading and table styling matching the website's color system
+- Official-record fields (KRA PIN, registration number, bank details, etc.) styled in **orange italics** so they're impossible to miss before sending a document
+
+To regenerate them after editing content in `templates/tools/generate_docs.py` (e.g. updated pricing, contact details, or company info):
+```bash
+pip install -r templates/tools/requirements.txt
+python templates/tools/generate_docs.py
+```
+This is a one-time local tool (not part of the website build) — it requires Python and is not run by `npm run build`.
+
 ## Folder Structure
 - `business-documents/`
   - Core commercial and operational templates: company profile, letterhead, quotations, invoices, receipts, and proposals.
