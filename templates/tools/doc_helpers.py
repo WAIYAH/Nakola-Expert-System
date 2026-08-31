@@ -112,12 +112,12 @@ def add_letterhead_header(doc):
     table = header.add_table(rows=1, cols=2, width=Inches(6.9))
     table.autofit = True
     left, right = table.rows[0].cells
-    left.width = Inches(1.0)
-    right.width = Inches(5.9)
+    left.width = Inches(1.3)
+    right.width = Inches(5.6)
 
     p = left.paragraphs[0]
     run = p.add_run()
-    run.add_picture(ICON_PATH, height=Inches(0.5))
+    run.add_picture(ICON_PATH, height=Inches(0.55))
 
     p2 = right.paragraphs[0]
     p2.alignment = WD_ALIGN_PARAGRAPH.RIGHT
