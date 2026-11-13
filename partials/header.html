@@ -1,0 +1,52 @@
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════ -->
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-transparent" role="banner">
+    <div class="container-nes flex items-center justify-between h-16 lg:h-20">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Nakola Expert Systems — Home">
+        <img src="/brand/logo.webp" alt="Nakola Expert Systems" width="339" height="192" class="h-12 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+        <a href="/" data-nav-link class="px-4 py-2 text-sm font-medium text-neutral-600 rounded-md hover:text-primary-600 hover:bg-primary-50 transition">Home</a>
+        <a href="/services" data-nav-link class="px-4 py-2 text-sm font-medium text-neutral-600 rounded-md hover:text-primary-600 hover:bg-primary-50 transition">Services</a>
+        <a href="/work" data-nav-link class="px-4 py-2 text-sm font-medium text-neutral-600 rounded-md hover:text-primary-600 hover:bg-primary-50 transition">Our Work</a>
+        <a href="/about" data-nav-link class="px-4 py-2 text-sm font-medium text-neutral-600 rounded-md hover:text-primary-600 hover:bg-primary-50 transition">About</a>
+        <a href="/insights" data-nav-link class="px-4 py-2 text-sm font-medium text-neutral-600 rounded-md hover:text-primary-600 hover:bg-primary-50 transition">Insights</a>
+        <a href="/careers" data-nav-link class="px-4 py-2 text-sm font-medium text-neutral-600 rounded-md hover:text-primary-600 hover:bg-primary-50 transition">Careers</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3"><a href="/contact" class="btn btn-primary btn-md">Get in Touch</a></div>
+      <button id="mobile-toggle" class="lg:hidden p-2 -mr-2 text-neutral-700 hover:text-primary-600 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <style>.header-scrolled{border-color:var(--color-neutral-200);box-shadow:0 1px 3px rgba(0,0,0,.04)}.header-hidden{transform:translateY(-100%)}.nav-active{color:var(--color-primary-600)!important;background:var(--color-primary-50)}</style>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/40 z-40 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+  <style>.overlay-visible{opacity:1!important;pointer-events:auto!important}</style>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-drawer" class="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl translate-x-full transition-[translate] duration-300 ease-in-out flex flex-col" role="dialog" aria-modal="true" aria-label="Mobile navigation" inert>
+    <div class="flex items-center justify-between p-5 border-b border-neutral-100">
+      <span class="font-heading font-bold text-lg text-neutral-900">Menu</span>
+      <button id="mobile-close" class="p-2 -mr-2 text-neutral-500 hover:text-neutral-700 transition" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-5 space-y-1" aria-label="Mobile">
+      <a href="/" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Home</a>
+      <a href="/services" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Services</a>
+      <a href="/work" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Our Work</a>
+      <a href="/about" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">About</a>
+      <a href="/insights" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Insights</a>
+      <a href="/careers" class="block px-4 py-3 text-base font-medium text-neutral-700 rounded-lg hover:bg-primary-50 hover:text-primary-600 transition">Careers</a>
+    </nav>
+    <div class="p-5 border-t border-neutral-100 space-y-3">
+      <a href="/contact" class="btn btn-primary btn-lg w-full">Get in Touch</a>
+      <a href="tel:+254715674828" class="btn btn-secondary btn-lg w-full">Call Us</a>
+    </div>
+  </aside>
+  <style>.drawer-open{translate:0!important}</style>

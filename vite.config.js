@@ -1,9 +1,37 @@
-import { defineConfig } from 'vite';
+import { defineConfig, normalizePath } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
+import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
+const partialsDir = resolve(__dirname, 'partials');
+
+/**
+ * Replaces `<!-- @include name -->` with partials/name.html, so the shared
+ * head tags, header/menu and footer are written once for every page.
+ * Runs before Vite's own HTML processing, so assets inside partials are
+ * bundled exactly as if they were written in the page.
+ */
+function htmlPartials() {
+  const includeTag = /<!--\s*@include\s+([\w-]+)\s*-->/g;
+  const watchedDir = `${normalizePath(partialsDir)}/`;
+  return {
+    name: 'nes-html-partials',
+    transformIndexHtml: {
+      order: 'pre',
+      handler: (html) =>
+        html.replace(includeTag, (_, name) => readFileSync(resolve(partialsDir, `${name}.html`), 'utf8')),
+    },
+    // Partials aren't in Vite's module graph, so reload the page ourselves.
+    handleHotUpdate({ file, server }) {
+      if (!file.startsWith(watchedDir)) return;
+      server.ws.send({ type: 'full-reload' });
+      return [];
+    },
+  };
+}
+
 export default defineConfig({
-  plugins: [tailwindcss()],
+  plugins: [htmlPartials(), tailwindcss()],
   root: '.',
   publicDir: 'public',
   build: {
@@ -16,7 +44,9 @@ export default defineConfig({
     minify: 'terser',                // advanced JS minification
     terserOptions: {
       compress: {
-        drop_console: true,          // strip console.log in prod
+        // Strip debug logging but keep console.error/warn, so real failures
+        // (e.g. a form that didn't send) still leave a trace in production.
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
         drop_debugger: true,
         passes: 2,
       },
