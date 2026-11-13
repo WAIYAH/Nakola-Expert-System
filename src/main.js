@@ -297,45 +297,43 @@ function initBackToTop() {
   });
 }
 
+/**
+ * Hero background videos are 1–4 MB each and sit under dark overlays, so the
+ * HTML loads none of them (preload="none", no autoplay) and shows the poster.
+ * They only play on tablet/desktop screens, without Data Saver or reduced
+ * motion, and only while visible — phones on metered data never download them.
+ */
 function initHeroMedia() {
-  const hero = document.querySelector('[data-hero-parallax]');
-  const heroVideo = hero?.querySelector('video');
-  if (!hero || !heroVideo) return;
+  const videos = document.querySelectorAll('video[data-hero-video]');
+  if (!videos.length) return;
 
+  const wideScreen = window.matchMedia('(min-width: 768px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  heroVideo.setAttribute('aria-hidden', 'true');
-
-  const syncPlayback = () => {
-    if (reducedMotion.matches || document.visibilityState === 'hidden') {
-      heroVideo.pause();
-      return;
-    }
-
-    if (hero.getBoundingClientRect().bottom > 0) {
-      heroVideo.play().catch(() => {});
-    }
+  const saveData = navigator.connection?.saveData === true;
+  const onChange = (query, fn) => {
+    if (typeof query.addEventListener === 'function') query.addEventListener('change', fn);
+    else if (typeof query.addListener === 'function') query.addListener(fn);
   };
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0];
-      if (!entry) return;
-      if (reducedMotion.matches) return;
-      if (entry.isIntersecting && document.visibilityState === 'visible') {
-        heroVideo.play().catch(() => {});
-      } else {
-        heroVideo.pause();
-      }
-    },
-    { threshold: 0.15 }
-  );
+  videos.forEach((video) => {
+    let inView = !('IntersectionObserver' in window);
 
-  observer.observe(hero);
-  document.addEventListener('visibilitychange', syncPlayback);
-  if (typeof reducedMotion.addEventListener === 'function') {
-    reducedMotion.addEventListener('change', syncPlayback);
-  } else if (typeof reducedMotion.addListener === 'function') {
-    reducedMotion.addListener(syncPlayback);
-  }
-  syncPlayback();
+    const sync = () => {
+      const shouldPlay = inView && wideScreen.matches && !reducedMotion.matches && !saveData
+        && document.visibilityState === 'visible';
+      if (shouldPlay) video.play().catch(() => {});
+      else video.pause();
+    };
+
+    if (!inView) {
+      new IntersectionObserver(([entry]) => {
+        inView = entry.isIntersecting;
+        sync();
+      }, { threshold: 0.15 }).observe(video);
+    }
+    document.addEventListener('visibilitychange', sync);
+    onChange(wideScreen, sync);
+    onChange(reducedMotion, sync);
+    sync();
+  });
 }
