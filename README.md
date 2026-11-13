@@ -40,7 +40,7 @@ No React. No Vue. No jQuery. Just fast, maintainable HTML/CSS/JS.
 ├── work.html               # Work — 6 case studies with filterable categories
 ├── insights.html           # Insights — articles, featured post, newsletter signup
 ├── contact.html            # Contact — 3-step progressive quote form, quick inquiry
-├── careers.html            # Careers — open positions, perks, application form
+├── careers.html            # Careers — hiring status, affiliate program, Tech Pulse Insider
 ├── privacy.html            # Privacy Policy — 13-section data handling policy
 ├── terms.html              # Terms of Service — 16-section legal agreement
 │
@@ -119,7 +119,7 @@ Serves the `dist/` folder locally to verify the production build.
 | Work | `/work.html` | 6 case studies with category filters |
 | Insights | `/insights.html` | Articles, featured post, newsletter signup |
 | Contact | `/contact.html` | 3-step progressive quote form, quick inquiry |
-| Careers | `/careers.html` | Open positions, perks, application form |
+| Careers | `/careers.html` | Hiring status (no open roles), affiliate program, Tech Pulse Insider |
 | Privacy | `/privacy.html` | 13-section privacy policy |
 | Terms | `/terms.html` | 16-section terms of service |
 
@@ -151,7 +151,7 @@ The design system lives in `src/styles/main.css` using Tailwind CSS v4's `@theme
 
 ## 🔍 SEO
 
-- **JSON-LD** structured data on every page (Organization, LocalBusiness, WebSite, CollectionPage, Blog, JobPosting)
+- **JSON-LD** structured data on every page (Organization, LocalBusiness, WebSite, CollectionPage, Blog)
 - **Open Graph** meta tags for social sharing
 - **XML Sitemap** at `/sitemap.xml` covering all 9 pages
 - **robots.txt** with crawler directives

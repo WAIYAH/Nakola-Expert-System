@@ -1,0 +1,5 @@
+# Hiring is paused, so old job-application links go to the careers page.
+# 302 (temporary) on purpose: a cached 301 would keep bouncing returning
+# visitors away from /careers-apply even after the page is restored.
+/careers-apply.html /careers 302
+/careers-apply /careers 302
