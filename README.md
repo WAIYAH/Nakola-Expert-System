@@ -8,7 +8,8 @@ A conversion-optimized, performance-first marketing website for [Nakola Expert S
 
 ## ✨ Highlights
 
-- **9 fully optimized pages** — Home, About, Services, Work, Insights, Contact, Careers, Privacy Policy, Terms of Service
+- **10 pages + a 404** — Home, About, Services, Work, Insights, Contact, Careers, Affiliate Application, Privacy Policy, Terms of Service
+- **Light on mobile data** — hero videos are poster-only on phones, Data Saver and reduced motion; on a phone, 9 of 10 pages first load under 0.7 MB
 - **Performance-first architecture** — Vite 7 build pipeline, Tailwind CSS 4 utility engine, vanilla ES6+ modules
 - **Conversion-focused design** — Multi-step quote form, strategic CTAs, trust signals, case studies with measurable outcomes
 - **Accessible by default** — Skip-to-content links, focus traps, keyboard-navigable filter tabs, semantic HTML
@@ -38,30 +39,47 @@ No React. No Vue. No jQuery. Just fast, maintainable HTML/CSS/JS.
 ├── about.html              # About — story, mission/vision, values, team, timeline
 ├── services.html           # Services — 6 offerings, engagement models, FAQ accordion
 ├── work.html               # Work — 6 case studies with filterable categories
-├── insights.html           # Insights — articles, featured post, newsletter signup
+├── insights.html           # Insights — upcoming articles ("coming soon"), newsletter signup
 ├── contact.html            # Contact — 3-step progressive quote form, quick inquiry
 ├── careers.html            # Careers — hiring status, affiliate program, Tech Pulse Insider
+├── affiliate-application.html  # Affiliate program application form
 ├── privacy.html            # Privacy Policy — 13-section data handling policy
 ├── terms.html              # Terms of Service — 16-section legal agreement
+├── 404.html                # Not-found page (minimal layout)
+│
+├── partials/               # Shared markup, inlined at build time (see below)
+│   ├── head.html           # Icons, manifest, fonts, main.js, no-JS fallback
+│   ├── header.html         # Skip link, header, mobile menu
+│   └── footer.html         # Site footer
 │
 ├── src/
-│   ├── main.js             # Entry point — module orchestration
+│   ├── main.js             # Entry point — module orchestration, hero videos
 │   ├── styles/
 │   │   └── main.css        # Design system — @theme tokens, layers, keyframes
 │   └── scripts/
 │       └── modules/
-│           ├── navigation.js   # Sticky header, mobile drawer, focus trap
-│           ├── animations.js   # Scroll-reveal, animated counters
-│           ├── forms.js        # Validation, multi-step, draft saving
-│           ├── filters.js      # Category tabs with arrow-key navigation
-│           └── analytics.js    # GA4 loader, conversion & event tracking
+│           ├── navigation.js     # Sticky header, mobile menu, current-page highlight
+│           ├── animations.js     # Scroll-reveal (with fallbacks), animated counters
+│           ├── forms.js          # Validation, multi-step quote form, submit + errors
+│           ├── affiliateForm.js  # Affiliate application submit
+│           ├── filters.js        # Category tabs with arrow-key navigation
+│           ├── effects.js        # Visual effects (parallax, tilt cards, magnetic buttons, blobs)
+│           ├── cookieConsent.js  # Consent banner that gates analytics
+│           ├── analytics.js      # GA4 loader, conversion & event tracking
+│           └── protection.js     # Content-copy deterrents
 │
-├── public/
+├── public/                 # Copied to dist/ as-is
+│   ├── _headers            # Security headers (CSP, HSTS, …) for Cloudflare
+│   ├── _redirects          # .html → clean-URL 301s, retired-page redirects
+│   ├── brand/              # Logo, favicons, app icons, social share image
+│   ├── videos/             # Compressed hero background videos
 │   ├── robots.txt          # Crawler directives
-│   └── sitemap.xml         # XML sitemap (9 pages)
+│   ├── site.webmanifest    # Install/app-icon metadata
+│   └── sitemap.xml         # XML sitemap
 │
-├── vite.config.js          # Multi-page build config, terser, lightning CSS
-├── package.json            # v2.0 — scripts, devDependencies
+├── vite.config.js          # Multi-page build config, partials plugin, terser
+├── wrangler.toml           # Cloudflare Workers static-assets config
+├── package.json            # Scripts, devDependencies
 └── docs/
     └── NES_STRATEGIC_BLUEPRINT.md  # Full project blueprint & design spec
 ```
@@ -72,7 +90,7 @@ No React. No Vue. No jQuery. Just fast, maintainable HTML/CSS/JS.
 
 ### Prerequisites
 
-- **Node.js** ≥ 18 (tested on v24.12)
+- **Node.js** ≥ 20.19 (required by Vite 7; tested on v24)
 - **npm** ≥ 9
 
 ### Install
@@ -107,6 +125,20 @@ npm run preview
 
 Serves the `dist/` folder locally to verify the production build.
 
+### Shared header, menu and footer
+
+The header, mobile menu, footer and common `<head>` tags are written once in `partials/`. A page includes them with a comment, and a small plugin in `vite.config.js` inlines the file in both `npm run dev` and `npm run build`:
+
+```html
+<!-- @include header -->
+```
+
+Edit `partials/header.html` once and every page updates (the dev server reloads automatically). The 404 page keeps its own minimal header and footer.
+
+### Deployment
+
+The site runs on Cloudflare (Workers static assets, configured in `wrangler.toml`). Cloudflare's GitHub integration builds every push: a push to `main` deploys to nakolaexpertsystems.com, and other branches get a preview URL (shown in the commit's checks on GitHub). Pages are served at clean URLs such as `/about`; `public/_redirects` sends old `.html` links there with a permanent redirect, and `public/_headers` sets the security headers.
+
 ---
 
 ## 📄 Pages
@@ -114,14 +146,15 @@ Serves the `dist/` folder locally to verify the production build.
 | Page | Path | Purpose |
 | ---- | ---- | ------- |
 | Home | `/` | Hero, services overview, featured case study, CTA |
-| About | `/about.html` | Company story, mission, values, team, timeline |
-| Services | `/services.html` | 6 service offerings, engagement models, FAQ |
-| Work | `/work.html` | 6 case studies with category filters |
-| Insights | `/insights.html` | Articles, featured post, newsletter signup |
-| Contact | `/contact.html` | 3-step progressive quote form, quick inquiry |
-| Careers | `/careers.html` | Hiring status (no open roles), affiliate program, Tech Pulse Insider |
-| Privacy | `/privacy.html` | 13-section privacy policy |
-| Terms | `/terms.html` | 16-section terms of service |
+| About | `/about` | Company story, mission, values, team, timeline |
+| Services | `/services` | 6 service offerings, engagement models, FAQ |
+| Work | `/work` | 6 case studies with category filters |
+| Insights | `/insights` | Upcoming articles ("coming soon"), newsletter signup |
+| Contact | `/contact` | 3-step progressive quote form, quick inquiry |
+| Careers | `/careers` | Hiring status (no open roles), affiliate program, Tech Pulse Insider |
+| Affiliate Application | `/affiliate-application` | Affiliate program application form |
+| Privacy | `/privacy` | 13-section privacy policy |
+| Terms | `/terms` | 16-section terms of service |
 
 ---
 
@@ -140,12 +173,14 @@ The design system lives in `src/styles/main.css` using Tailwind CSS v4's `@theme
 ## ♿ Accessibility
 
 - Skip-to-content links on all pages
-- Focus trap in mobile navigation drawer
+- Focus trap in the open mobile menu; the closed menu is `inert`, so keyboard focus never lands on hidden links
+- Current page marked in the nav with `aria-current="page"`
 - Arrow-key navigation on filter tabs (`role="tablist"`)
 - Semantic HTML5 elements (`<header>`, `<main>`, `<section>`, `<nav>`, `<footer>`)
-- Proper heading hierarchy (h1 → h2 → h3)
-- Sufficient color contrast ratios
-- Form labels linked to inputs via `for`/`id`
+- Proper heading hierarchy (h1 → h2 → h3), no skipped levels
+- Text contrast meets WCAG AA (4.5:1) on every page
+- Content stays readable without JavaScript, and when the script loads late or fails
+- Form labels linked to inputs via `for`/`id`; failed form sends announce an error with fallback contacts
 
 ---
 
@@ -153,7 +188,8 @@ The design system lives in `src/styles/main.css` using Tailwind CSS v4's `@theme
 
 - **JSON-LD** structured data on every page (Organization, LocalBusiness, WebSite, CollectionPage, Blog)
 - **Open Graph** meta tags for social sharing
-- **XML Sitemap** at `/sitemap.xml` covering all 9 pages
+- **XML Sitemap** at `/sitemap.xml` covering every page, at its clean URL
+- **Clean, canonical URLs** (`/about`) everywhere: links, canonicals, `og:url`, structured data and sitemap agree
 - **robots.txt** with crawler directives
 - Semantic HTML for search engine comprehension
 - Descriptive `<title>` and `<meta name="description">` per page
