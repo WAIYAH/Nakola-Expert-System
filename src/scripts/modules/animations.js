@@ -3,16 +3,26 @@
    Scroll-triggered reveal + counter animation
    ============================================================ */
 
+const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const canObserve = 'IntersectionObserver' in window;
+
 /**
  * Observe elements with class `.reveal` and add `.revealed` when
  * they enter the viewport.
  */
 export function initScrollReveal() {
-  // Respect reduced motion preference
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.reveal').forEach((el) => {
-      el.classList.add('revealed');
-    });
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+
+  // If the CSS safety net already faded the content in (this script arrived
+  // late), keep it visible rather than hiding it again to re-animate.
+  const alreadyShown = parseFloat(getComputedStyle(reveals[0]).opacity) > 0;
+  document.documentElement.classList.add('reveal-ready'); // switches the safety net off
+
+  // Show everything at once for reduced motion, a late script, or browsers
+  // without IntersectionObserver (some data-saver browsers).
+  if (alreadyShown || prefersReducedMotion() || !canObserve) {
+    reveals.forEach((el) => el.classList.add('revealed'));
     return;
   }
 
@@ -28,7 +38,7 @@ export function initScrollReveal() {
     { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
   );
 
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  reveals.forEach((el) => observer.observe(el));
 }
 
 /**
@@ -37,7 +47,10 @@ export function initScrollReveal() {
  */
 export function initCounters() {
   const counters = document.querySelectorAll('[data-count-to]');
-  if (!counters.length) return;
+  // The HTML holds the final value, so it reads correctly without the animation.
+  if (!counters.length || !canObserve || prefersReducedMotion()) return;
+
+  counters.forEach((el) => { el.textContent = `0${el.dataset.countSuffix || ''}`; });
 
   const observer = new IntersectionObserver(
     (entries) => {

@@ -56,7 +56,7 @@ function setupMultistep(form) {
   const prevBtns  = form.querySelectorAll('[data-step-prev]');
   let currentStep = 1;
 
-  function showStep(n) {
+  function showStep(n, { scroll = true } = {}) {
     steps.forEach((s) => {
       const stepNum = parseInt(s.dataset.step, 10);
       s.classList.toggle('hidden', stepNum !== n);
@@ -79,8 +79,8 @@ function setupMultistep(form) {
 
     currentStep = n;
 
-    // Smooth scroll to form top
-    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Bring the form top into view when moving between steps
+    if (scroll) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   // Next buttons — validate current step before advancing
@@ -110,8 +110,8 @@ function setupMultistep(form) {
     });
   });
 
-  // Initialize step 1
-  showStep(1);
+  // Initialize step 1 without scrolling: the page must open at the top
+  showStep(1, { scroll: false });
 }
 
 /* ── Validate a single field ──────────────────────────────── */
@@ -178,6 +178,7 @@ async function handleSubmit(form) {
 
   const submitBtn = form.querySelector('[type="submit"]');
   const original  = submitBtn?.innerHTML;
+  hideSubmitError(form);
 
   // Loading state
   if (submitBtn) {
@@ -234,13 +235,38 @@ async function handleSubmit(form) {
   } catch (err) {
     console.error('[NES Forms] Submission failed:', err);
     if (submitBtn) {
-      submitBtn.innerHTML = 'Error — try again';
+      submitBtn.innerHTML = original;
       submitBtn.disabled = false;
-      setTimeout(() => { submitBtn.innerHTML = original; }, 4000);
     }
+    showSubmitError(form);
   } finally {
     _submitting = false;
   }
+}
+
+/* ── Submission error with fallback contacts ──────────────── */
+// A failed send must not lose the lead: keep the message on screen
+// (not just a brief button label) and offer channels that still work.
+const SUBMIT_ERROR_HTML = `Sorry, your message didn't send. Please try again, or reach us on
+  <a href="https://wa.me/254715674828" target="_blank" rel="noopener noreferrer" class="font-semibold underline">WhatsApp</a>
+  or at <a href="mailto:luckiesdabwoy@gmail.com" class="font-semibold underline">luckiesdabwoy@gmail.com</a>.`;
+
+function showSubmitError(form) {
+  let box = form.nextElementSibling;
+  if (!box?.hasAttribute('data-submit-error')) {
+    box = document.createElement('p');
+    box.setAttribute('data-submit-error', '');
+    box.setAttribute('role', 'alert');
+    box.className = 'mt-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700';
+    form.after(box);
+  }
+  box.hidden = false;
+  box.innerHTML = SUBMIT_ERROR_HTML; // re-set on every failure so screen readers announce it again
+}
+
+function hideSubmitError(form) {
+  const box = form.nextElementSibling;
+  if (box?.hasAttribute('data-submit-error')) box.hidden = true;
 }
 
 /* ── LocalStorage draft saving ────────────────────────────── */

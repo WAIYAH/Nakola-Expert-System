@@ -117,6 +117,10 @@
   to   { opacity: 1; }
 }
 
+@keyframes revealFallback {
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -582,6 +586,12 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* Safety net: if the reveal script hasn't taken over within 3 s (slow or
+       failed download), show the content anyway instead of a blank page. */
+    animation: revealFallback 0.6s ease-out 3s forwards;
+  }
+  .reveal-ready .reveal {
+    animation: none;
   }
   .reveal.revealed {
     opacity: 1;

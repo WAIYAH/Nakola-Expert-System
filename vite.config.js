@@ -44,7 +44,9 @@ export default defineConfig({
     minify: 'terser',                // advanced JS minification
     terserOptions: {
       compress: {
-        drop_console: true,          // strip console.log in prod
+        // Strip debug logging but keep console.error/warn, so real failures
+        // (e.g. a form that didn't send) still leave a trace in production.
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
         drop_debugger: true,
         passes: 2,
       },

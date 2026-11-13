@@ -43,7 +43,10 @@ export function initNavigation() {
   handleScroll(); // run once on load
 
   /* ── Mobile drawer ──────────────────────────────────────── */
+  // While closed, the drawer is only moved off-screen, so `inert` keeps its
+  // links out of the Tab order and away from screen readers.
   function openDrawer() {
+    drawer?.removeAttribute('inert');
     drawer?.classList.add('drawer-open');
     overlay?.classList.add('overlay-visible');
     document.body.style.overflow = 'hidden';
@@ -54,6 +57,7 @@ export function initNavigation() {
 
   function closeDrawer() {
     drawer?.classList.remove('drawer-open');
+    drawer?.setAttribute('inert', '');
     overlay?.classList.remove('overlay-visible');
     document.body.style.overflow = '';
     toggle?.setAttribute('aria-expanded', 'false');
@@ -65,9 +69,9 @@ export function initNavigation() {
   closeBtn?.addEventListener('click', closeDrawer);
   overlay?.addEventListener('click', closeDrawer);
 
-  // Close on Escape
+  // Close on Escape (only when open, or focus would jump to the menu button)
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeDrawer();
+    if (e.key === 'Escape' && drawer?.classList.contains('drawer-open')) closeDrawer();
   });
 
   // Focus trap inside open drawer
