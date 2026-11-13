@@ -3,3 +3,17 @@
 # visitors away from /careers-apply even after the page is restored.
 /careers-apply.html /careers 302
 /careers-apply /careers 302
+
+# Pages live at clean URLs (/about). Old .html links get a permanent 301
+# here instead of Cloudflare's default temporary 307, so search engines
+# move their index to the clean URLs.
+/index.html / 301
+/about.html /about 301
+/services.html /services 301
+/work.html /work 301
+/insights.html /insights 301
+/contact.html /contact 301
+/careers.html /careers 301
+/affiliate-application.html /affiliate-application 301
+/privacy.html /privacy 301
+/terms.html /terms 301

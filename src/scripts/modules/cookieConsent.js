@@ -36,7 +36,7 @@ export function initCookieConsent() {
     <p class="cookie-consent__text">
       We use cookies for basic analytics to understand how visitors use this site.
       No personal data is sold or shared. See our
-      <a href="/privacy.html">Privacy Policy</a>.
+      <a href="/privacy">Privacy Policy</a>.
     </p>
     <div class="cookie-consent__actions">
       <button type="button" class="btn btn-secondary btn-sm" data-cookie-decline>Decline</button>

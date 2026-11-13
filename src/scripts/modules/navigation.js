@@ -98,11 +98,14 @@ export function initNavigation() {
   });
 
   /* ── Active link highlighting ───────────────────────────── */
-  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  // Compare clean paths so /about, /about.html and /about/ all match.
+  const cleanPath = (path) => path.replace(/(\/index)?\.html$/, '').replace(/\/$/, '') || '/';
+  const currentPath = cleanPath(window.location.pathname);
   document.querySelectorAll('[data-nav-link]').forEach((link) => {
-    const href = link.getAttribute('href')?.replace(/\/$/, '') || '/';
-    if (href === currentPath || (currentPath.startsWith(href) && href !== '/')) {
+    const href = cleanPath(new URL(link.href).pathname);
+    if (href === currentPath || (href !== '/' && currentPath.startsWith(`${href}/`))) {
       link.classList.add('nav-active');
+      link.setAttribute('aria-current', 'page');
     }
   });
 }
